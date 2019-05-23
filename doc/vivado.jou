@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2017.1 (64-bit)
+# SW Build 1846317 on Fri Apr 14 18:54:47 MDT 2017
+# IP Build 1846188 on Fri Apr 14 20:52:08 MDT 2017
+# Start of session at: Fri Mar 15 12:13:07 2019
+# Process ID: 1559
+# Current directory: /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/doc
+# Command line: vivado
+# Log file: /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/doc/vivado.log
+# Journal file: /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/doc/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/deki/Downloads/hsos/gtwizard_0_ex/gtwizard_0_ex.xpr
+update_compile_order -fileset sources_1
