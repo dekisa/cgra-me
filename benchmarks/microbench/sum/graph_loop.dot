@@ -1,20 +1,19 @@
 digraph G {
-add0[opcode=add];
-output1[opcode=output];
-add2[opcode=add];
+phi0[opcode=phi];
+const1[opcode=const];
+phi2[opcode=phi];
 const3[opcode=const];
-input4[opcode=input];
+add4[opcode=add];
 output5[opcode=output];
-input6[opcode=input];
-output7[opcode=output];
-input8[opcode=input];
-output9[opcode=output];
-add0->output1[operand=0]; //add->output
-add0->output5[operand=0]; //add->output
-add2->output7[operand=0]; //add->output
-add2->output9[operand=0]; //add->output
-const3->add2[operand=1]; //const->add
-input4->add0[operand=0]; //input->add
-input6->add0[operand=1]; //input->add
-input8->add2[operand=0]; //input->add
+add6[opcode=add];
+const7[opcode=const];
+phi0->add4[operand=0]; //phi->add
+phi2->add4[operand=1]; //phi->add
+phi2->add6[operand=0]; //phi->add
+add4->phi0[operand=0]; //add->phi
+add4->output5[operand=0]; //add->output
+add6->phi2[operand=0]; //add->phi
+const1->phi0[operand=1]; //const->phi
+const3->phi2[operand=1]; //const->phi
+const7->add6[operand=1]; //const->add
 }
