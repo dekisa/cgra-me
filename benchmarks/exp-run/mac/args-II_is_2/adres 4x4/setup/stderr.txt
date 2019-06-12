@@ -1,0 +1,5 @@
+Info: Tag detected: 1 loop
+Info: The loop with tag: loop is generating DFG.
+Info: Removing Phi Nodes!
+Info: Removing Unnecessary Leaf Nodes!
+Info: Done all loops

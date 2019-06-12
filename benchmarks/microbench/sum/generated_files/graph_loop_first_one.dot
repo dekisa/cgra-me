@@ -1,0 +1,28 @@
+digraph G {
+icmp0[opcode=icmp];
+const1[opcode=const];
+add2[opcode=add];
+const3[opcode=const];
+select4[opcode=select];
+const5[opcode=const];
+add6[opcode=add];
+output7[opcode=output];
+select8[opcode=select];
+add9[opcode=add];
+const10[opcode=const];
+icmp0->select4[operand=0]; //icmp->select
+icmp0->select8[operand=0]; //icmp->select
+add2->select8[operand=1]; //add->select
+select4->add6[operand=0]; //select->add
+add6->output7[operand=0]; //add->output
+add6->add6[operand=1]; //add->add
+select8->add9[operand=0]; //select->add
+add9->icmp0[operand=0]; //add->icmp
+add9->add2[operand=0]; //add->add
+add9->select4[operand=2]; //add->select
+add9->select8[operand=2]; //add->select
+const1->icmp0[operand=1]; //const->icmp
+const3->add2[operand=1]; //const->add
+const5->select4[operand=1]; //const->select
+const10->add9[operand=1]; //const->add
+}

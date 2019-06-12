@@ -1,0 +1,6 @@
+make: Entering directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/accumulate'
+make: Nothing to be done for 'prepare_run'.
+make: Leaving directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/accumulate'
+make: Entering directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/accumulate'
+make: Nothing to be done for 'prepare_run'.
+make: Leaving directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/accumulate'

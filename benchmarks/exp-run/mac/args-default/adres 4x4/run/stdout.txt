@@ -1,0 +1,906 @@
+make: Entering directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/mac'
+'cgrame'  --cpp 2 --arch-opts 'cols=4 rows=4' -g graph_loop.dot
+
+CGRA - Modelling and Exploration Version 1.0 (http://cgra-me.ece.utoronto.ca/)
+Copyright (c) 2015-2018 University of Toronto. All Rights Reserved.
+For research and academic purposes only. Commercial use is prohibited.
+Please email questions to: Xander Chin(xan@ece.utoronto.ca)
+Compiled: Feb 21 2019 11:49:18
+
+[INFO] Creating Architecture #2 from C++...
+[INFO] Architecture Name: Adres CGRA Architecture
+[INFO] Overwritting C++ Architecture Parameter: cols to 4 (Default: 4)
+[INFO] Overwritting C++ Architecture Parameter: rows to 4 (Default: 4)
+[INFO] Creating "Adres CGRA Architecture" Architecture from C++...
+[INFO] Parsing DFG...
+[INFO] Creating Mapper...
+[INFO] Mapping DFG Onto CGRA Architecture...
+presolving:
+(round 1, fast)       4528 del vars, 4196 del conss, 0 add conss, 644 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 15991 clqs
+(round 2, fast)       5116 del vars, 5816 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 15887 clqs
+(round 3, fast)       5680 del vars, 6664 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 15267 clqs
+(round 4, fast)       5984 del vars, 7144 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 14787 clqs
+(round 5, exhaustive) 5984 del vars, 7220 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 14787 clqs
+(round 6, exhaustive) 5984 del vars, 7220 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 16903 upgd conss, 0 impls, 14787 clqs
+(round 7, fast)       6064 del vars, 7236 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 16903 upgd conss, 0 impls, 14747 clqs
+(round 8, fast)       6064 del vars, 7260 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 16903 upgd conss, 0 impls, 14747 clqs
+   (2.5s) probing: 1000/11860 (8.4%) - 0 fixings, 0 aggregations, 221212 implications, 0 bound changes
+   (2.5s) probing: 1001/11860 (8.4%) - 0 fixings, 0 aggregations, 221425 implications, 0 bound changes
+   (2.5s) probing aborted: 1000/1000 successive useless probings
+presolving (9 rounds: 9 fast, 3 medium, 3 exhaustive):
+ 6068 deleted vars, 7264 deleted constraints, 0 added constraints, 820 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 236169 cliques
+presolved problem has 11860 variables (11860 bin, 0 int, 0 impl, 0 cont) and 16863 constraints
+  14743 constraints of type <setppc>
+   2120 constraints of type <logicor>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 2.50
+
+ time | node  | left  |LP iter|LP it/n| mem |mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  3.0s|     1 |     0 |  3746 |     - | 139M|   0 | 276 |  11k|  16k|  11k|  16k|   0 |  12 |   0 | 9.175000e+01 |      --      |    Inf 
+  6.6s|     1 |     0 |  9885 |     - | 150M|   0 | 331 |  11k|  16k|  11k|  16k|   7 |  13 |   0 | 9.250000e+01 |      --      |    Inf 
+  7.3s|     1 |     0 |  9978 |     - | 161M|   0 | 363 |  11k|  16k|  11k|  16k|  12 |  15 |   0 | 9.400000e+01 |      --      |    Inf 
+  8.0s|     1 |     0 | 10047 |     - | 165M|   0 | 281 |  11k|  16k|  11k|  16k|  20 |  16 |   0 | 9.400000e+01 |      --      |    Inf 
+  8.9s|     1 |     0 | 10704 |     - | 177M|   0 | 544 |  11k|  16k|  11k|  16k|  32 |  17 |   0 | 9.483333e+01 |      --      |    Inf 
+ 10.0s|     1 |     0 | 11023 |     - | 191M|   0 | 561 |  11k|  16k|  11k|  16k|  42 |  18 |   0 | 9.575000e+01 |      --      |    Inf 
+ 10.9s|     1 |     0 | 11198 |     - | 195M|   0 | 535 |  11k|  16k|  11k|  16k|  50 |  20 |   0 | 9.575000e+01 |      --      |    Inf 
+ 12.1s|     1 |     0 | 12018 |     - | 201M|   0 | 520 |  11k|  16k|  11k|  16k|  56 |  22 |   0 | 9.661538e+01 |      --      |    Inf 
+ 13.4s|     1 |     0 | 12600 |     - | 211M|   0 | 484 |  11k|  16k|  11k|  16k|  61 |  23 |   0 | 9.757143e+01 |      --      |    Inf 
+ 14.5s|     1 |     0 | 13051 |     - | 215M|   0 | 550 |  11k|  16k|  11k|  16k|  65 |  23 |   0 | 9.832000e+01 |      --      |    Inf 
+ 15.8s|     1 |     0 | 13587 |     - | 216M|   0 | 567 |  11k|  16k|  11k|  16k|  69 |  25 |   0 | 9.872727e+01 |      --      |    Inf 
+ 17.1s|     1 |     0 | 15342 |     - | 228M|   0 | 531 |  11k|  16k|  11k|  16k|  75 |  26 |   0 | 1.000000e+02 |      --      |    Inf 
+ 17.9s|     1 |     0 | 15773 |     - | 228M|   0 | 493 |  11k|  16k|  11k|  16k|  80 |  27 |   0 | 1.000000e+02 |      --      |    Inf 
+ 18.6s|     1 |     0 | 15832 |     - | 228M|   0 | 459 |  11k|  16k|  11k|  16k|  84 |  29 |   0 | 1.000000e+02 |      --      |    Inf 
+ 19.3s|     1 |     0 | 15952 |     - | 236M|   0 | 523 |  11k|  16k|  11k|  16k|  88 |  30 |   0 | 1.000000e+02 |      --      |    Inf 
+ time | node  | left  |LP iter|LP it/n| mem |mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+ 20.2s|     1 |     0 | 16235 |     - | 236M|   0 | 628 |  11k|  16k|  11k|  16k|  92 |  31 |   0 | 1.000000e+02 |      --      |    Inf 
+ 20.9s|     1 |     0 | 16236 |     - | 236M|   0 | 628 |  11k|  16k|  11k|  16k|  93 |  32 |   0 | 1.000000e+02 |      --      |    Inf 
+ 26.2s|     1 |     2 | 16236 |     - | 236M|   0 | 628 |  11k|  16k|  11k|  16k|  93 |  34 |  19 | 1.000000e+02 |      --      |    Inf 
+ 81.2s|   100 |   101 | 62710 | 469.4 | 242M|  27 |  75 |  11k|  16k|  11k|  16k|  93 |  81 | 442 | 1.000000e+02 |      --      |    Inf 
+ 89.8s|   200 |   201 | 98215 | 412.0 | 243M|  33 |  96 |  11k|  17k|  11k|  16k|  93 | 189 | 458 | 1.000000e+02 |      --      |    Inf 
+  101s|   300 |   301 |127358 | 371.6 | 246M|  33 |  43 |  11k|  17k|  11k|  16k|  93 | 339 | 484 | 1.000000e+02 |      --      |    Inf 
+  114s|   400 |   401 |156058 | 350.4 | 247M|  33 |  62 |  11k|  17k|  11k|  16k|  93 | 386 | 533 | 1.000000e+02 |      --      |    Inf 
+  123s|   500 |   499 |177945 | 324.1 | 248M|  41 | 105 |  11k|  17k|  11k|  16k|  93 | 447 | 593 | 1.000000e+02 |      --      |    Inf 
+  130s|   600 |   599 |197125 | 302.0 | 252M|  43 |  38 |  11k|  17k|  11k|  16k|  93 | 541 | 619 | 1.000000e+02 |      --      |    Inf 
+  139s|   700 |   699 |220867 | 292.7 | 253M|  43 | 173 |  11k|  17k|  11k|  16k|  93 | 626 | 653 | 1.000000e+02 |      --      |    Inf 
+  149s|   800 |   797 |248961 | 291.3 | 254M|  43 |  64 |  11k|  17k|  11k|  16k|  93 | 678 | 705 | 1.000000e+02 |      --      |    Inf 
+  156s|   900 |   897 |266718 | 278.6 | 255M|  43 | 173 |  11k|  17k|  11k|  16k|  93 | 777 | 740 | 1.000000e+02 |      --      |    Inf 
+  166s|  1000 |   993 |290851 | 274.9 | 258M|  43 |  38 |  11k|  17k|  11k|  16k|  93 | 839 | 810 | 1.000000e+02 |      --      |    Inf 
+  186s|  1100 |  1091 |325791 | 281.7 | 260M|  47 | 158 |  11k|  17k|  11k|  16k|  93 | 915 | 849 | 1.000000e+02 |      --      |    Inf 
+  200s|  1200 |  1191 |354735 | 282.3 | 260M|  47 | 223 |  11k|  17k|  11k|  16k|  93 | 955 | 892 | 1.000000e+02 |      --      |    Inf 
+ time | node  | left  |LP iter|LP it/n| mem |mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  212s|  1300 |  1289 |382502 | 282.0 | 265M|  47 | 141 |  11k|  17k|  11k|  16k|  93 |1025 | 945 | 1.000000e+02 |      --      |    Inf 
+  223s|  1400 |  1385 |406980 | 279.3 | 266M|  47 | 135 |  11k|  17k|  11k|  16k|  93 |1129 | 999 | 1.000000e+02 |      --      |    Inf 
+  233s|  1500 |  1485 |429043 | 275.4 | 267M|  49 | 134 |  11k|  17k|  11k|  16k|  93 |1171 |1040 | 1.000000e+02 |      --      |    Inf 
+F 236s|  1534 |  1517 |438180 | 275.2 | 269M|  49 |   0 |  11k|  17k|  11k|  16k|  93 |1183 |1065 | 1.000000e+02 | 3.360000e+02 | 236.00%
+
+SCIP Status        : solving was interrupted [solution limit reached]
+Solving Time (sec) : 236.28
+Solving Nodes      : 1534
+Primal Bound       : +3.36000000000000e+02 (1 solutions)
+Dual Bound         : +1.00000000000000e+02
+Gap                : 236.00 %
+[INFO] Suboptimal CGRA Mapping Found
+MapperTimeout: 0
+Mapped: 1
+
+Operation Mapping Result:
+mul0(mul): 0:pe_c3_r2.func.fu
+const1(const): 0:pe_c3_r2.const.const
+load2(load): 0:mem_2.mem_unit.mem
+mul3(mul): 0:pe_c0_r1.func.fu
+const4(const): 0:pe_c0_r1.const.const
+load5(load): 0:mem_1.mem_unit.mem
+mul6(mul): 0:pe_c1_r1.func.fu
+add7(add): 0:pe_c1_r0.func.fu
+output8(output): 0:io_top_1.OE.io
+add9(add): 0:pe_c0_r2.func.fu
+const10(const): 0:pe_c0_r2.const.const
+
+Connection Mapping Result:
+load2_val_output:
+  0:mem_2.mem_unit.data_out
+  0:mem_2.out
+  0:pe_c1_r1.func.in_b
+  0:pe_c1_r1.in1
+  0:pe_c1_r1.mux_b.in1
+  0:pe_c1_r1.mux_b.mux
+  0:pe_c1_r1.mux_b.out
+  0:pe_c2_r1.in2
+  0:pe_c2_r1.mux_bypass.in2
+  0:pe_c2_r1.mux_bypass.mux
+  0:pe_c2_r1.mux_bypass.out
+  0:pe_c2_r1.mux_out.in1
+  0:pe_c2_r1.mux_out.mux
+  0:pe_c2_r1.mux_out.out
+  0:pe_c2_r1.out
+  0:pe_c2_r2.in4
+  0:pe_c2_r2.mux_bypass.in4
+  0:pe_c2_r2.mux_bypass.mux
+  0:pe_c2_r2.mux_bypass.out
+  0:pe_c2_r2.mux_out.in1
+  0:pe_c2_r2.mux_out.mux
+  0:pe_c2_r2.mux_out.out
+  0:pe_c2_r2.out
+
+load5_val_output:
+  0:mem_1.mem_unit.data_out
+  0:mem_1.out
+  0:pe_c1_r1.func.in_a
+  0:pe_c1_r1.in4
+  0:pe_c1_r1.mux_a.in4
+  0:pe_c1_r1.mux_a.mux
+  0:pe_c1_r1.mux_a.out
+
+mul6_val_output:
+  0:pe_c1_r0.func.in_a
+  0:pe_c1_r0.in2
+  0:pe_c1_r0.mux_a.in2
+  0:pe_c1_r0.mux_a.mux
+  0:pe_c1_r0.mux_a.out
+  0:pe_c1_r1.fu_to_rf
+  0:pe_c1_r1.func.m_out
+  0:pe_c1_r1.func.out
+  0:pe_c1_r1.mux_out.in0
+  0:pe_c1_r1.mux_out.mux
+  0:pe_c1_r1.mux_out.out
+  0:pe_c1_r1.out
+  0:pe_c1_r1.rf_to_muxout
+  0:rf_c1_r1.in0
+  0:rf_c1_r1.out1
+  0:rf_c1_r1.out1_m1
+  0:rf_c1_r1.reg1
+  0:rf_c1_r1.reg1_m0
+
+add7_val_output:
+  0:drf.in1
+  0:drf.in2
+  0:drf.in3
+  0:drf.out3
+  0:drf.out3_m7
+  0:drf.out4
+  0:drf.out4_m0
+  0:drf.out5
+  0:drf.out5_m7
+  0:drf.reg0
+  0:drf.reg0_m2
+  0:drf.reg1
+  0:drf.reg1_m1
+  0:drf.reg3
+  0:drf.reg3_fb
+  0:drf.reg4
+  0:drf.reg4_fb
+  0:drf.reg7
+  0:drf.reg7_m1
+  0:io_top_1.OE.in
+  0:io_top_1.in
+  0:io_top_1.reg_in.in
+  0:io_top_1.reg_in.out
+  0:io_top_1.reg_in.reg
+  0:pe_c0_r0.in4
+  0:pe_c0_r0.mux_bypass.in0
+  0:pe_c0_r0.mux_bypass.mux
+  0:pe_c0_r0.rf_to_muxout
+  0:pe_c0_r1.in0
+  0:pe_c0_r1.in3
+  0:pe_c0_r2.in0
+  0:pe_c0_r2.in1
+  0:pe_c0_r2.mux_bypass.out
+  0:pe_c0_r3.in3
+  0:pe_c1_r0.fu_to_rf
+  0:pe_c1_r0.func.in_b
+  0:pe_c1_r0.func.m_out
+  0:pe_c1_r0.func.out
+  0:pe_c1_r0.in1
+  0:pe_c1_r0.mux_b.in1
+  0:pe_c1_r0.mux_b.mux
+  0:pe_c1_r0.mux_b.out
+  0:pe_c1_r0.mux_out.in0
+  0:pe_c1_r0.mux_out.mux
+  0:pe_c1_r0.mux_out.out
+  0:pe_c1_r0.out
+  0:pe_c1_r0.rf_to_muxout
+  0:pe_c1_r2.func.in_a
+  0:pe_c1_r2.rf_to_muxa
+  0:pe_c1_r3.mux_a.out
+  0:pe_c1_r3.mux_bypass.out
+  0:pe_c2_r0.fu_to_rf
+  0:pe_c2_r0.func.in_a
+  0:pe_c2_r0.func.m_in_a
+  0:pe_c2_r0.func.out
+  0:pe_c2_r0.in4
+  0:pe_c2_r0.mux_a.in7
+  0:pe_c2_r0.mux_a.mux
+  0:pe_c2_r0.mux_a.out
+  0:pe_c2_r0.mux_b.out
+  0:pe_c2_r0.mux_out.in0
+  0:pe_c2_r0.mux_out.mux
+  0:pe_c2_r0.mux_out.out
+  0:pe_c2_r0.out
+  0:pe_c2_r0.rf_to_muxa
+  0:pe_c2_r0.rf_to_muxout
+  0:pe_c2_r1.fu_to_rf
+  0:pe_c2_r1.func.m_in_a
+  0:pe_c2_r1.func.out
+  0:pe_c2_r1.rf_to_muxa
+  0:pe_c2_r2.fu_to_rf
+  0:pe_c2_r2.mux_a.out
+  0:pe_c2_r3.fu_to_rf
+  0:pe_c3_r0.func.in_a
+  0:pe_c3_r0.mux_bypass.in5
+  0:pe_c3_r0.mux_bypass.mux
+  0:pe_c3_r1.mux_a.out
+  0:pe_c3_r1.mux_b.out
+  0:pe_c3_r2.in2
+  0:pe_c3_r2.rf_to_muxa
+  0:pe_c3_r3.mux_bypass.out
+  0:pe_c3_r3.mux_out.out
+  0:rf_c1_r1.reg0
+  0:rf_c1_r1.reg0_fb
+  0:rf_c2_r2.out0
+  0:rf_c2_r2.out0_m0
+  0:rf_c2_r2.reg1
+  0:rf_c2_r2.reg1_fb
+  0:rf_c2_r3.in0
+  0:rf_c2_r3.out0
+  0:rf_c2_r3.out0_m0
+  0:rf_c3_r3.reg0
+  0:rf_c3_r3.reg0_fb
+
+add9_val_output:
+  0:drf.reg2
+  0:drf.reg2_fb
+  0:drf.reg5
+  0:drf.reg5_fb
+  0:drf.reg6
+  0:drf.reg6_fb
+  0:pe_c0_r0.in1
+  0:pe_c0_r0.mux_b.in4
+  0:pe_c0_r0.mux_b.mux
+  0:pe_c0_r0.mux_b.out
+  0:pe_c0_r0.mux_out.out
+  0:pe_c0_r0.out
+  0:pe_c0_r1.func.in_b
+  0:pe_c0_r1.in1
+  0:pe_c0_r1.in2
+  0:pe_c0_r1.mux_b.in2
+  0:pe_c0_r1.mux_b.mux
+  0:pe_c0_r1.mux_b.out
+  0:pe_c0_r1.mux_bypass.out
+  0:pe_c0_r1.rf_to_muxa
+  0:pe_c0_r2.fu_to_rf
+  0:pe_c0_r2.func.in_a
+  0:pe_c0_r2.func.m_out
+  0:pe_c0_r2.func.out
+  0:pe_c0_r2.in2
+  0:pe_c0_r2.in3
+  0:pe_c0_r2.mux_a.in6
+  0:pe_c0_r2.mux_a.mux
+  0:pe_c0_r2.mux_a.out
+  0:pe_c0_r2.mux_out.in0
+  0:pe_c0_r2.mux_out.mux
+  0:pe_c0_r2.mux_out.out
+  0:pe_c0_r2.out
+  0:pe_c0_r2.rf_to_muxa
+  0:pe_c0_r2.rf_to_muxout
+  0:pe_c0_r3.fu_to_rf
+  0:pe_c0_r3.func.in_a
+  0:pe_c0_r3.func.m_in_a
+  0:pe_c0_r3.func.out
+  0:pe_c0_r3.in1
+  0:pe_c0_r3.mux_a.in6
+  0:pe_c0_r3.mux_a.mux
+  0:pe_c0_r3.mux_a.out
+  0:pe_c0_r3.mux_b.in1
+  0:pe_c0_r3.mux_b.mux
+  0:pe_c0_r3.mux_bypass.in1
+  0:pe_c0_r3.mux_bypass.mux
+  0:pe_c0_r3.mux_bypass.out
+  0:pe_c0_r3.mux_out.in1
+  0:pe_c0_r3.mux_out.mux
+  0:pe_c0_r3.mux_out.out
+  0:pe_c0_r3.out
+  0:pe_c0_r3.rf_to_muxa
+  0:pe_c0_r3.rf_to_muxout
+  0:pe_c1_r0.in4
+  0:pe_c1_r2.fu_to_rf
+  0:pe_c1_r2.func.in_b
+  0:pe_c1_r2.func.m_in_b
+  0:pe_c1_r2.func.out
+  0:pe_c1_r2.in0
+  0:pe_c1_r2.in3
+  0:pe_c1_r2.mux_b.in6
+  0:pe_c1_r2.mux_b.mux
+  0:pe_c1_r2.mux_b.out
+  0:pe_c1_r2.mux_out.in0
+  0:pe_c1_r2.mux_out.mux
+  0:pe_c1_r2.mux_out.out
+  0:pe_c1_r2.out
+  0:pe_c1_r2.rf_to_muxout
+  0:pe_c1_r3.fu_to_rf
+  0:pe_c1_r3.func.in_a
+  0:pe_c1_r3.func.in_b
+  0:pe_c1_r3.func.m_in_b
+  0:pe_c1_r3.func.out
+  0:pe_c1_r3.in3
+  0:pe_c1_r3.mux_b.in3
+  0:pe_c1_r3.mux_b.mux
+  0:pe_c1_r3.mux_b.out
+  0:pe_c1_r3.mux_out.in0
+  0:pe_c1_r3.mux_out.mux
+  0:pe_c1_r3.mux_out.out
+  0:pe_c1_r3.out
+  0:pe_c1_r3.rf_to_muxout
+  0:pe_c2_r0.func.in_b
+  0:pe_c2_r0.in1
+  0:pe_c2_r0.in2
+  0:pe_c2_r0.mux_b.in2
+  0:pe_c2_r0.mux_b.mux
+  0:pe_c2_r0.mux_bypass.out
+  0:pe_c2_r1.in1
+  0:pe_c2_r2.in2
+  0:pe_c2_r3.in2
+  0:pe_c2_r3.rf_to_muxa
+  0:pe_c3_r0.rf_to_muxa
+  0:pe_c3_r1.fu_to_rf
+  0:pe_c3_r1.in3
+  0:pe_c3_r1.mux_b.in1
+  0:pe_c3_r1.mux_b.mux
+  0:pe_c3_r2.func.in_b
+  0:pe_c3_r2.in1
+  0:pe_c3_r2.mux_b.in1
+  0:pe_c3_r2.mux_b.mux
+  0:pe_c3_r2.mux_b.out
+  0:pe_c3_r3.fu_to_rf
+  0:pe_c3_r3.in0
+  0:rf_c0_r2.in0
+  0:rf_c0_r2.out0
+  0:rf_c0_r2.out0_m1
+  0:rf_c0_r2.out1
+  0:rf_c0_r2.out1_m1
+  0:rf_c0_r2.reg0
+  0:rf_c0_r2.reg0_fb
+  0:rf_c0_r2.reg1
+  0:rf_c0_r2.reg1_m0
+  0:rf_c0_r3.in0
+  0:rf_c0_r3.out0
+  0:rf_c0_r3.out0_m1
+  0:rf_c0_r3.reg1
+  0:rf_c0_r3.reg1_m0
+  0:rf_c1_r2.in0
+  0:rf_c1_r2.out0
+  0:rf_c1_r2.out0_m0
+  0:rf_c1_r2.out1
+  0:rf_c1_r2.out1_m0
+  0:rf_c1_r2.reg0
+  0:rf_c1_r2.reg0_m0
+  0:rf_c1_r3.in0
+  0:rf_c1_r3.out1
+  0:rf_c1_r3.out1_m1
+  0:rf_c1_r3.reg0
+  0:rf_c1_r3.reg0_fb
+  0:rf_c1_r3.reg1
+  0:rf_c1_r3.reg1_m0
+  0:rf_c2_r2.reg0
+  0:rf_c2_r2.reg0_fb
+  0:rf_c3_r1.reg0
+  0:rf_c3_r1.reg0_fb
+  0:rf_c3_r3.in0
+
+const1_val_output:
+  0:pe_c3_r2.const.out
+  0:pe_c3_r2.func.in_a
+  0:pe_c3_r2.mux_a.in5
+  0:pe_c3_r2.mux_a.mux
+  0:pe_c3_r2.mux_a.out
+
+mul0_val_output:
+  0:mem_2.in3
+  0:mem_2.mem_unit.addr
+  0:mem_2.mux_addr.in3
+  0:mem_2.mux_addr.mux
+  0:mem_2.mux_addr.out
+  0:pe_c3_r2.fu_to_rf
+  0:pe_c3_r2.func.m_out
+  0:pe_c3_r2.func.out
+  0:pe_c3_r2.mux_out.in0
+  0:pe_c3_r2.mux_out.mux
+  0:pe_c3_r2.mux_out.out
+  0:pe_c3_r2.out
+  0:pe_c3_r2.rf_to_muxout
+  0:rf_c3_r2.in0
+  0:rf_c3_r2.out1
+  0:rf_c3_r2.out1_m0
+  0:rf_c3_r2.reg0
+  0:rf_c3_r2.reg0_m0
+
+const4_val_output:
+  0:pe_c0_r1.const.out
+  0:pe_c0_r1.func.in_a
+  0:pe_c0_r1.mux_a.in5
+  0:pe_c0_r1.mux_a.mux
+  0:pe_c0_r1.mux_a.out
+  0:rf_c2_r3.reg1
+  0:rf_c2_r3.reg1_fb
+
+mul3_val_output:
+  0:mem_1.in0
+  0:mem_1.mem_unit.addr
+  0:mem_1.mux_addr.in0
+  0:mem_1.mux_addr.mux
+  0:mem_1.mux_addr.out
+  0:pe_c0_r1.fu_to_rf
+  0:pe_c0_r1.func.m_out
+  0:pe_c0_r1.func.out
+  0:pe_c0_r1.mux_out.in0
+  0:pe_c0_r1.mux_out.mux
+  0:pe_c0_r1.mux_out.out
+  0:pe_c0_r1.out
+  0:pe_c0_r1.rf_to_muxout
+  0:rf_c0_r1.in0
+  0:rf_c0_r1.out1
+  0:rf_c0_r1.out1_m0
+  0:rf_c0_r1.reg0
+  0:rf_c0_r1.reg0_m0
+
+const10_val_output:
+  0:pe_c0_r2.const.out
+  0:pe_c0_r2.func.in_b
+  0:pe_c0_r2.mux_b.in5
+  0:pe_c0_r2.mux_b.mux
+  0:pe_c0_r2.mux_b.out
+
+make: Leaving directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/mac'
+make: Entering directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/mac'
+'cgrame'  --cpp 2 --arch-opts 'cols=4 rows=4' -g graph_loop.dot
+
+CGRA - Modelling and Exploration Version 1.0 (http://cgra-me.ece.utoronto.ca/)
+Copyright (c) 2015-2018 University of Toronto. All Rights Reserved.
+For research and academic purposes only. Commercial use is prohibited.
+Please email questions to: Xander Chin(xan@ece.utoronto.ca)
+Compiled: May  7 2019 15:53:57
+
+[INFO] Creating Architecture #2 from C++...
+[INFO] Architecture Name: Adres CGRA Architecture
+[INFO] Overwritting C++ Architecture Parameter: cols to 4 (Default: 4)
+[INFO] Overwritting C++ Architecture Parameter: rows to 4 (Default: 4)
+[INFO] Creating "Adres CGRA Architecture" Architecture from C++...
+[INFO] Parsing DFG...
+[INFO] Creating Mapper...
+[INFO] Mapping DFG Onto CGRA Architecture...
+presolving:
+(round 1, fast)       4528 del vars, 4196 del conss, 0 add conss, 644 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 15991 clqs
+(round 2, fast)       5116 del vars, 5816 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 15887 clqs
+(round 3, fast)       5680 del vars, 6664 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 15267 clqs
+(round 4, fast)       5984 del vars, 7144 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 14787 clqs
+(round 5, exhaustive) 5984 del vars, 7220 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 14787 clqs
+(round 6, exhaustive) 5984 del vars, 7220 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 16903 upgd conss, 0 impls, 14787 clqs
+(round 7, fast)       6064 del vars, 7236 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 16903 upgd conss, 0 impls, 14747 clqs
+(round 8, fast)       6064 del vars, 7260 del conss, 0 add conss, 820 chg bounds, 0 chg sides, 0 chg coeffs, 16903 upgd conss, 0 impls, 14747 clqs
+   (2.8s) probing: 1000/11860 (8.4%) - 0 fixings, 0 aggregations, 221212 implications, 0 bound changes
+   (2.8s) probing: 1001/11860 (8.4%) - 0 fixings, 0 aggregations, 221425 implications, 0 bound changes
+   (2.8s) probing aborted: 1000/1000 successive useless probings
+presolving (9 rounds: 9 fast, 3 medium, 3 exhaustive):
+ 6068 deleted vars, 7264 deleted constraints, 0 added constraints, 820 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 236169 cliques
+presolved problem has 11860 variables (11860 bin, 0 int, 0 impl, 0 cont) and 16863 constraints
+  14743 constraints of type <setppc>
+   2120 constraints of type <logicor>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 2.76
+
+ time | node  | left  |LP iter|LP it/n| mem |mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  3.3s|     1 |     0 |  3746 |     - | 139M|   0 | 276 |  11k|  16k|  11k|  16k|   0 |  12 |   0 | 9.175000e+01 |      --      |    Inf 
+  6.9s|     1 |     0 |  9885 |     - | 150M|   0 | 331 |  11k|  16k|  11k|  16k|   7 |  13 |   0 | 9.250000e+01 |      --      |    Inf 
+  7.6s|     1 |     0 |  9978 |     - | 161M|   0 | 363 |  11k|  16k|  11k|  16k|  12 |  15 |   0 | 9.400000e+01 |      --      |    Inf 
+  8.3s|     1 |     0 | 10047 |     - | 165M|   0 | 281 |  11k|  16k|  11k|  16k|  20 |  16 |   0 | 9.400000e+01 |      --      |    Inf 
+  9.2s|     1 |     0 | 10704 |     - | 177M|   0 | 544 |  11k|  16k|  11k|  16k|  32 |  17 |   0 | 9.483333e+01 |      --      |    Inf 
+ 10.4s|     1 |     0 | 11023 |     - | 191M|   0 | 561 |  11k|  16k|  11k|  16k|  42 |  18 |   0 | 9.575000e+01 |      --      |    Inf 
+ 11.4s|     1 |     0 | 11198 |     - | 195M|   0 | 535 |  11k|  16k|  11k|  16k|  50 |  20 |   0 | 9.575000e+01 |      --      |    Inf 
+ 12.6s|     1 |     0 | 12018 |     - | 201M|   0 | 520 |  11k|  16k|  11k|  16k|  56 |  22 |   0 | 9.661538e+01 |      --      |    Inf 
+ 13.8s|     1 |     0 | 12600 |     - | 211M|   0 | 484 |  11k|  16k|  11k|  16k|  61 |  23 |   0 | 9.757143e+01 |      --      |    Inf 
+ 15.0s|     1 |     0 | 13051 |     - | 215M|   0 | 550 |  11k|  16k|  11k|  16k|  65 |  23 |   0 | 9.832000e+01 |      --      |    Inf 
+ 16.3s|     1 |     0 | 13587 |     - | 216M|   0 | 567 |  11k|  16k|  11k|  16k|  69 |  25 |   0 | 9.872727e+01 |      --      |    Inf 
+ 17.7s|     1 |     0 | 15342 |     - | 228M|   0 | 531 |  11k|  16k|  11k|  16k|  75 |  26 |   0 | 1.000000e+02 |      --      |    Inf 
+ 18.5s|     1 |     0 | 15773 |     - | 228M|   0 | 493 |  11k|  16k|  11k|  16k|  80 |  27 |   0 | 1.000000e+02 |      --      |    Inf 
+ 19.1s|     1 |     0 | 15832 |     - | 228M|   0 | 459 |  11k|  16k|  11k|  16k|  84 |  29 |   0 | 1.000000e+02 |      --      |    Inf 
+ 19.9s|     1 |     0 | 15952 |     - | 236M|   0 | 523 |  11k|  16k|  11k|  16k|  88 |  30 |   0 | 1.000000e+02 |      --      |    Inf 
+ time | node  | left  |LP iter|LP it/n| mem |mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+ 20.9s|     1 |     0 | 16235 |     - | 236M|   0 | 628 |  11k|  16k|  11k|  16k|  92 |  31 |   0 | 1.000000e+02 |      --      |    Inf 
+ 21.5s|     1 |     0 | 16236 |     - | 236M|   0 | 628 |  11k|  16k|  11k|  16k|  93 |  32 |   0 | 1.000000e+02 |      --      |    Inf 
+ 27.0s|     1 |     2 | 16236 |     - | 236M|   0 | 628 |  11k|  16k|  11k|  16k|  93 |  34 |  19 | 1.000000e+02 |      --      |    Inf 
+ 83.0s|   100 |   101 | 62710 | 469.4 | 242M|  27 |  75 |  11k|  16k|  11k|  16k|  93 |  81 | 442 | 1.000000e+02 |      --      |    Inf 
+ 91.8s|   200 |   201 | 98215 | 412.0 | 243M|  33 |  96 |  11k|  17k|  11k|  16k|  93 | 189 | 458 | 1.000000e+02 |      --      |    Inf 
+  103s|   300 |   301 |127358 | 371.6 | 246M|  33 |  43 |  11k|  17k|  11k|  16k|  93 | 339 | 484 | 1.000000e+02 |      --      |    Inf 
+  116s|   400 |   401 |156058 | 350.4 | 247M|  33 |  62 |  11k|  17k|  11k|  16k|  93 | 386 | 533 | 1.000000e+02 |      --      |    Inf 
+  126s|   500 |   499 |177945 | 324.1 | 248M|  41 | 105 |  11k|  17k|  11k|  16k|  93 | 447 | 593 | 1.000000e+02 |      --      |    Inf 
+  133s|   600 |   599 |197125 | 302.0 | 252M|  43 |  38 |  11k|  17k|  11k|  16k|  93 | 541 | 619 | 1.000000e+02 |      --      |    Inf 
+  142s|   700 |   699 |220867 | 292.7 | 253M|  43 | 173 |  11k|  17k|  11k|  16k|  93 | 626 | 653 | 1.000000e+02 |      --      |    Inf 
+  152s|   800 |   797 |248961 | 291.3 | 254M|  43 |  64 |  11k|  17k|  11k|  16k|  93 | 678 | 705 | 1.000000e+02 |      --      |    Inf 
+  159s|   900 |   897 |266718 | 278.6 | 255M|  43 | 173 |  11k|  17k|  11k|  16k|  93 | 777 | 740 | 1.000000e+02 |      --      |    Inf 
+  170s|  1000 |   993 |290851 | 274.9 | 258M|  43 |  38 |  11k|  17k|  11k|  16k|  93 | 839 | 810 | 1.000000e+02 |      --      |    Inf 
+  190s|  1100 |  1091 |325791 | 281.7 | 260M|  47 | 158 |  11k|  17k|  11k|  16k|  93 | 915 | 849 | 1.000000e+02 |      --      |    Inf 
+  204s|  1200 |  1191 |354735 | 282.3 | 260M|  47 | 223 |  11k|  17k|  11k|  16k|  93 | 955 | 892 | 1.000000e+02 |      --      |    Inf 
+ time | node  | left  |LP iter|LP it/n| mem |mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  217s|  1300 |  1289 |382502 | 282.0 | 265M|  47 | 141 |  11k|  17k|  11k|  16k|  93 |1025 | 945 | 1.000000e+02 |      --      |    Inf 
+  228s|  1400 |  1385 |406980 | 279.3 | 266M|  47 | 135 |  11k|  17k|  11k|  16k|  93 |1129 | 999 | 1.000000e+02 |      --      |    Inf 
+  238s|  1500 |  1485 |429043 | 275.4 | 267M|  49 | 134 |  11k|  17k|  11k|  16k|  93 |1171 |1040 | 1.000000e+02 |      --      |    Inf 
+F 242s|  1534 |  1517 |438180 | 275.2 | 269M|  49 |   0 |  11k|  17k|  11k|  16k|  93 |1183 |1065 | 1.000000e+02 | 3.360000e+02 | 236.00%
+
+SCIP Status        : solving was interrupted [solution limit reached]
+Solving Time (sec) : 241.71
+Solving Nodes      : 1534
+Primal Bound       : +3.36000000000000e+02 (1 solutions)
+Dual Bound         : +1.00000000000000e+02
+Gap                : 236.00 %
+[INFO] Suboptimal CGRA Mapping Found
+MapperTimeout: 0
+Mapped: 1
+
+Operation Mapping Result:
+mul0(mul): 0:pe_c3_r2.func.fu
+const1(const): 0:pe_c3_r2.const.const
+load2(load): 0:mem_2.mem_unit.mem
+mul3(mul): 0:pe_c0_r1.func.fu
+const4(const): 0:pe_c0_r1.const.const
+load5(load): 0:mem_1.mem_unit.mem
+mul6(mul): 0:pe_c1_r1.func.fu
+add7(add): 0:pe_c1_r0.func.fu
+output8(output): 0:io_top_1.OE.io
+add9(add): 0:pe_c0_r2.func.fu
+const10(const): 0:pe_c0_r2.const.const
+
+Connection Mapping Result:
+load2_val_output:
+  0:mem_2.mem_unit.data_out
+  0:mem_2.out
+  0:pe_c1_r1.func.in_b
+  0:pe_c1_r1.in1
+  0:pe_c1_r1.mux_b.in1
+  0:pe_c1_r1.mux_b.mux
+  0:pe_c1_r1.mux_b.out
+  0:pe_c2_r1.in2
+  0:pe_c2_r1.mux_bypass.in2
+  0:pe_c2_r1.mux_bypass.mux
+  0:pe_c2_r1.mux_bypass.out
+  0:pe_c2_r1.mux_out.in1
+  0:pe_c2_r1.mux_out.mux
+  0:pe_c2_r1.mux_out.out
+  0:pe_c2_r1.out
+  0:pe_c2_r2.in4
+  0:pe_c2_r2.mux_bypass.in4
+  0:pe_c2_r2.mux_bypass.mux
+  0:pe_c2_r2.mux_bypass.out
+  0:pe_c2_r2.mux_out.in1
+  0:pe_c2_r2.mux_out.mux
+  0:pe_c2_r2.mux_out.out
+  0:pe_c2_r2.out
+
+load5_val_output:
+  0:mem_1.mem_unit.data_out
+  0:mem_1.out
+  0:pe_c1_r1.func.in_a
+  0:pe_c1_r1.in4
+  0:pe_c1_r1.mux_a.in4
+  0:pe_c1_r1.mux_a.mux
+  0:pe_c1_r1.mux_a.out
+
+mul6_val_output:
+  0:pe_c1_r0.func.in_a
+  0:pe_c1_r0.in2
+  0:pe_c1_r0.mux_a.in2
+  0:pe_c1_r0.mux_a.mux
+  0:pe_c1_r0.mux_a.out
+  0:pe_c1_r1.fu_to_rf
+  0:pe_c1_r1.func.m_out
+  0:pe_c1_r1.func.out
+  0:pe_c1_r1.mux_out.in0
+  0:pe_c1_r1.mux_out.mux
+  0:pe_c1_r1.mux_out.out
+  0:pe_c1_r1.out
+  0:pe_c1_r1.rf_to_muxout
+  0:rf_c1_r1.in0
+  0:rf_c1_r1.out1
+  0:rf_c1_r1.out1_m1
+  0:rf_c1_r1.reg1
+  0:rf_c1_r1.reg1_m0
+
+add7_val_output:
+  0:drf.in1
+  0:drf.in2
+  0:drf.in3
+  0:drf.out3
+  0:drf.out3_m7
+  0:drf.out4
+  0:drf.out4_m0
+  0:drf.out5
+  0:drf.out5_m7
+  0:drf.reg0
+  0:drf.reg0_m2
+  0:drf.reg1
+  0:drf.reg1_m1
+  0:drf.reg3
+  0:drf.reg3_fb
+  0:drf.reg4
+  0:drf.reg4_fb
+  0:drf.reg7
+  0:drf.reg7_m1
+  0:io_top_1.OE.in
+  0:io_top_1.in
+  0:io_top_1.reg_in.in
+  0:io_top_1.reg_in.out
+  0:io_top_1.reg_in.reg
+  0:pe_c0_r0.in4
+  0:pe_c0_r0.mux_bypass.in0
+  0:pe_c0_r0.mux_bypass.mux
+  0:pe_c0_r0.rf_to_muxout
+  0:pe_c0_r1.in0
+  0:pe_c0_r1.in3
+  0:pe_c0_r2.in0
+  0:pe_c0_r2.in1
+  0:pe_c0_r2.mux_bypass.out
+  0:pe_c0_r3.in3
+  0:pe_c1_r0.fu_to_rf
+  0:pe_c1_r0.func.in_b
+  0:pe_c1_r0.func.m_out
+  0:pe_c1_r0.func.out
+  0:pe_c1_r0.in1
+  0:pe_c1_r0.mux_b.in1
+  0:pe_c1_r0.mux_b.mux
+  0:pe_c1_r0.mux_b.out
+  0:pe_c1_r0.mux_out.in0
+  0:pe_c1_r0.mux_out.mux
+  0:pe_c1_r0.mux_out.out
+  0:pe_c1_r0.out
+  0:pe_c1_r0.rf_to_muxout
+  0:pe_c1_r2.func.in_a
+  0:pe_c1_r2.rf_to_muxa
+  0:pe_c1_r3.mux_a.out
+  0:pe_c1_r3.mux_bypass.out
+  0:pe_c2_r0.fu_to_rf
+  0:pe_c2_r0.func.in_a
+  0:pe_c2_r0.func.m_in_a
+  0:pe_c2_r0.func.out
+  0:pe_c2_r0.in4
+  0:pe_c2_r0.mux_a.in7
+  0:pe_c2_r0.mux_a.mux
+  0:pe_c2_r0.mux_a.out
+  0:pe_c2_r0.mux_b.out
+  0:pe_c2_r0.mux_out.in0
+  0:pe_c2_r0.mux_out.mux
+  0:pe_c2_r0.mux_out.out
+  0:pe_c2_r0.out
+  0:pe_c2_r0.rf_to_muxa
+  0:pe_c2_r0.rf_to_muxout
+  0:pe_c2_r1.fu_to_rf
+  0:pe_c2_r1.func.m_in_a
+  0:pe_c2_r1.func.out
+  0:pe_c2_r1.rf_to_muxa
+  0:pe_c2_r2.fu_to_rf
+  0:pe_c2_r2.mux_a.out
+  0:pe_c2_r3.fu_to_rf
+  0:pe_c3_r0.func.in_a
+  0:pe_c3_r0.mux_bypass.in5
+  0:pe_c3_r0.mux_bypass.mux
+  0:pe_c3_r1.mux_a.out
+  0:pe_c3_r1.mux_b.out
+  0:pe_c3_r2.in2
+  0:pe_c3_r2.rf_to_muxa
+  0:pe_c3_r3.mux_bypass.out
+  0:pe_c3_r3.mux_out.out
+  0:rf_c1_r1.reg0
+  0:rf_c1_r1.reg0_fb
+  0:rf_c2_r2.out0
+  0:rf_c2_r2.out0_m0
+  0:rf_c2_r2.reg1
+  0:rf_c2_r2.reg1_fb
+  0:rf_c2_r3.in0
+  0:rf_c2_r3.out0
+  0:rf_c2_r3.out0_m0
+  0:rf_c3_r3.reg0
+  0:rf_c3_r3.reg0_fb
+
+add9_val_output:
+  0:drf.reg2
+  0:drf.reg2_fb
+  0:drf.reg5
+  0:drf.reg5_fb
+  0:drf.reg6
+  0:drf.reg6_fb
+  0:pe_c0_r0.in1
+  0:pe_c0_r0.mux_b.in4
+  0:pe_c0_r0.mux_b.mux
+  0:pe_c0_r0.mux_b.out
+  0:pe_c0_r0.mux_out.out
+  0:pe_c0_r0.out
+  0:pe_c0_r1.func.in_b
+  0:pe_c0_r1.in1
+  0:pe_c0_r1.in2
+  0:pe_c0_r1.mux_b.in2
+  0:pe_c0_r1.mux_b.mux
+  0:pe_c0_r1.mux_b.out
+  0:pe_c0_r1.mux_bypass.out
+  0:pe_c0_r1.rf_to_muxa
+  0:pe_c0_r2.fu_to_rf
+  0:pe_c0_r2.func.in_a
+  0:pe_c0_r2.func.m_out
+  0:pe_c0_r2.func.out
+  0:pe_c0_r2.in2
+  0:pe_c0_r2.in3
+  0:pe_c0_r2.mux_a.in6
+  0:pe_c0_r2.mux_a.mux
+  0:pe_c0_r2.mux_a.out
+  0:pe_c0_r2.mux_out.in0
+  0:pe_c0_r2.mux_out.mux
+  0:pe_c0_r2.mux_out.out
+  0:pe_c0_r2.out
+  0:pe_c0_r2.rf_to_muxa
+  0:pe_c0_r2.rf_to_muxout
+  0:pe_c0_r3.fu_to_rf
+  0:pe_c0_r3.func.in_a
+  0:pe_c0_r3.func.m_in_a
+  0:pe_c0_r3.func.out
+  0:pe_c0_r3.in1
+  0:pe_c0_r3.mux_a.in6
+  0:pe_c0_r3.mux_a.mux
+  0:pe_c0_r3.mux_a.out
+  0:pe_c0_r3.mux_b.in1
+  0:pe_c0_r3.mux_b.mux
+  0:pe_c0_r3.mux_bypass.in1
+  0:pe_c0_r3.mux_bypass.mux
+  0:pe_c0_r3.mux_bypass.out
+  0:pe_c0_r3.mux_out.in1
+  0:pe_c0_r3.mux_out.mux
+  0:pe_c0_r3.mux_out.out
+  0:pe_c0_r3.out
+  0:pe_c0_r3.rf_to_muxa
+  0:pe_c0_r3.rf_to_muxout
+  0:pe_c1_r0.in4
+  0:pe_c1_r2.fu_to_rf
+  0:pe_c1_r2.func.in_b
+  0:pe_c1_r2.func.m_in_b
+  0:pe_c1_r2.func.out
+  0:pe_c1_r2.in0
+  0:pe_c1_r2.in3
+  0:pe_c1_r2.mux_b.in6
+  0:pe_c1_r2.mux_b.mux
+  0:pe_c1_r2.mux_b.out
+  0:pe_c1_r2.mux_out.in0
+  0:pe_c1_r2.mux_out.mux
+  0:pe_c1_r2.mux_out.out
+  0:pe_c1_r2.out
+  0:pe_c1_r2.rf_to_muxout
+  0:pe_c1_r3.fu_to_rf
+  0:pe_c1_r3.func.in_a
+  0:pe_c1_r3.func.in_b
+  0:pe_c1_r3.func.m_in_b
+  0:pe_c1_r3.func.out
+  0:pe_c1_r3.in3
+  0:pe_c1_r3.mux_b.in3
+  0:pe_c1_r3.mux_b.mux
+  0:pe_c1_r3.mux_b.out
+  0:pe_c1_r3.mux_out.in0
+  0:pe_c1_r3.mux_out.mux
+  0:pe_c1_r3.mux_out.out
+  0:pe_c1_r3.out
+  0:pe_c1_r3.rf_to_muxout
+  0:pe_c2_r0.func.in_b
+  0:pe_c2_r0.in1
+  0:pe_c2_r0.in2
+  0:pe_c2_r0.mux_b.in2
+  0:pe_c2_r0.mux_b.mux
+  0:pe_c2_r0.mux_bypass.out
+  0:pe_c2_r1.in1
+  0:pe_c2_r2.in2
+  0:pe_c2_r3.in2
+  0:pe_c2_r3.rf_to_muxa
+  0:pe_c3_r0.rf_to_muxa
+  0:pe_c3_r1.fu_to_rf
+  0:pe_c3_r1.in3
+  0:pe_c3_r1.mux_b.in1
+  0:pe_c3_r1.mux_b.mux
+  0:pe_c3_r2.func.in_b
+  0:pe_c3_r2.in1
+  0:pe_c3_r2.mux_b.in1
+  0:pe_c3_r2.mux_b.mux
+  0:pe_c3_r2.mux_b.out
+  0:pe_c3_r3.fu_to_rf
+  0:pe_c3_r3.in0
+  0:rf_c0_r2.in0
+  0:rf_c0_r2.out0
+  0:rf_c0_r2.out0_m1
+  0:rf_c0_r2.out1
+  0:rf_c0_r2.out1_m1
+  0:rf_c0_r2.reg0
+  0:rf_c0_r2.reg0_fb
+  0:rf_c0_r2.reg1
+  0:rf_c0_r2.reg1_m0
+  0:rf_c0_r3.in0
+  0:rf_c0_r3.out0
+  0:rf_c0_r3.out0_m1
+  0:rf_c0_r3.reg1
+  0:rf_c0_r3.reg1_m0
+  0:rf_c1_r2.in0
+  0:rf_c1_r2.out0
+  0:rf_c1_r2.out0_m0
+  0:rf_c1_r2.out1
+  0:rf_c1_r2.out1_m0
+  0:rf_c1_r2.reg0
+  0:rf_c1_r2.reg0_m0
+  0:rf_c1_r3.in0
+  0:rf_c1_r3.out1
+  0:rf_c1_r3.out1_m1
+  0:rf_c1_r3.reg0
+  0:rf_c1_r3.reg0_fb
+  0:rf_c1_r3.reg1
+  0:rf_c1_r3.reg1_m0
+  0:rf_c2_r2.reg0
+  0:rf_c2_r2.reg0_fb
+  0:rf_c3_r1.reg0
+  0:rf_c3_r1.reg0_fb
+  0:rf_c3_r3.in0
+
+const1_val_output:
+  0:pe_c3_r2.const.out
+  0:pe_c3_r2.func.in_a
+  0:pe_c3_r2.mux_a.in5
+  0:pe_c3_r2.mux_a.mux
+  0:pe_c3_r2.mux_a.out
+
+mul0_val_output:
+  0:mem_2.in3
+  0:mem_2.mem_unit.addr
+  0:mem_2.mux_addr.in3
+  0:mem_2.mux_addr.mux
+  0:mem_2.mux_addr.out
+  0:pe_c3_r2.fu_to_rf
+  0:pe_c3_r2.func.m_out
+  0:pe_c3_r2.func.out
+  0:pe_c3_r2.mux_out.in0
+  0:pe_c3_r2.mux_out.mux
+  0:pe_c3_r2.mux_out.out
+  0:pe_c3_r2.out
+  0:pe_c3_r2.rf_to_muxout
+  0:rf_c3_r2.in0
+  0:rf_c3_r2.out1
+  0:rf_c3_r2.out1_m0
+  0:rf_c3_r2.reg0
+  0:rf_c3_r2.reg0_m0
+
+const4_val_output:
+  0:pe_c0_r1.const.out
+  0:pe_c0_r1.func.in_a
+  0:pe_c0_r1.mux_a.in5
+  0:pe_c0_r1.mux_a.mux
+  0:pe_c0_r1.mux_a.out
+  0:rf_c2_r3.reg1
+  0:rf_c2_r3.reg1_fb
+
+mul3_val_output:
+  0:mem_1.in0
+  0:mem_1.mem_unit.addr
+  0:mem_1.mux_addr.in0
+  0:mem_1.mux_addr.mux
+  0:mem_1.mux_addr.out
+  0:pe_c0_r1.fu_to_rf
+  0:pe_c0_r1.func.m_out
+  0:pe_c0_r1.func.out
+  0:pe_c0_r1.mux_out.in0
+  0:pe_c0_r1.mux_out.mux
+  0:pe_c0_r1.mux_out.out
+  0:pe_c0_r1.out
+  0:pe_c0_r1.rf_to_muxout
+  0:rf_c0_r1.in0
+  0:rf_c0_r1.out1
+  0:rf_c0_r1.out1_m0
+  0:rf_c0_r1.reg0
+  0:rf_c0_r1.reg0_m0
+
+const10_val_output:
+  0:pe_c0_r2.const.out
+  0:pe_c0_r2.func.in_b
+  0:pe_c0_r2.mux_b.in5
+  0:pe_c0_r2.mux_b.mux
+  0:pe_c0_r2.mux_b.out
+
+make: Leaving directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/mac'

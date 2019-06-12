@@ -1,0 +1,338 @@
+make: Entering directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/nomem1'
+'cgrame'  --cpp 2 --arch-opts 'cols=4 rows=4' -g graph_loop.dot
+
+CGRA - Modelling and Exploration Version 1.0 (http://cgra-me.ece.utoronto.ca/)
+Copyright (c) 2015-2018 University of Toronto. All Rights Reserved.
+For research and academic purposes only. Commercial use is prohibited.
+Please email questions to: Xander Chin(xan@ece.utoronto.ca)
+Compiled: Feb 21 2019 11:49:18
+
+[INFO] Creating Architecture #2 from C++...
+[INFO] Architecture Name: Adres CGRA Architecture
+[INFO] Overwritting C++ Architecture Parameter: cols to 4 (Default: 4)
+[INFO] Overwritting C++ Architecture Parameter: rows to 4 (Default: 4)
+[INFO] Creating "Adres CGRA Architecture" Architecture from C++...
+[INFO] Parsing DFG...
+[INFO] Creating Mapper...
+[INFO] Mapping DFG Onto CGRA Architecture...
+presolving:
+(round 1, fast)       2536 del vars, 2344 del conss, 0 add conss, 324 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 10354 clqs
+(round 2, fast)       2924 del vars, 3408 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 10218 clqs
+(round 3, fast)       3380 del vars, 4088 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 9698 clqs
+(round 4, fast)       3636 del vars, 4504 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 9282 clqs
+(round 5, exhaustive) 3636 del vars, 4552 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 9282 clqs
+(round 6, exhaustive) 3636 del vars, 4552 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 10414 upgd conss, 0 impls, 9282 clqs
+(round 7, fast)       3716 del vars, 4608 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 10414 upgd conss, 0 impls, 9226 clqs
+   (1.3s) probing: 1000/7032 (14.2%) - 0 fixings, 0 aggregations, 87999 implications, 0 bound changes
+   (1.3s) probing: 1001/7032 (14.2%) - 0 fixings, 0 aggregations, 88090 implications, 0 bound changes
+   (1.3s) probing aborted: 1000/1000 successive useless probings
+presolving (8 rounds: 8 fast, 3 medium, 3 exhaustive):
+ 3720 deleted vars, 4612 deleted constraints, 0 added constraints, 436 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 97312 cliques
+presolved problem has 7032 variables (7032 bin, 0 int, 0 impl, 0 cont) and 10358 constraints
+   9222 constraints of type <setppc>
+   1136 constraints of type <logicor>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 1.24
+
+ time | node  | left  |LP iter|LP it/n| mem |mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  1.4s|     1 |     0 |  1837 |     - |  78M|   0 | 166 |7032 |  10k|7032 |  10k|   0 |   6 |   0 | 3.600000e+01 |      --      |    Inf 
+  2.8s|     1 |     0 |  9066 |     - |  82M|   0 | 140 |7032 |  10k|7032 |  10k|   6 |   6 |   0 | 3.900000e+01 |      --      |    Inf 
+  3.1s|     1 |     0 |  9146 |     - |  83M|   0 | 202 |7032 |  10k|7032 |  10k|  12 |   7 |   0 | 3.900000e+01 |      --      |    Inf 
+  3.5s|     1 |     0 |  9193 |     - |  87M|   0 | 243 |7032 |  10k|7032 |  10k|  19 |   8 |   0 | 3.900000e+01 |      --      |    Inf 
+  3.9s|     1 |     0 |  9249 |     - |  98M|   0 | 220 |7032 |  10k|7032 |  10k|  24 |  10 |   0 | 3.900000e+01 |      --      |    Inf 
+  4.3s|     1 |     0 |  9291 |     - | 108M|   0 | 246 |7032 |  10k|7032 |  10k|  28 |  11 |   0 | 3.900000e+01 |      --      |    Inf 
+  4.7s|     1 |     0 |  9298 |     - | 113M|   0 | 222 |7032 |  10k|7032 |  10k|  30 |  12 |   0 | 3.900000e+01 |      --      |    Inf 
+  6.8s|     1 |     2 |  9298 |     - | 113M|   0 | 222 |7032 |  10k|7032 |  10k|  30 |  13 |  55 | 3.900000e+01 |      --      |    Inf 
+e30.4s|    58 |    53 | 21810 | 219.5 | 114M|  19 |   - |7032 |  10k|7032 |  10k|  30 |  73 | 808 | 3.900000e+01 | 9.100000e+01 | 133.33%
+
+SCIP Status        : solving was interrupted [solution limit reached]
+Solving Time (sec) : 30.42
+Solving Nodes      : 58
+Primal Bound       : +9.10000000000000e+01 (1 solutions)
+Dual Bound         : +3.90000000000000e+01
+Gap                : 133.33 %
+[INFO] Suboptimal CGRA Mapping Found
+MapperTimeout: 0
+Mapped: 1
+
+Operation Mapping Result:
+mul0(mul): 0:pe_c2_r0.func.fu
+const1(const): 0:pe_c2_r0.const.const
+add2(add): 0:pe_c0_r0.func.fu
+output3(output): 0:io_top_0.OE.io
+add4(add): 0:pe_c2_r3.func.fu
+const5(const): 0:pe_c2_r3.const.const
+
+Connection Mapping Result:
+mul0_val_output:
+  0:drf.in2
+  0:drf.out0
+  0:drf.out0_m7
+  0:drf.reg7
+  0:drf.reg7_m2
+  0:pe_c0_r0.func.in_a
+  0:pe_c0_r0.mux_a.in7
+  0:pe_c0_r0.mux_a.mux
+  0:pe_c0_r0.mux_a.out
+  0:pe_c0_r0.rf_to_muxa
+  0:pe_c2_r0.fu_to_rf
+  0:pe_c2_r0.func.m_out
+  0:pe_c2_r0.func.out
+
+add2_val_output:
+  0:drf.in0
+  0:drf.out1
+  0:drf.out1_m2
+  0:drf.reg2
+  0:drf.reg2_m0
+  0:io_top_0.OE.in
+  0:io_top_0.in
+  0:io_top_0.reg_in.in
+  0:io_top_0.reg_in.out
+  0:io_top_0.reg_in.reg
+  0:pe_c0_r0.fu_to_rf
+  0:pe_c0_r0.func.in_b
+  0:pe_c0_r0.func.m_out
+  0:pe_c0_r0.func.out
+  0:pe_c0_r0.mux_b.in7
+  0:pe_c0_r0.mux_b.mux
+  0:pe_c0_r0.mux_b.out
+  0:pe_c0_r0.mux_out.in0
+  0:pe_c0_r0.mux_out.mux
+  0:pe_c0_r0.mux_out.out
+  0:pe_c0_r0.out
+  0:pe_c0_r0.rf_to_muxout
+  0:pe_c3_r3.func.m_out
+  0:pe_c3_r3.func.out
+
+add4_val_output:
+  0:drf.in1
+  0:drf.out2
+  0:drf.out2_m0
+  0:drf.reg0
+  0:drf.reg0_m1
+  0:drf.reg3
+  0:drf.reg3_fb
+  0:pe_c1_r0.fu_to_rf
+  0:pe_c1_r0.func.in_a
+  0:pe_c1_r0.func.m_in_a
+  0:pe_c1_r0.func.out
+  0:pe_c1_r0.mux_a.in7
+  0:pe_c1_r0.mux_a.mux
+  0:pe_c1_r0.mux_a.out
+  0:pe_c1_r0.rf_to_muxa
+  0:pe_c2_r0.func.in_a
+  0:pe_c2_r0.in4
+  0:pe_c2_r0.mux_a.in4
+  0:pe_c2_r0.mux_a.mux
+  0:pe_c2_r0.mux_a.out
+  0:pe_c2_r3.fu_to_rf
+  0:pe_c2_r3.func.in_a
+  0:pe_c2_r3.func.m_out
+  0:pe_c2_r3.func.out
+  0:pe_c2_r3.mux_a.in6
+  0:pe_c2_r3.mux_a.mux
+  0:pe_c2_r3.mux_a.out
+  0:pe_c2_r3.mux_out.in0
+  0:pe_c2_r3.mux_out.mux
+  0:pe_c2_r3.mux_out.out
+  0:pe_c2_r3.out
+  0:pe_c2_r3.rf_to_muxa
+  0:pe_c2_r3.rf_to_muxout
+  0:rf_c1_r3.reg0
+  0:rf_c1_r3.reg0_fb
+  0:rf_c2_r3.in0
+  0:rf_c2_r3.out0
+  0:rf_c2_r3.out0_m0
+  0:rf_c2_r3.out1
+  0:rf_c2_r3.out1_m1
+  0:rf_c2_r3.reg0
+  0:rf_c2_r3.reg0_m0
+  0:rf_c2_r3.reg1
+  0:rf_c2_r3.reg1_m0
+
+const1_val_output:
+  0:pe_c2_r0.const.out
+  0:pe_c2_r0.func.in_b
+  0:pe_c2_r0.mux_b.in6
+  0:pe_c2_r0.mux_b.mux
+  0:pe_c2_r0.mux_b.out
+
+const5_val_output:
+  0:pe_c2_r3.const.out
+  0:pe_c2_r3.func.in_b
+  0:pe_c2_r3.mux_b.in5
+  0:pe_c2_r3.mux_b.mux
+  0:pe_c2_r3.mux_b.out
+
+make: Leaving directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/nomem1'
+make: Entering directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/nomem1'
+'cgrame'  --cpp 2 --arch-opts 'cols=4 rows=4' -g graph_loop.dot
+
+CGRA - Modelling and Exploration Version 1.0 (http://cgra-me.ece.utoronto.ca/)
+Copyright (c) 2015-2018 University of Toronto. All Rights Reserved.
+For research and academic purposes only. Commercial use is prohibited.
+Please email questions to: Xander Chin(xan@ece.utoronto.ca)
+Compiled: May  7 2019 15:53:57
+
+[INFO] Creating Architecture #2 from C++...
+[INFO] Architecture Name: Adres CGRA Architecture
+[INFO] Overwritting C++ Architecture Parameter: cols to 4 (Default: 4)
+[INFO] Overwritting C++ Architecture Parameter: rows to 4 (Default: 4)
+[INFO] Creating "Adres CGRA Architecture" Architecture from C++...
+[INFO] Parsing DFG...
+[INFO] Creating Mapper...
+[INFO] Mapping DFG Onto CGRA Architecture...
+presolving:
+(round 1, fast)       2536 del vars, 2344 del conss, 0 add conss, 324 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 10354 clqs
+(round 2, fast)       2924 del vars, 3408 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 10218 clqs
+(round 3, fast)       3380 del vars, 4088 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 9698 clqs
+(round 4, fast)       3636 del vars, 4504 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 9282 clqs
+(round 5, exhaustive) 3636 del vars, 4552 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 9282 clqs
+(round 6, exhaustive) 3636 del vars, 4552 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 10414 upgd conss, 0 impls, 9282 clqs
+(round 7, fast)       3716 del vars, 4608 del conss, 0 add conss, 436 chg bounds, 0 chg sides, 0 chg coeffs, 10414 upgd conss, 0 impls, 9226 clqs
+   (1.4s) probing: 1000/7032 (14.2%) - 0 fixings, 0 aggregations, 87999 implications, 0 bound changes
+   (1.4s) probing: 1001/7032 (14.2%) - 0 fixings, 0 aggregations, 88090 implications, 0 bound changes
+   (1.4s) probing aborted: 1000/1000 successive useless probings
+presolving (8 rounds: 8 fast, 3 medium, 3 exhaustive):
+ 3720 deleted vars, 4612 deleted constraints, 0 added constraints, 436 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 0 implications, 97312 cliques
+presolved problem has 7032 variables (7032 bin, 0 int, 0 impl, 0 cont) and 10358 constraints
+   9222 constraints of type <setppc>
+   1136 constraints of type <logicor>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 1.35
+
+ time | node  | left  |LP iter|LP it/n| mem |mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+  1.5s|     1 |     0 |  1837 |     - |  78M|   0 | 166 |7032 |  10k|7032 |  10k|   0 |   6 |   0 | 3.600000e+01 |      --      |    Inf 
+  2.9s|     1 |     0 |  9066 |     - |  82M|   0 | 140 |7032 |  10k|7032 |  10k|   6 |   6 |   0 | 3.900000e+01 |      --      |    Inf 
+  3.3s|     1 |     0 |  9146 |     - |  83M|   0 | 202 |7032 |  10k|7032 |  10k|  12 |   7 |   0 | 3.900000e+01 |      --      |    Inf 
+  3.7s|     1 |     0 |  9193 |     - |  87M|   0 | 243 |7032 |  10k|7032 |  10k|  19 |   8 |   0 | 3.900000e+01 |      --      |    Inf 
+  4.1s|     1 |     0 |  9249 |     - |  98M|   0 | 220 |7032 |  10k|7032 |  10k|  24 |  10 |   0 | 3.900000e+01 |      --      |    Inf 
+  4.5s|     1 |     0 |  9291 |     - | 108M|   0 | 246 |7032 |  10k|7032 |  10k|  28 |  11 |   0 | 3.900000e+01 |      --      |    Inf 
+  5.0s|     1 |     0 |  9298 |     - | 113M|   0 | 222 |7032 |  10k|7032 |  10k|  30 |  12 |   0 | 3.900000e+01 |      --      |    Inf 
+  7.2s|     1 |     2 |  9298 |     - | 113M|   0 | 222 |7032 |  10k|7032 |  10k|  30 |  13 |  55 | 3.900000e+01 |      --      |    Inf 
+e31.6s|    58 |    53 | 21810 | 219.5 | 114M|  19 |   - |7032 |  10k|7032 |  10k|  30 |  73 | 808 | 3.900000e+01 | 9.100000e+01 | 133.33%
+
+SCIP Status        : solving was interrupted [solution limit reached]
+Solving Time (sec) : 31.59
+Solving Nodes      : 58
+Primal Bound       : +9.10000000000000e+01 (1 solutions)
+Dual Bound         : +3.90000000000000e+01
+Gap                : 133.33 %
+[INFO] Suboptimal CGRA Mapping Found
+MapperTimeout: 0
+Mapped: 1
+
+Operation Mapping Result:
+mul0(mul): 0:pe_c2_r0.func.fu
+const1(const): 0:pe_c2_r0.const.const
+add2(add): 0:pe_c0_r0.func.fu
+output3(output): 0:io_top_0.OE.io
+add4(add): 0:pe_c2_r3.func.fu
+const5(const): 0:pe_c2_r3.const.const
+
+Connection Mapping Result:
+mul0_val_output:
+  0:drf.in2
+  0:drf.out0
+  0:drf.out0_m7
+  0:drf.reg7
+  0:drf.reg7_m2
+  0:pe_c0_r0.func.in_a
+  0:pe_c0_r0.mux_a.in7
+  0:pe_c0_r0.mux_a.mux
+  0:pe_c0_r0.mux_a.out
+  0:pe_c0_r0.rf_to_muxa
+  0:pe_c2_r0.fu_to_rf
+  0:pe_c2_r0.func.m_out
+  0:pe_c2_r0.func.out
+
+add2_val_output:
+  0:drf.in0
+  0:drf.out1
+  0:drf.out1_m2
+  0:drf.reg2
+  0:drf.reg2_m0
+  0:io_top_0.OE.in
+  0:io_top_0.in
+  0:io_top_0.reg_in.in
+  0:io_top_0.reg_in.out
+  0:io_top_0.reg_in.reg
+  0:pe_c0_r0.fu_to_rf
+  0:pe_c0_r0.func.in_b
+  0:pe_c0_r0.func.m_out
+  0:pe_c0_r0.func.out
+  0:pe_c0_r0.mux_b.in7
+  0:pe_c0_r0.mux_b.mux
+  0:pe_c0_r0.mux_b.out
+  0:pe_c0_r0.mux_out.in0
+  0:pe_c0_r0.mux_out.mux
+  0:pe_c0_r0.mux_out.out
+  0:pe_c0_r0.out
+  0:pe_c0_r0.rf_to_muxout
+  0:pe_c3_r3.func.m_out
+  0:pe_c3_r3.func.out
+
+add4_val_output:
+  0:drf.in1
+  0:drf.out2
+  0:drf.out2_m0
+  0:drf.reg0
+  0:drf.reg0_m1
+  0:drf.reg3
+  0:drf.reg3_fb
+  0:pe_c1_r0.fu_to_rf
+  0:pe_c1_r0.func.in_a
+  0:pe_c1_r0.func.m_in_a
+  0:pe_c1_r0.func.out
+  0:pe_c1_r0.mux_a.in7
+  0:pe_c1_r0.mux_a.mux
+  0:pe_c1_r0.mux_a.out
+  0:pe_c1_r0.rf_to_muxa
+  0:pe_c2_r0.func.in_a
+  0:pe_c2_r0.in4
+  0:pe_c2_r0.mux_a.in4
+  0:pe_c2_r0.mux_a.mux
+  0:pe_c2_r0.mux_a.out
+  0:pe_c2_r3.fu_to_rf
+  0:pe_c2_r3.func.in_a
+  0:pe_c2_r3.func.m_out
+  0:pe_c2_r3.func.out
+  0:pe_c2_r3.mux_a.in6
+  0:pe_c2_r3.mux_a.mux
+  0:pe_c2_r3.mux_a.out
+  0:pe_c2_r3.mux_out.in0
+  0:pe_c2_r3.mux_out.mux
+  0:pe_c2_r3.mux_out.out
+  0:pe_c2_r3.out
+  0:pe_c2_r3.rf_to_muxa
+  0:pe_c2_r3.rf_to_muxout
+  0:rf_c1_r3.reg0
+  0:rf_c1_r3.reg0_fb
+  0:rf_c2_r3.in0
+  0:rf_c2_r3.out0
+  0:rf_c2_r3.out0_m0
+  0:rf_c2_r3.out1
+  0:rf_c2_r3.out1_m1
+  0:rf_c2_r3.reg0
+  0:rf_c2_r3.reg0_m0
+  0:rf_c2_r3.reg1
+  0:rf_c2_r3.reg1_m0
+
+const1_val_output:
+  0:pe_c2_r0.const.out
+  0:pe_c2_r0.func.in_b
+  0:pe_c2_r0.mux_b.in6
+  0:pe_c2_r0.mux_b.mux
+  0:pe_c2_r0.mux_b.out
+
+const5_val_output:
+  0:pe_c2_r3.const.out
+  0:pe_c2_r3.func.in_b
+  0:pe_c2_r3.mux_b.in5
+  0:pe_c2_r3.mux_b.mux
+  0:pe_c2_r3.mux_b.out
+
+make: Leaving directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/nomem1'

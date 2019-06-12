@@ -1,0 +1,9 @@
+make: Entering directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/accumulate'
+'../../../build/script/LoopParser.py' 'accumulate.c' 'accumulate.tagged.c' 'accumulate.tag'
+clang -emit-llvm -c 'accumulate.tagged.c' -o 'accumulate.bc' -O3 -fno-vectorize -fno-slp-vectorize -fno-unroll-loops
+opt 'accumulate.bc' -o '/dev/null' -load '../../../build/lib/libDFG.so' --dfg-out -in-tag-pairs 'accumulate.tag' -loop-tags 'loop'
+rm accumulate.tagged.c
+make: Leaving directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/accumulate'
+make: Entering directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/accumulate'
+make: Nothing to be done for 'prepare_run'.
+make: Leaving directory '/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/benchmarks/microbench/accumulate'

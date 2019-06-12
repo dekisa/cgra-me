@@ -1,0 +1,3 @@
+'presolve time' : ['3.49', '3.69']
+'mapper timeout' : ['0', '0']
+'solver' : []
