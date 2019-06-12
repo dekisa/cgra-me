@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -fno-rtti -O3 -DNDEBUG  -shared  -o ../../lib/libDFG.so CMakeFiles/DFG.dir/DFGGeneration.cpp.o ../../lib/libcgra-me.so -Wl,-rpath,/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/lib 

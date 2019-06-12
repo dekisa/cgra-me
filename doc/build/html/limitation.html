@@ -1,0 +1,138 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Limitation &#8212; CGRA-ME 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="User Guide" href="userguide.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="limitation">
+<span id="limitation-label"></span><h1>Limitation<a class="headerlink" href="#limitation" title="Permalink to this headline">¶</a></h1>
+<p>There are some limitation to the software, this might vary between different versions.</p>
+<div class="section" id="dfg-generation-limitation">
+<span id="dfg-generation-limitation-label"></span><h2>DFG Generation Limitation<a class="headerlink" href="#dfg-generation-limitation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>If you have nested loops, only the innermost loop will be looked at. So, if you tagged the outer loop, it will not generate DFG for you.</li>
+<li>You can only have one basic block within the loop body, meaning you can not have any branching in your loop body. (If statement, switch statement)</li>
+<li>You must follow the to make all of your functions are properly inlined or not-inlined, otherwise there is undefined behaviour.</li>
+<li>DFG generation has been having issues with structs, this has been noticed and will be fixed.</li>
+</ol>
+</div>
+<div class="section" id="mapper-limitation">
+<h2>Mapper Limitation<a class="headerlink" href="#mapper-limitation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>The mapper currently only generates the datapath portion of the mapping.</li>
+<li>DFGs with cycle (caused by back-edges) that have a length larger than one will not be mapped correctly. (Fixed in upcoming release)</li>
+<li>The mapper will not work correctly if the DFG provided has imbalanced path within. (Fixed in upcoming release)</li>
+<li>There is behaviour differences between the ILP Mapper and the Simulated Annealing Mapper, the result from ILP should be the prefered one.</li>
+<li>The Simulate Annealing Mapper needs a slower schedule for DFGs that have back-edges.</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">CGRA-ME</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userguide.html">User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userguide.html#xml-user-guide">XML User Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userguide.html#c-api-user-guide">C++ API User Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Limitation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dfg-generation-limitation">DFG Generation Limitation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mapper-limitation">Mapper Limitation</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="userguide.html" title="previous chapter">User Guide</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, CGRA-ME.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/limitation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
