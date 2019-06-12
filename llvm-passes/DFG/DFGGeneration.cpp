@@ -197,10 +197,49 @@ namespace
                             auto phi_child_it = std::find((*phi_output_it)->input.begin(), (*phi_output_it)->input.end(), (*opnode_it)->output);
                             if(phi_child_it != (*phi_output_it)->input.end())
                             {
-                                (*phi_output_it)->input.erase(phi_child_it); // Remove the old link from phi's child to phi
-                                (*phi_output_it)->input.push_back(non_special_val); // Set-up new link from phi's child to phi's non-const/input parent
-                                non_special_val->output.push_back(*phi_output_it); // Set-up new link from phi's non-const/input parent to phi's child
-                                non_special_val->output_operand.push_back((*opnode_it)->output->output_operand.at(phi_output_it - (*opnode_it)->output->output.begin())); // Set-up new oprand number from phi's non-const parent to phi's child
+                                //this is the old way before deki_edit
+				//use this for single step cycles if you want to keep them
+				// you just need to check if it's signle step cycle (detect this by comparing non_special_val->input and *phi_output_it )
+				//(*phi_output_it)->input.erase(phi_child_it); // Remove the old link from phi's child to phi
+                                //(*phi_output_it)->input.push_back(non_special_val); // Set-up new link from phi's child to phi's non-const/input parent
+                                //non_special_val->output.push_back(*phi_output_it); // Set-up new link from phi's non-const/input parent to phi's child
+                                //non_special_val->output_operand.push_back((*opnode_it)->output->output_operand.at(phi_output_it - (*opnode_it)->output->output.begin())); // Set-up new oprand number from phi's non-const parent to phi's child
+
+				//deki_edit
+
+				//create new INPUT node to replace PHI and link it to phi child
+				OpGraphOp* in = new OpGraphOp("input", OPGRAPH_OP_INPUT);
+                            	opgraph->op_nodes.push_back(in);
+				opgraph->inputs.push_back(in);
+				
+				OpGraphVal * v_in = new OpGraphVal("");
+				opgraph->val_nodes.push_back(v_in);
+				
+				in->output  = v_in;
+				v_in->input    = in;
+
+				(*phi_output_it)->input.erase(phi_child_it); // Remove the old link from phi's child to phi
+                                (*phi_output_it)->input.push_back(v_in); // Set-up new link from phi's child to NEW INPUT
+
+				v_in->output.push_back(*phi_output_it);
+				v_in->output_operand.push_back((*opnode_it)->output->output_operand.at(phi_output_it - (*opnode_it)->output->output.begin()));
+
+				//create new OUTPUT node to replace PHI and link it to phi parent
+	                        OpGraphOp* out = new OpGraphOp("output", OPGRAPH_OP_OUTPUT);
+		                out->input.push_back(non_special_val);
+		                opgraph->op_nodes.push_back(out);
+		                opgraph->outputs.push_back(out);
+
+		                OpGraphVal * v_out = new OpGraphVal("");
+		                opgraph->val_nodes.push_back(v_out);
+
+		                out->output = v_out;
+		                v_out->input = out;
+
+		                non_special_val->output.push_back(out);
+		                non_special_val->output_operand.push_back(0);
+
+				//deki_edit
                             }
                             else
                                 errs() << "Error: Could not find link to phi node from phi's child!" << "\n";
