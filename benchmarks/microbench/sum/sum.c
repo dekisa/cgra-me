@@ -37,7 +37,8 @@ int main() {
 //        if (i == 2)
 //            sum += N;
 //        else
-           sum += i;
+           sum += N;
+           i+=sum;
     }
     printf("sum = %d\n", sum);
 
