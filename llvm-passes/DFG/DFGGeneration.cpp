@@ -225,19 +225,34 @@ namespace
 				v_in->output_operand.push_back((*opnode_it)->output->output_operand.at(phi_output_it - (*opnode_it)->output->output.begin()));
 
 				//create new OUTPUT node to replace PHI and link it to phi parent
-	                        OpGraphOp* out = new OpGraphOp("output", OPGRAPH_OP_OUTPUT);
-		                out->input.push_back(non_special_val);
-		                opgraph->op_nodes.push_back(out);
-		                opgraph->outputs.push_back(out);
+                               //first: check if phi parent already has an output node
+                               bool parent_has_output_node = false;                            
+                               auto is_output_node_lambda = [&parent_has_output_node](OpGraphOp * item) -> void
+                               {
+                                       // Mark const nodes to erase
+                                       if(item->opcode == OPGRAPH_OP_OUTPUT)
+                                                       parent_has_output_node = true;
+                               };
+                               std::for_each(non_special_val->output.begin(), non_special_val->output.end(), is_output_node_lambda);
 
-		                OpGraphVal * v_out = new OpGraphVal("");
-		                opgraph->val_nodes.push_back(v_out);
+                               if(!parent_has_output_node){
+                                       OpGraphOp* out = new OpGraphOp("output", OPGRAPH_OP_OUTPUT);
+                                       out->input.push_back(non_special_val);
+                                       opgraph->op_nodes.push_back(out);
+                                       opgraph->outputs.push_back(out);
 
-		                out->output = v_out;
-		                v_out->input = out;
+                                       OpGraphVal * v_out = new OpGraphVal("");
+                                       opgraph->val_nodes.push_back(v_out);
 
-		                non_special_val->output.push_back(out);
-		                non_special_val->output_operand.push_back(0);
+                                       out->output = v_out;
+                                       v_out->input = out;
+
+                                       non_special_val->output.push_back(out);
+                                       non_special_val->output_operand.push_back(0);
+                               } else {
+                                       errs() << "Info: No OUTPUT node added, PHI's parent already has an output" << "\n";
+                               }
+
 
 				//deki_edit
                             }

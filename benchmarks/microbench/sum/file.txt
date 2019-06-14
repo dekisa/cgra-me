@@ -1,0 +1,2 @@
+'cgrame' -a -o -c 2 -g graph_loop.dot
+../../rules_mem2reg.mk:48: recipe for target 'run_mapper' failed
