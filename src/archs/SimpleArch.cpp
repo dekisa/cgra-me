@@ -751,3 +751,60 @@ std::unique_ptr<CGRA> UserArchs::createSimpleArchOrth(const std::map<std::string
     return result;
 }
 
+
+std::unique_ptr<CGRA> UserArchs::createDummyArch(const std::map<std::string, std::string> & args)
+{
+    int cols;
+    int rows;
+    int homo;
+
+    std::unique_ptr<CGRA> result(new CGRA());
+
+    result->addPort("ext_io_top0", PORT_BIDIR);
+    result->addSubModule(new IO("io_top0", 32));
+    result->addConnection(
+        "io_top0.bidir",
+        "this.ext_io_top0"
+        ); // to top-level external pin
+    
+    result->addPort("ext_io_top1", PORT_BIDIR);
+    result->addSubModule(new IO("io_top1", 32));
+    result->addConnection(
+        "io_top1.bidir",
+        "this.ext_io_top1"
+        ); // to top-level external pin
+
+    result->addSubModule(new SimpleArchFU("b_c0_r0", 2));
+
+    result->addPort("ext_io_bottom", PORT_BIDIR);
+    result->addSubModule(new IO("io_bottom", 32));
+    result->addConnection(
+        "io_bottom.bidir",
+        "this.ext_io_bottom"
+        ); // to top-level external pin
+
+    std::string io_name = "io_top0";
+    std::string block_name = "b_c0_r0";
+    result->addConnection(io_name + ".out", block_name + ".in0"); // to block
+    //result->addConnection(block_name + ".out", io_name + ".in"); // to io
+    io_name = "io_top1";
+    result->addConnection(io_name + ".out", block_name + ".in1"); // to block
+    //result->addConnection(block_name + ".out", io_name + ".in"); // to io
+    io_name = "io_bottom";
+    //result->addConnection(io_name + ".out", block_name + ".in2"); // to block
+    result->addConnection(block_name + ".out", io_name + ".in"); // to io
+
+    return result;
+    
+    //digraph G {
+    //add0[opcode=add];
+    //input1[opcode=input];
+    //input2[opcode=input];
+    //output3[opcide=input];q
+    //input1->add0[operand=0]; //input->add
+    //input2->add0[operand=1]; //input->add
+    //add0->output3[operand=0]; //add->output
+    //}
+}
+
+

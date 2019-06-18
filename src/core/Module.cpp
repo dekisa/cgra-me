@@ -1142,6 +1142,7 @@ IO::IO(std::string name, unsigned size)
     addConnection("reg_in.out", "OE.in");
     addConnection("this.bidir", "reg_out.in");
     addConnection("OE.out", "this.bidir");
+    //addConnection("OE.out", "reg_out.in");//deki_edit
     addConnection("reg_out.out", "this.out");
 
     // module type
