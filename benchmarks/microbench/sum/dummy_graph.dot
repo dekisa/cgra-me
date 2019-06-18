@@ -1,0 +1,9 @@
+digraph G {
+add0[opcode=add];
+input1[opcode=input];
+input2[opcode=input];
+//output3[opcide=input];q
+input1->add0[operand=0]; //input->add
+input2->add0[operand=1]; //input->add
+//add0->output3[operand=0]; //add->output
+}

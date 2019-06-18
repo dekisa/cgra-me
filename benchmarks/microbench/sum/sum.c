@@ -31,14 +31,13 @@ int main() {
     int i;
     volatile int input;
 
-    for (i = 0; i < N; i++) {
-        //DFGLoop: loop
-        
+    for (i = 0; i < 100; i++) {
+	//DFGLoop:loop
 //        if (i == 2)
-//            sum += N;
+            sum += a[i];
 //        else
-           sum += N;
-           i+=sum;
+//           sum += N;
+//           i+=sum;
     }
     printf("sum = %d\n", sum);
 
