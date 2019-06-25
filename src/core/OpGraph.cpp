@@ -490,8 +490,8 @@ void OpGraph::printDOTwithOps(std::ostream &s)
     {
         assert(*it);
         stringstream node_name;
-        node_name << (*it)->opcode;
-
+        //node_name << (*it)->opcode << (*it)->name;
+	node_name << (*it)->name;
         opnode_map[(*it)] = node_name.str() + std::to_string(counter++);
         s << opnode_map[(*it)] << "[opcode=" << (*it)->opcode << "];\n";
     }

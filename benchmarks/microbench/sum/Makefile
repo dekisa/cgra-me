@@ -1,2 +1,2 @@
-DFG_FLAGS=#-no-phi-removal
-include ../../rules_loops.mk
+DFG_FLAGS=-no-phi-removal -no-leaf-removal
+include ../../rules.mk

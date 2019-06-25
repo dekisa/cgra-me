@@ -86,10 +86,11 @@ namespace
             case Instruction::SDiv      :   return OPGRAPH_OP_DIV;
             case Instruction::UDiv      :   return OPGRAPH_OP_DIV;
             case Instruction::Mul       :   return OPGRAPH_OP_MUL;
-            case Instruction::Load      :   return OPGRAPH_OP_LOAD;
-            case Instruction::Store     :   return OPGRAPH_OP_STORE;
+            case Instruction::Load      :   return OPGRAPH_OP_INPUT;
+            case Instruction::Store     :   return OPGRAPH_OP_OUTPUT;
             case Instruction::GetElementPtr : return OPGRAPH_OP_GEP;
             case Instruction::ICmp      : return OPGRAPH_OP_ICMP;
+            case Instruction::Ret      : return OPGRAPH_OP_OUTPUT;
 
             default: errs() << "could not look up:" << *I << "\n"; abort(); return OPGRAPH_OP_NOP;
         }
@@ -260,13 +261,13 @@ namespace
     }
 
     // Hello - The first implementation, without getAnalysisUsage.
-    struct DFGOut : public LoopPass
+    struct DFGOut : public FunctionPass
     {
         std::vector<OpGraph*> graphs;
         std::map<unsigned int, std::string> tag_pairs;
         std::vector<std::string> loop_tags;
         static char ID; // Pass identification, replacement for typeid
-        DFGOut() : LoopPass(ID)
+        DFGOut() : FunctionPass(ID)
         {
             if(!inputTagPairs.empty())
             {
@@ -291,54 +292,58 @@ namespace
                 errs() << "Info: Tag detected: " << temp.first << " " << temp.second << "\n";
         }
 
-        virtual bool runOnLoop(Loop *L, LPPassManager &LPM)
+	    virtual bool runOnFunction(Function &F) override
         {
             // Loop tag is in ths first basic block of the loop
             int found_tag_num = 0;
-            for(auto it = L->getHeader()->begin(); it != L->getHeader()->end(); ++it)
-            {
-                if(isa<CallInst>(it))
-                {
-                    Function * func = dyn_cast<CallInst>(it)->getCalledFunction();
-                    if((func != NULL) && (func->getName() == "DFGLOOP_TAG")) // The case where an indirect call happens
-                        found_tag_num = cast<ConstantInt>(dyn_cast<CallInst>(it)->getArgOperand(0))->getValue().getZExtValue(); // found_tag_num has the the tag number
-                }
-            }
-            if(!found_tag_num) // If there is no tag associated with this loop
-                return false;
+            //for(auto it = F.begin()->begin(); it != F.begin()->end(); ++it)
+            //{
+            //    if(isa<CallInst>(it))
+            //    {
+            //        Function * func = dyn_cast<CallInst>(it)->getCalledFunction();
+            //        if((func != NULL) && (func->getName() == "DFGLOOP_TAG")){
+			//            // The case where an indirect call happens
+			//            found_tag_num = cast<ConstantInt>(dyn_cast<CallInst>(it)->getArgOperand(0))->getValue().getZExtValue(); // found_tag_num has the the tag number
+			//        }
+            //    }
+            //}
+            
+            //if(!found_tag_num) // If there is no tag associated with this loop
+            //    return false;
 
-            std::string tag_name;
-
-            auto tag_pairs_it = tag_pairs.find(found_tag_num);
-            if(tag_pairs_it == tag_pairs.end())
-            {
-                errs() << "Error: Tag could not be found from the generated script, ignoring this loop." << "\n";
-                return false;
-            }
-            else
-            {
-                auto tag_string_it = std::find(loop_tags.begin(), loop_tags.end(), tag_pairs_it->second);
-                if(tag_string_it == loop_tags.end())
-                {
-                    return false; // Do not process this loop
-                }
+//            std::string tag_name;
+//
+//            auto tag_pairs_it = tag_pairs.find(found_tag_num);
+//            if(tag_pairs_it == tag_pairs.end())
+//            {
+//                errs() << "Error: Tag could not be found from the generated script, ignoring this loop." << "\n";
+//                return false;
+//            }
+//            else
+//            {
+//                auto tag_string_it = std::find(loop_tags.begin(), loop_tags.end(), tag_pairs_it->second);
+//                if(tag_string_it == loop_tags.end())
+//                {
+//                    return false; // Do not process this loop
+//                }
                 // Process the loop otherwise
-                tag_name = *tag_string_it;
-                errs() << "Info: The loop with tag: " << tag_name << " is generating DFG." << "\n";
-            }
+//                tag_name = *tag_string_it;
+//                errs() << "Info: The loop with tag: " << tag_name << " is generating DFG." << "\n";
+//            }
 
-            if(!L->empty()) // if empty there are no sub loops
-                return false;
+            //if(!L->empty()) // if empty there are no sub loops
+            //   return false;
 
-            unsigned int bb_count = L->getBlocks().size();
+            unsigned int bb_count = F.size();
+            
             if(bb_count > 1) // More then one basic block within a loop
             {
-                errs() << "Error: Loop with tag: " << tag_name << " is not supported. This loop is ignored." << "\n";
+                errs() << "Error: Loop with tag: " << /*tag_name <<*/ " is not supported. This loop is ignored." << "\n";
                 return false;
             }
 
             // Print the whole function
-            //L->dump();
+            F.dump();
 
             // create new opgraph for loop
             OpGraph* opgraph = new OpGraph();
@@ -349,10 +354,10 @@ namespace
             // Loop through basic blocks and all instructions to
             // populate the initial vals map with instructions
             // Also, find inputs, and outputs of the inner loop and add appropriate ops
-            for(Loop::block_iterator bb = L->block_begin(), e = L->block_end(); bb != e; ++bb)
+            for(Function::iterator bb = F.begin(), e = F.end(); bb != e; ++bb)
             {
                 // First create output vals for each output instuction and create map from instruction to the correct val node and 'fix' type conversions.
-                for(BasicBlock::iterator i = (*bb)->begin(), e = (*bb)->end(); i != e; ++i)
+                for(BasicBlock::iterator i = bb->begin(), e = bb->end(); i != e; ++i)
                 {
                     auto I = i;
                     if(I->getOpcode() == Instruction::Br || I->getOpcode() == Instruction::Call)
@@ -365,7 +370,7 @@ namespace
                         vals[&*I] = vals[pre];
                         continue;
                     }
-
+                    
                     // create output val node
                     vals[&*I] = new OpGraphVal("");
                     opgraph->val_nodes.push_back(vals[&*I]);
@@ -374,9 +379,9 @@ namespace
 
 
             // Loop through basic blocks and all instructions again
-            for(Loop::block_iterator bb = L->block_begin(), e = L->block_end(); bb != e; ++bb)
+            for(Function::iterator bb = F.begin(), e = F.end(); bb != e; ++bb)
             {
-                for(BasicBlock::iterator i = (*bb)->begin(), e = (*bb)->end(); i != e; ++i)
+                for(BasicBlock::iterator i = (bb)->begin(), e = (bb)->end(); i != e; ++i)
                 {
                     auto I = i;
                     if(I->getOpcode() == Instruction::Br || I->getOpcode() == Instruction::Call)
@@ -390,7 +395,7 @@ namespace
                     }
                 }
 
-                for(BasicBlock::iterator i = (*bb)->begin(), e = (*bb)->end(); i != e; ++i)
+                for(BasicBlock::iterator i = (bb)->begin(), e = (bb)->end(); i != e; ++i)
                 {
                     auto I = i;
                     if(I->getOpcode() == Instruction::Br || I->getOpcode() == Instruction::Call)
@@ -529,7 +534,13 @@ namespace
                             // This converts all constants
                             if(Constant* C = dyn_cast<Constant>(I->getOperand(r)))
                             {
-                                OpGraphOp* const_op = new OpGraphOp("const", OPGRAPH_OP_CONST);
+                                std::string val = "";
+                                
+                                if(ConstantInt* Cint = dyn_cast<ConstantInt>(C))
+                                    val = std::to_string(Cint->getSExtValue());
+                                    
+                                OpGraphOp* const_op = new OpGraphOp("const" + val + "_", OPGRAPH_OP_CONST);
+
                                 opgraph->op_nodes.push_back(const_op);
 
                                 OpGraphVal * v = new OpGraphVal("");
@@ -545,7 +556,7 @@ namespace
                             // When the parent is function argument it is changed to a input node?
                             else if(Argument* A = dyn_cast<Argument>(I->getOperand(r)))
                             {
-                                OpGraphOp* in = new OpGraphOp("input", OPGRAPH_OP_INPUT);
+                                OpGraphOp* in = new OpGraphOp("input" + std::to_string(A->getArgNo()) + "_", OPGRAPH_OP_INPUT);
                                 opgraph->op_nodes.push_back(in);
                                 opgraph->inputs.push_back(in);
 
@@ -563,15 +574,15 @@ namespace
                         }
 
                         bool isInput = true;
-                        for (const BasicBlock * BB : L->getBlocks())
+                        for(auto& BB : F)
                         {
-                            if(pre->getParent() == BB)
+                            if(pre->getParent() == &BB)
                             {
                                 isInput = false;
                                 break;
                             }
                         }
-
+			            
                         if(!isInput)
                         {
                             auto itv = vals.find(pre);
@@ -606,22 +617,22 @@ namespace
 
                     // Figure out if this is an output of the loop
                     bool isNotOutput = true;
-                    for (const Use &U : I->uses())
-                    {
-                        //                  errs() << I->getParent()->getName() << ":::: " << *I << "\n";
-                        const Instruction *I = cast<Instruction>(U.getUser());
-                        bool use_is_in_loop = false;
-                        for (const BasicBlock * BB : L->getBlocks())
-                        {
-                            if(I->getParent() == BB)
-                            {
-                                use_is_in_loop = true;
-                                break;
-                            }
-                        }
-                        isNotOutput = use_is_in_loop && isNotOutput;
-                    }
-
+                    //for (const Use &U : I->uses())
+                    //{
+                    //    //                  errs() << I->getParent()->getName() << ":::: " << *I << "\n";
+                    //    const Instruction *I = cast<Instruction>(U.getUser());
+                    //    bool use_is_in_loop = false;
+                    //    for (const BasicBlock * BB : L->getBlocks())
+                    //    {
+                    //        if(I->getParent() == BB)
+                    //        {
+                    //            use_is_in_loop = true;
+                    //            break;
+                    //        }
+                    //    }
+                    //    isNotOutput = use_is_in_loop && isNotOutput;
+                    //}
+			
                     // if it is an output, create output node
                     if(!isNotOutput)
                     {
@@ -649,8 +660,8 @@ namespace
                 removeUnnecessaryLeafNodes(opgraph);
 
             opgraph->debug_check();
-
-            std::ofstream f("graph_" + tag_name + ".dot", std::ios::out);
+	    std::ofstream f("graph.dot", std::ios::out);
+            //std::ofstream f("graph_" + tag_name + ".dot", std::ios::out);
             opgraph->printDOTwithOps(f);
 
             return false;
