@@ -43,6 +43,13 @@ class SimpleArchFU : public Module
         virtual ~SimpleArchFU() {}
 };
 
+class NESWArchFU : public Module
+{
+    public:
+        NESWArchFU(std::string, bool full_fu = true);
+        virtual ~NESWArchFU() {}
+};
+
 class AdresPE : public Module
 {
     public:
