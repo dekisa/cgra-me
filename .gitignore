@@ -21,7 +21,7 @@ benchmarks/userbench/*
 !benchmarks/userbench/README
 
 #Excluding build path
-#build/
+build/
 
 #Exclude exp-run
 benchmarks/exp-run/
