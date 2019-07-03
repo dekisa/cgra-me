@@ -92,6 +92,10 @@ CGRA/ModuleComposites.h
 CGRA/user-inc/UserModules.h
 -
 
+/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/modules/NESWArchFU.cpp
+CGRA/user-inc/UserModules.h
+-
+
 /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/modules/SimpleArchFU.cpp
 CGRA/user-inc/UserModules.h
 -

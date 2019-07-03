@@ -13,6 +13,18 @@ src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o: ../inc/CGRA/user-inc/UserArchs.h
 src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o: ../inc/CGRA/user-inc/UserModules.h
 src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o: ../src/archs/AdresArch.cpp
 
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../inc/CGRA/BitSetting.h
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../inc/CGRA/CGRA.h
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../inc/CGRA/Exception.h
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../inc/CGRA/MRRG.h
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../inc/CGRA/Mapping.h
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../inc/CGRA/Module.h
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../inc/CGRA/ModuleComposites.h
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../inc/CGRA/OpGraph.h
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../inc/CGRA/user-inc/UserArchs.h
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../inc/CGRA/user-inc/UserModules.h
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../src/archs/NESWArch.cpp
+
 src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o: ../inc/CGRA/BitSetting.h
 src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o: ../inc/CGRA/CGRA.h
 src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o: ../inc/CGRA/Exception.h

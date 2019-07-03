@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/archs/AdresArch.cpp" "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o"
+  "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/archs/NESWArch.cpp" "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o"
   "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/archs/SimpleArch.cpp" "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
