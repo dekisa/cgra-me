@@ -556,19 +556,36 @@ namespace
                             // When the parent is function argument it is changed to a input node?
                             else if(Argument* A = dyn_cast<Argument>(I->getOperand(r)))
                             {
-                                OpGraphOp* in = new OpGraphOp("input" + std::to_string(A->getArgNo()) + "_", OPGRAPH_OP_INPUT);
-                                opgraph->op_nodes.push_back(in);
-                                opgraph->inputs.push_back(in);
+                                bool input_already_exists = false;
+				                std::string input_name  = "input" + std::to_string(A->getArgNo()) + "_";
+                                OpGraphOp* existent_input = NULL;
+                                auto find_input_lambda = [&existent_input, input_name, &input_already_exists](OpGraphOp * item) -> bool
+                                {
+                                    if(item->name == input_name){
+                                        input_already_exists = true;
+                                        existent_input = item;
+                                    }
+                                };
+	                            std::for_each(opgraph->inputs.begin(), opgraph->inputs.end(), find_input_lambda);
+				                if(!input_already_exists){
+		                            OpGraphOp* in = new OpGraphOp(input_name, OPGRAPH_OP_INPUT);
+		                            opgraph->op_nodes.push_back(in);
+		                            opgraph->inputs.push_back(in);
 
-                                OpGraphVal * v = new OpGraphVal("");
-                                opgraph->val_nodes.push_back(v);
+		                            OpGraphVal * v = new OpGraphVal("");
+		                            opgraph->val_nodes.push_back(v);
 
-                                in->output  = v;
-                                v->input    = in;
+		                            in->output  = v;
+		                            v->input    = in;
 
-                                op->input.push_back(v);
-                                v->output.push_back(op);
-                                v->output_operand.push_back(r);
+		                            op->input.push_back(v);
+		                            v->output.push_back(op);
+		                            v->output_operand.push_back(r);
+				                }
+                                else { 
+                                    existent_input->output->output.push_back(op);
+                                    existent_input->output->output_operand.push_back(r);
+				                }
                             }
                             continue;
                         }
