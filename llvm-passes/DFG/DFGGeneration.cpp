@@ -50,7 +50,7 @@
 
 #include <CGRA/OpGraph.h>
 
-#define DFG_LOWER_GEP_INSTR
+//#define DFG_LOWER_GEP_INSTR
 
 using namespace llvm;
 
@@ -360,7 +360,7 @@ namespace
                 for(BasicBlock::iterator i = bb->begin(), e = bb->end(); i != e; ++i)
                 {
                     auto I = i;
-                    if(I->getOpcode() == Instruction::Br || I->getOpcode() == Instruction::Call)
+                    if(I->getOpcode() == Instruction::Br || I->getOpcode() == Instruction::Call || Instruction::GetElementPtr) //maybe add ignore LOAD STORE and GEP. load is added here altough it is not used when its only user is GEP
                         continue;
                     if(isa<CastInst>(I))
                     {
@@ -384,7 +384,7 @@ namespace
                 for(BasicBlock::iterator i = (bb)->begin(), e = (bb)->end(); i != e; ++i)
                 {
                     auto I = i;
-                    if(I->getOpcode() == Instruction::Br || I->getOpcode() == Instruction::Call)
+                    if(I->getOpcode() == Instruction::Br || I->getOpcode() == Instruction::Call || Instruction::GetElementPtr ) //maybe add ignore LOAD STORE and GEP. load is added here altough it is not used when its only user is GEP
                         continue;
 
                     auto itv = vals.find(&*I);
@@ -506,8 +506,158 @@ namespace
                     {
                         continue;
                     }
+                    // ignore gep for now
+                    if(I->getOpcode() == Instruction::GetElementPtr)
+                    {
+                        errs() << "GEP instruction is ignored\n";                             //debug
+                        //I->dump();                                                          //debug
+                        continue;
+                    }
+                    // load should be input
+                    if(LoadInst* L = dyn_cast<LoadInst>(I))
+                    {
+                        if (L->hasOneUse()){
+                            if(GetElementPtrInst* G = dyn_cast<GetElementPtrInst>(L->use_begin()->getUser())){
+                                errs() << "load used only by GEP instruction is ignored\n";   //debug
+                                //L->use_begin()->getUser()->dump();                          //debug
+                                //L->dump();                                                  //debug
+                                continue;
+                            }
+                        }
+                        //this load is useful, make a input node
+                        errs() << "making input node for load";                                       //debug
+                        //L->dump();
+                        std::string input_name  = "input";
+                        //check if this is array
+                        if(GetElementPtrInst* G = dyn_cast<GetElementPtrInst>(L->getPointerOperand())){
+                            errs() << ", index one: ";
+                            //G->dump();
+                            if(ConstantInt *C = dyn_cast<ConstantInt>( G->idx_begin() )){
+                                errs() <<  C->getSExtValue();
+                                input_name = input_name + "_" + std::to_string(C->getSExtValue());
+                            }
+                            else if(Argument* A = dyn_cast<Argument>( G->idx_begin() )){ 
+                                errs() <<  A->getArgNo();
+                                input_name = input_name + "_arg" + std::to_string(A->getArgNo());
+                            } else {
+                                input_name = input_name + "_x";
+                                errs() << "unknown index";
+                            }
+                            //check if it is 2d array
+                            if(LoadInst* L1 = dyn_cast<LoadInst>(G->getPointerOperand())){
+                                errs() << " index two: ";
+                                if(GetElementPtrInst* G1 = dyn_cast<GetElementPtrInst>(L1->getPointerOperand())){
+                                    //G1->dump();
+                                    if(ConstantInt *C1 = dyn_cast<ConstantInt>( G1->idx_begin() )){
+                                        errs() <<  C1->getSExtValue();
+                                        input_name = input_name + "_" + std::to_string(C1->getSExtValue());
+                                    }else if(Argument* A1 = dyn_cast<Argument>( G1->idx_begin() )){ 
+                                        errs() <<  A1->getArgNo();
+                                        input_name = input_name + "_arg" + std::to_string(A1->getArgNo());
+                                    } else {
+                                        input_name = input_name + "_x";
+                                        errs() << "unknown index";
+                                    }
+                                    //here we should insert check for 3d array. instead assume 2d and check if array is input
+                                    if(Argument* Arg = dyn_cast<Argument>(G1->getPointerOperand())){
+                                        errs() << ", input: " << std::to_string(Arg->getArgNo());
+                                        input_name = input_name + "_arg" + std::to_string(Arg->getArgNo());
+                                    } else {
+                                        input_name = input_name + "_argx";
+                                        errs() << "this array is not input?";
+                                    }
+                                } else {
+                                    errs() << "error: 2d array is not using gep";
+                                }
+                            } else if(Argument* Arg = dyn_cast<Argument>(G->getPointerOperand())){
+                                errs() << ", input: " << std::to_string(Arg->getArgNo());  
+                                input_name = input_name + "_arg" + std::to_string(Arg->getArgNo());
+                            } else {
+                                input_name = input_name + "_argx";
+                                errs() << "this array is not input?";
+                            }
+                        }
+                        else {
+                            errs() << "load pointer is not gep\n";;
+                        }
+                        errs() << "\n";
+                        OpGraphOp* op = new OpGraphOp(input_name, OPGRAPH_OP_INPUT);
+                        opgraph->op_nodes.push_back(op);
+                        opgraph->inputs.push_back(op);
+                        // create output val and add to vector (must create since LLVM follows SSA)
+                        auto itv = vals.find(&*I);
+                        if(itv == vals.end()) // see if we already created a val
+                        {
+                            assert(1);
+                            vals[&*I] = new OpGraphVal("");
+                            opgraph->val_nodes.push_back(vals[&*I]);
+                        }
+
+                        vals[&*I]->input = op;
+                        op->output = vals[&*I];
+                        continue;
+                    }
+                    //store should be output
+                    if(StoreInst* S = dyn_cast<StoreInst>(I))
+                    {
+                        std::string output_name  = "output";
+                        //check if this is array
+                        if(GetElementPtrInst* G = dyn_cast<GetElementPtrInst>(S->getPointerOperand())){
+                            if(ConstantInt *C = dyn_cast<ConstantInt>( G->idx_begin() )){
+                                output_name = output_name + "_" + std::to_string(C->getSExtValue());
+                            }
+                            else if(Argument* A = dyn_cast<Argument>( G->idx_begin() )){ 
+                                output_name = output_name + "_arg" + std::to_string(A->getArgNo());
+                            } else {
+                                output_name = output_name + "_x";
+                            }
+                            //check if it is 2d array
+                            if(LoadInst* L1 = dyn_cast<LoadInst>(G->getPointerOperand())){
+                                if(GetElementPtrInst* G1 = dyn_cast<GetElementPtrInst>(L1->getPointerOperand())){
+                                    if(ConstantInt *C1 = dyn_cast<ConstantInt>( G1->idx_begin() )){
+                                        output_name = output_name + "_" + std::to_string(C1->getSExtValue());
+                                    }else if(Argument* A1 = dyn_cast<Argument>( G1->idx_begin() )){ 
+                                        output_name = output_name + "_arg" + std::to_string(A1->getArgNo());
+                                    } else {
+                                        output_name = output_name + "_x";
+                                    }
+                                    if(Argument* Arg = dyn_cast<Argument>(G1->getPointerOperand())){
+                                        output_name = output_name + "_arg" + std::to_string(Arg->getArgNo());
+                                    } else {
+                                        output_name = output_name + "_argx";
+                                    }
+                                } else {
+                                    errs() << "error: 2d array is not using gep";
+                                }
+                            } else if(Argument* Arg = dyn_cast<Argument>(G->getPointerOperand())){
+                                output_name = output_name + "_arg" + std::to_string(Arg->getArgNo());
+                            } else {
+                                output_name = output_name + "_argx";
+                            }
+                        }
+                        else {
+                            errs() << "load pointer is not gep\n";;
+                        }
+
+                        Instruction* store_input = S->getValueOperand();
+                        OpGraphOp* out = new OpGraphOp(output_name, OPGRAPH_OP_OUTPUT);
+                        out->input.push_back(vals[store_input]);
+                        opgraph->op_nodes.push_back(out);
+                        opgraph->outputs.push_back(out);
+
+                        OpGraphVal * v = new OpGraphVal("");
+                        opgraph->val_nodes.push_back(v);
+
+                        out->output = v;
+                        v->input = out;
+
+                        vals[store_input]->output.push_back(out);
+                        vals[store_input]->output_operand.push_back(0);
+                        errs() << "made " << output_name;
+                        continue;
+                    }
                     // go through each instruction and build graph by
-                    // creating an Op for the instruction
+                    // creatmakeing an Op for the instruction
                     OpGraphOp* op = new OpGraphOp(I->getOpcodeName(), LLVMtoOp(&*I));
                     opgraph->op_nodes.push_back(op);
 
@@ -677,7 +827,7 @@ namespace
                 removeUnnecessaryLeafNodes(opgraph);
 
             opgraph->debug_check();
-	    std::ofstream f("graph.dot", std::ios::out);
+	        std::ofstream f("graph.dot", std::ios::out);
             //std::ofstream f("graph_" + tag_name + ".dot", std::ios::out);
             opgraph->printDOTwithOps(f);
 

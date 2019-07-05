@@ -3,7 +3,7 @@ MAKEFLAGS += -r
 
 BENCHNAME ?= $(shell basename `pwd`)
 
-CFLAGS ?= -O3
+CFLAGS ?= -O0
 
 OPT_DISABLE_FLAGS ?= -fno-vectorize -fno-slp-vectorize -fno-unroll-loops -Xclang -disable-O0-optnone
 
