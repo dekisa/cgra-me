@@ -121,7 +121,7 @@ NESWArchFU::NESWArchFU(std::string name, bool full_fu)
     addConnection("this.in_s", "mux_b.in2");
     addConnection("this.in_w", "mux_b.in3");
     //addConnection("mux_out.out", "mux_a.in" + std::to_string(num_inputs));
-    addConnection("const.out", "mux_b.in4");
+    //addConnection("const.out", "mux_b.in4"); //we dont need constatn on both inputs
     // to out mux n
     addConnection("this.in_e", "mux_n.in0");
     addConnection("this.in_s", "mux_n.in1");
