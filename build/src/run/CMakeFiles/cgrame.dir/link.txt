@@ -1,1 +1,0 @@
-/usr/bin/c++   -O3 -DNDEBUG   CMakeFiles/cgrame.dir/cgrame.cpp.o  -o ../../bin/cgrame -rdynamic ../../lib/libcgra-me.so -Wl,-rpath,/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/lib 
