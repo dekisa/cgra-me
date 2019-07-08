@@ -361,12 +361,14 @@ int main(int argc, char* argv[])
             genMappingVisual(exe_path, mapping_result);
             mapping_result.outputMapping();
 
-            if (make_testbench)
-            {
-                std::ofstream tb_file("testbench.v");
-                arch->genBitStream(mapping_result).print_testbench(tb_file);
-            }
-
+            //if (make_testbench)
+            //{
+            //    std::ofstream tb_file("testbench.v");
+                BitStream bs = arch->genBitStream(mapping_result);
+            //}
+            std::cout << "bitstream is:";
+            bs.print();
+	        std::cout << "bitstream end";
             return 0;
         }
         else

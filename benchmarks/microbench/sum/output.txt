@@ -213,3 +213,2105 @@ Gap                : infinite
 MapperTimeout: 0
 Mapped: 0
 ../../rules.mk:45: recipe for target 'run_mapper' failed
+'cgrame' -v -a -o --gen-testbench -c 3 -g graph_loop.dot
+
+CGRA - Modelling and Exploration Version 1.0 (http://cgra-me.ece.utoronto.ca/)
+Copyright (c) 2015-2018 University of Toronto. All Rights Reserved.
+For research and academic purposes only. Commercial use is prohibited.
+Please email questions to: Xander Chin(xan@ece.utoronto.ca)
+Compiled: Jul  6 2019 17:44:09
+
+[INFO] Creating Architecture #3 from C++...
+[INFO] Architecture Name: North-East-South-West CGRA Architecture
+[INFO] Creating "North-East-South-West CGRA Architecture" Architecture from C++...
+
+[ARCHGRAPH]
+CGRA:
+ports:
+ext_io_bottom_0
+ext_io_bottom_1
+ext_io_bottom_2
+ext_io_bottom_3
+ext_io_left_0
+ext_io_left_1
+ext_io_left_2
+ext_io_left_3
+ext_io_right_0
+ext_io_right_1
+ext_io_right_2
+ext_io_right_3
+ext_io_top_0
+ext_io_top_1
+ext_io_top_2
+ext_io_top_3
+connections:
+CGRA<-CGRA;
+CGRA<-b_c2_r0;
+CGRA<-CGRA;
+CGRA<-b_c0_r0;
+CGRA<-b_c1_r0;
+CGRA<-CGRA;
+CGRA<-b_c3_r0;
+CGRA<-CGRA;
+CGRA<-b_c3_r0;
+CGRA<-CGRA;
+CGRA<-b_c3_r1;
+CGRA<-CGRA;
+CGRA<-b_c3_r2;
+CGRA<-CGRA;
+CGRA<-b_c3_r3;
+CGRA<-CGRA;
+CGRA<-b_c0_r3;
+CGRA<-CGRA;
+CGRA<-b_c1_r3;
+CGRA<-CGRA;
+CGRA<-b_c2_r3;
+CGRA<-CGRA;
+CGRA<-b_c3_r3;
+CGRA<-CGRA;
+CGRA<-b_c0_r0;
+CGRA<-CGRA;
+CGRA<-b_c0_r1;
+CGRA<-CGRA;
+CGRA<-b_c0_r2;
+CGRA<-CGRA;
+CGRA<-b_c0_r3;
+CGRA<-CGRA;
+CGRA<-io_top_0;
+CGRA<-b_c1_r0;
+CGRA<-b_c0_r1;
+CGRA<-io_left_0;
+CGRA<-b_c0_r0;
+CGRA<-b_c1_r1;
+CGRA<-b_c0_r2;
+CGRA<-io_left_1;
+CGRA<-b_c0_r1;
+CGRA<-b_c1_r2;
+CGRA<-b_c0_r3;
+CGRA<-io_left_2;
+CGRA<-b_c0_r2;
+CGRA<-b_c1_r3;
+CGRA<-io_bottom_0;
+CGRA<-io_left_3;
+CGRA<-io_top_1;
+CGRA<-b_c2_r0;
+CGRA<-b_c1_r1;
+CGRA<-b_c0_r0;
+CGRA<-b_c1_r0;
+CGRA<-b_c2_r1;
+CGRA<-b_c1_r2;
+CGRA<-b_c0_r1;
+CGRA<-b_c1_r1;
+CGRA<-b_c2_r2;
+CGRA<-b_c1_r3;
+CGRA<-b_c0_r2;
+CGRA<-b_c1_r2;
+CGRA<-b_c2_r3;
+CGRA<-io_bottom_1;
+CGRA<-b_c0_r3;
+CGRA<-io_top_2;
+CGRA<-b_c3_r0;
+CGRA<-b_c2_r1;
+CGRA<-b_c1_r0;
+CGRA<-b_c2_r0;
+CGRA<-b_c3_r1;
+CGRA<-b_c2_r2;
+CGRA<-b_c1_r1;
+CGRA<-b_c2_r1;
+CGRA<-b_c3_r2;
+CGRA<-b_c2_r3;
+CGRA<-b_c1_r2;
+CGRA<-b_c2_r2;
+CGRA<-b_c3_r3;
+CGRA<-io_bottom_2;
+CGRA<-b_c1_r3;
+CGRA<-io_top_3;
+CGRA<-io_right_0;
+CGRA<-b_c3_r1;
+CGRA<-b_c2_r0;
+CGRA<-b_c3_r0;
+CGRA<-io_right_1;
+CGRA<-b_c3_r2;
+CGRA<-b_c2_r1;
+CGRA<-b_c3_r1;
+CGRA<-io_right_2;
+CGRA<-b_c3_r3;
+CGRA<-b_c2_r2;
+CGRA<-b_c3_r2;
+CGRA<-io_right_3;
+CGRA<-io_bottom_3;
+CGRA<-b_c2_r3;
+submodules:
+b_c0_r0
+b_c0_r1
+b_c0_r2
+b_c0_r3
+b_c1_r0
+b_c1_r1
+b_c1_r2
+b_c1_r3
+b_c2_r0
+b_c2_r1
+b_c2_r2
+b_c2_r3
+b_c3_r0
+b_c3_r1
+b_c3_r2
+b_c3_r3
+io_bottom_0
+io_bottom_1
+io_bottom_2
+io_bottom_3
+io_left_0
+io_left_1
+io_left_2
+io_left_3
+io_right_0
+io_right_1
+io_right_2
+io_right_3
+io_top_0
+io_top_1
+io_top_2
+io_top_3
+CGRA;
+io_top_2.bidir->CGRA.ext_io_top_2;
+io_top_2.out->b_c2_r0.in_n;
+io_top_0.bidir->CGRA.ext_io_top_0;
+io_top_0.out->b_c0_r0.in_n;
+io_top_1.out->b_c1_r0.in_n;
+io_top_1.bidir->CGRA.ext_io_top_1;
+io_top_3.out->b_c3_r0.in_n;
+io_top_3.bidir->CGRA.ext_io_top_3;
+io_right_0.out->b_c3_r0.in_e;
+io_right_0.bidir->CGRA.ext_io_right_0;
+io_right_1.out->b_c3_r1.in_e;
+io_right_1.bidir->CGRA.ext_io_right_1;
+io_right_2.out->b_c3_r2.in_e;
+io_right_2.bidir->CGRA.ext_io_right_2;
+io_right_3.out->b_c3_r3.in_e;
+io_right_3.bidir->CGRA.ext_io_right_3;
+io_bottom_0.out->b_c0_r3.in_s;
+io_bottom_0.bidir->CGRA.ext_io_bottom_0;
+io_bottom_1.out->b_c1_r3.in_s;
+io_bottom_1.bidir->CGRA.ext_io_bottom_1;
+io_bottom_2.out->b_c2_r3.in_s;
+io_bottom_2.bidir->CGRA.ext_io_bottom_2;
+io_bottom_3.out->b_c3_r3.in_s;
+io_bottom_3.bidir->CGRA.ext_io_bottom_3;
+io_left_0.out->b_c0_r0.in_w;
+io_left_0.bidir->CGRA.ext_io_left_0;
+io_left_1.out->b_c0_r1.in_w;
+io_left_1.bidir->CGRA.ext_io_left_1;
+io_left_2.out->b_c0_r2.in_w;
+io_left_2.bidir->CGRA.ext_io_left_2;
+io_left_3.out->b_c0_r3.in_w;
+io_left_3.bidir->CGRA.ext_io_left_3;
+b_c0_r0.out_n->io_top_0.in;
+b_c0_r0.out_e->b_c1_r0.in_w;
+b_c0_r0.out_s->b_c0_r1.in_n;
+b_c0_r0.out_w->io_left_0.in;
+b_c0_r1.out_n->b_c0_r0.in_s;
+b_c0_r1.out_e->b_c1_r1.in_w;
+b_c0_r1.out_s->b_c0_r2.in_n;
+b_c0_r1.out_w->io_left_1.in;
+b_c0_r2.out_n->b_c0_r1.in_s;
+b_c0_r2.out_e->b_c1_r2.in_w;
+b_c0_r2.out_s->b_c0_r3.in_n;
+b_c0_r2.out_w->io_left_2.in;
+b_c0_r3.out_n->b_c0_r2.in_s;
+b_c0_r3.out_e->b_c1_r3.in_w;
+b_c0_r3.out_s->io_bottom_0.in;
+b_c0_r3.out_w->io_left_3.in;
+b_c1_r0.out_n->io_top_1.in;
+b_c1_r0.out_e->b_c2_r0.in_w;
+b_c1_r0.out_s->b_c1_r1.in_n;
+b_c1_r0.out_w->b_c0_r0.in_e;
+b_c1_r1.out_n->b_c1_r0.in_s;
+b_c1_r1.out_e->b_c2_r1.in_w;
+b_c1_r1.out_s->b_c1_r2.in_n;
+b_c1_r1.out_w->b_c0_r1.in_e;
+b_c1_r2.out_n->b_c1_r1.in_s;
+b_c1_r2.out_e->b_c2_r2.in_w;
+b_c1_r2.out_s->b_c1_r3.in_n;
+b_c1_r2.out_w->b_c0_r2.in_e;
+b_c1_r3.out_n->b_c1_r2.in_s;
+b_c1_r3.out_e->b_c2_r3.in_w;
+b_c1_r3.out_s->io_bottom_1.in;
+b_c1_r3.out_w->b_c0_r3.in_e;
+b_c2_r0.out_n->io_top_2.in;
+b_c2_r0.out_e->b_c3_r0.in_w;
+b_c2_r0.out_s->b_c2_r1.in_n;
+b_c2_r0.out_w->b_c1_r0.in_e;
+b_c2_r1.out_n->b_c2_r0.in_s;
+b_c2_r1.out_e->b_c3_r1.in_w;
+b_c2_r1.out_s->b_c2_r2.in_n;
+b_c2_r1.out_w->b_c1_r1.in_e;
+b_c2_r2.out_n->b_c2_r1.in_s;
+b_c2_r2.out_e->b_c3_r2.in_w;
+b_c2_r2.out_s->b_c2_r3.in_n;
+b_c2_r2.out_w->b_c1_r2.in_e;
+b_c2_r3.out_n->b_c2_r2.in_s;
+b_c2_r3.out_e->b_c3_r3.in_w;
+b_c2_r3.out_s->io_bottom_2.in;
+b_c2_r3.out_w->b_c1_r3.in_e;
+b_c3_r0.out_n->io_top_3.in;
+b_c3_r0.out_e->io_right_0.in;
+b_c3_r0.out_s->b_c3_r1.in_n;
+b_c3_r0.out_w->b_c2_r0.in_e;
+b_c3_r1.out_n->b_c3_r0.in_s;
+b_c3_r1.out_e->io_right_1.in;
+b_c3_r1.out_s->b_c3_r2.in_n;
+b_c3_r1.out_w->b_c2_r1.in_e;
+b_c3_r2.out_n->b_c3_r1.in_s;
+b_c3_r2.out_e->io_right_2.in;
+b_c3_r2.out_s->b_c3_r3.in_n;
+b_c3_r2.out_w->b_c2_r2.in_e;
+b_c3_r3.out_n->b_c3_r2.in_s;
+b_c3_r3.out_e->io_right_3.in;
+b_c3_r3.out_s->io_bottom_3.in;
+b_c3_r3.out_w->b_c2_r3.in_e;
+b_c0_r0;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c0_r0.out_n;
+mux_e.out->b_c0_r0.out_e;
+mux_s.out->b_c0_r0.out_s;
+mux_w.out->b_c0_r0.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c0_r0.in_n->mux_a.in0;
+b_c0_r0.in_n->mux_b.in0;
+b_c0_r0.in_n->mux_e.in0;
+b_c0_r0.in_n->mux_s.in0;
+b_c0_r0.in_n->mux_w.in0;
+b_c0_r0.in_e->mux_a.in1;
+b_c0_r0.in_e->mux_b.in1;
+b_c0_r0.in_e->mux_n.in0;
+b_c0_r0.in_e->mux_s.in1;
+b_c0_r0.in_e->mux_w.in1;
+b_c0_r0.in_s->mux_a.in2;
+b_c0_r0.in_s->mux_b.in2;
+b_c0_r0.in_s->mux_n.in1;
+b_c0_r0.in_s->mux_e.in1;
+b_c0_r0.in_s->mux_w.in2;
+b_c0_r0.in_w->mux_a.in3;
+b_c0_r0.in_w->mux_b.in3;
+b_c0_r0.in_w->mux_n.in2;
+b_c0_r0.in_w->mux_e.in2;
+b_c0_r0.in_w->mux_s.in2;
+const;
+b_c0_r1;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c0_r1.out_n;
+mux_e.out->b_c0_r1.out_e;
+mux_s.out->b_c0_r1.out_s;
+mux_w.out->b_c0_r1.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c0_r1.in_n->mux_a.in0;
+b_c0_r1.in_n->mux_b.in0;
+b_c0_r1.in_n->mux_e.in0;
+b_c0_r1.in_n->mux_s.in0;
+b_c0_r1.in_n->mux_w.in0;
+b_c0_r1.in_e->mux_a.in1;
+b_c0_r1.in_e->mux_b.in1;
+b_c0_r1.in_e->mux_n.in0;
+b_c0_r1.in_e->mux_s.in1;
+b_c0_r1.in_e->mux_w.in1;
+b_c0_r1.in_s->mux_a.in2;
+b_c0_r1.in_s->mux_b.in2;
+b_c0_r1.in_s->mux_n.in1;
+b_c0_r1.in_s->mux_e.in1;
+b_c0_r1.in_s->mux_w.in2;
+b_c0_r1.in_w->mux_a.in3;
+b_c0_r1.in_w->mux_b.in3;
+b_c0_r1.in_w->mux_n.in2;
+b_c0_r1.in_w->mux_e.in2;
+b_c0_r1.in_w->mux_s.in2;
+const;
+b_c0_r2;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c0_r2.out_n;
+mux_e.out->b_c0_r2.out_e;
+mux_s.out->b_c0_r2.out_s;
+mux_w.out->b_c0_r2.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c0_r2.in_n->mux_a.in0;
+b_c0_r2.in_n->mux_b.in0;
+b_c0_r2.in_n->mux_e.in0;
+b_c0_r2.in_n->mux_s.in0;
+b_c0_r2.in_n->mux_w.in0;
+b_c0_r2.in_e->mux_a.in1;
+b_c0_r2.in_e->mux_b.in1;
+b_c0_r2.in_e->mux_n.in0;
+b_c0_r2.in_e->mux_s.in1;
+b_c0_r2.in_e->mux_w.in1;
+b_c0_r2.in_s->mux_a.in2;
+b_c0_r2.in_s->mux_b.in2;
+b_c0_r2.in_s->mux_n.in1;
+b_c0_r2.in_s->mux_e.in1;
+b_c0_r2.in_s->mux_w.in2;
+b_c0_r2.in_w->mux_a.in3;
+b_c0_r2.in_w->mux_b.in3;
+b_c0_r2.in_w->mux_n.in2;
+b_c0_r2.in_w->mux_e.in2;
+b_c0_r2.in_w->mux_s.in2;
+const;
+b_c0_r3;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c0_r3.out_n;
+mux_e.out->b_c0_r3.out_e;
+mux_s.out->b_c0_r3.out_s;
+mux_w.out->b_c0_r3.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c0_r3.in_n->mux_a.in0;
+b_c0_r3.in_n->mux_b.in0;
+b_c0_r3.in_n->mux_e.in0;
+b_c0_r3.in_n->mux_s.in0;
+b_c0_r3.in_n->mux_w.in0;
+b_c0_r3.in_e->mux_a.in1;
+b_c0_r3.in_e->mux_b.in1;
+b_c0_r3.in_e->mux_n.in0;
+b_c0_r3.in_e->mux_s.in1;
+b_c0_r3.in_e->mux_w.in1;
+b_c0_r3.in_s->mux_a.in2;
+b_c0_r3.in_s->mux_b.in2;
+b_c0_r3.in_s->mux_n.in1;
+b_c0_r3.in_s->mux_e.in1;
+b_c0_r3.in_s->mux_w.in2;
+b_c0_r3.in_w->mux_a.in3;
+b_c0_r3.in_w->mux_b.in3;
+b_c0_r3.in_w->mux_n.in2;
+b_c0_r3.in_w->mux_e.in2;
+b_c0_r3.in_w->mux_s.in2;
+const;
+b_c1_r0;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c1_r0.out_n;
+mux_e.out->b_c1_r0.out_e;
+mux_s.out->b_c1_r0.out_s;
+mux_w.out->b_c1_r0.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c1_r0.in_n->mux_a.in0;
+b_c1_r0.in_n->mux_b.in0;
+b_c1_r0.in_n->mux_e.in0;
+b_c1_r0.in_n->mux_s.in0;
+b_c1_r0.in_n->mux_w.in0;
+b_c1_r0.in_e->mux_a.in1;
+b_c1_r0.in_e->mux_b.in1;
+b_c1_r0.in_e->mux_n.in0;
+b_c1_r0.in_e->mux_s.in1;
+b_c1_r0.in_e->mux_w.in1;
+b_c1_r0.in_s->mux_a.in2;
+b_c1_r0.in_s->mux_b.in2;
+b_c1_r0.in_s->mux_n.in1;
+b_c1_r0.in_s->mux_e.in1;
+b_c1_r0.in_s->mux_w.in2;
+b_c1_r0.in_w->mux_a.in3;
+b_c1_r0.in_w->mux_b.in3;
+b_c1_r0.in_w->mux_n.in2;
+b_c1_r0.in_w->mux_e.in2;
+b_c1_r0.in_w->mux_s.in2;
+const;
+b_c1_r1;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c1_r1.out_n;
+mux_e.out->b_c1_r1.out_e;
+mux_s.out->b_c1_r1.out_s;
+mux_w.out->b_c1_r1.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c1_r1.in_n->mux_a.in0;
+b_c1_r1.in_n->mux_b.in0;
+b_c1_r1.in_n->mux_e.in0;
+b_c1_r1.in_n->mux_s.in0;
+b_c1_r1.in_n->mux_w.in0;
+b_c1_r1.in_e->mux_a.in1;
+b_c1_r1.in_e->mux_b.in1;
+b_c1_r1.in_e->mux_n.in0;
+b_c1_r1.in_e->mux_s.in1;
+b_c1_r1.in_e->mux_w.in1;
+b_c1_r1.in_s->mux_a.in2;
+b_c1_r1.in_s->mux_b.in2;
+b_c1_r1.in_s->mux_n.in1;
+b_c1_r1.in_s->mux_e.in1;
+b_c1_r1.in_s->mux_w.in2;
+b_c1_r1.in_w->mux_a.in3;
+b_c1_r1.in_w->mux_b.in3;
+b_c1_r1.in_w->mux_n.in2;
+b_c1_r1.in_w->mux_e.in2;
+b_c1_r1.in_w->mux_s.in2;
+const;
+b_c1_r2;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c1_r2.out_n;
+mux_e.out->b_c1_r2.out_e;
+mux_s.out->b_c1_r2.out_s;
+mux_w.out->b_c1_r2.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c1_r2.in_n->mux_a.in0;
+b_c1_r2.in_n->mux_b.in0;
+b_c1_r2.in_n->mux_e.in0;
+b_c1_r2.in_n->mux_s.in0;
+b_c1_r2.in_n->mux_w.in0;
+b_c1_r2.in_e->mux_a.in1;
+b_c1_r2.in_e->mux_b.in1;
+b_c1_r2.in_e->mux_n.in0;
+b_c1_r2.in_e->mux_s.in1;
+b_c1_r2.in_e->mux_w.in1;
+b_c1_r2.in_s->mux_a.in2;
+b_c1_r2.in_s->mux_b.in2;
+b_c1_r2.in_s->mux_n.in1;
+b_c1_r2.in_s->mux_e.in1;
+b_c1_r2.in_s->mux_w.in2;
+b_c1_r2.in_w->mux_a.in3;
+b_c1_r2.in_w->mux_b.in3;
+b_c1_r2.in_w->mux_n.in2;
+b_c1_r2.in_w->mux_e.in2;
+b_c1_r2.in_w->mux_s.in2;
+const;
+b_c1_r3;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c1_r3.out_n;
+mux_e.out->b_c1_r3.out_e;
+mux_s.out->b_c1_r3.out_s;
+mux_w.out->b_c1_r3.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c1_r3.in_n->mux_a.in0;
+b_c1_r3.in_n->mux_b.in0;
+b_c1_r3.in_n->mux_e.in0;
+b_c1_r3.in_n->mux_s.in0;
+b_c1_r3.in_n->mux_w.in0;
+b_c1_r3.in_e->mux_a.in1;
+b_c1_r3.in_e->mux_b.in1;
+b_c1_r3.in_e->mux_n.in0;
+b_c1_r3.in_e->mux_s.in1;
+b_c1_r3.in_e->mux_w.in1;
+b_c1_r3.in_s->mux_a.in2;
+b_c1_r3.in_s->mux_b.in2;
+b_c1_r3.in_s->mux_n.in1;
+b_c1_r3.in_s->mux_e.in1;
+b_c1_r3.in_s->mux_w.in2;
+b_c1_r3.in_w->mux_a.in3;
+b_c1_r3.in_w->mux_b.in3;
+b_c1_r3.in_w->mux_n.in2;
+b_c1_r3.in_w->mux_e.in2;
+b_c1_r3.in_w->mux_s.in2;
+const;
+b_c2_r0;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c2_r0.out_n;
+mux_e.out->b_c2_r0.out_e;
+mux_s.out->b_c2_r0.out_s;
+mux_w.out->b_c2_r0.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c2_r0.in_n->mux_a.in0;
+b_c2_r0.in_n->mux_b.in0;
+b_c2_r0.in_n->mux_e.in0;
+b_c2_r0.in_n->mux_s.in0;
+b_c2_r0.in_n->mux_w.in0;
+b_c2_r0.in_e->mux_a.in1;
+b_c2_r0.in_e->mux_b.in1;
+b_c2_r0.in_e->mux_n.in0;
+b_c2_r0.in_e->mux_s.in1;
+b_c2_r0.in_e->mux_w.in1;
+b_c2_r0.in_s->mux_a.in2;
+b_c2_r0.in_s->mux_b.in2;
+b_c2_r0.in_s->mux_n.in1;
+b_c2_r0.in_s->mux_e.in1;
+b_c2_r0.in_s->mux_w.in2;
+b_c2_r0.in_w->mux_a.in3;
+b_c2_r0.in_w->mux_b.in3;
+b_c2_r0.in_w->mux_n.in2;
+b_c2_r0.in_w->mux_e.in2;
+b_c2_r0.in_w->mux_s.in2;
+const;
+b_c2_r1;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c2_r1.out_n;
+mux_e.out->b_c2_r1.out_e;
+mux_s.out->b_c2_r1.out_s;
+mux_w.out->b_c2_r1.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c2_r1.in_n->mux_a.in0;
+b_c2_r1.in_n->mux_b.in0;
+b_c2_r1.in_n->mux_e.in0;
+b_c2_r1.in_n->mux_s.in0;
+b_c2_r1.in_n->mux_w.in0;
+b_c2_r1.in_e->mux_a.in1;
+b_c2_r1.in_e->mux_b.in1;
+b_c2_r1.in_e->mux_n.in0;
+b_c2_r1.in_e->mux_s.in1;
+b_c2_r1.in_e->mux_w.in1;
+b_c2_r1.in_s->mux_a.in2;
+b_c2_r1.in_s->mux_b.in2;
+b_c2_r1.in_s->mux_n.in1;
+b_c2_r1.in_s->mux_e.in1;
+b_c2_r1.in_s->mux_w.in2;
+b_c2_r1.in_w->mux_a.in3;
+b_c2_r1.in_w->mux_b.in3;
+b_c2_r1.in_w->mux_n.in2;
+b_c2_r1.in_w->mux_e.in2;
+b_c2_r1.in_w->mux_s.in2;
+const;
+b_c2_r2;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c2_r2.out_n;
+mux_e.out->b_c2_r2.out_e;
+mux_s.out->b_c2_r2.out_s;
+mux_w.out->b_c2_r2.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c2_r2.in_n->mux_a.in0;
+b_c2_r2.in_n->mux_b.in0;
+b_c2_r2.in_n->mux_e.in0;
+b_c2_r2.in_n->mux_s.in0;
+b_c2_r2.in_n->mux_w.in0;
+b_c2_r2.in_e->mux_a.in1;
+b_c2_r2.in_e->mux_b.in1;
+b_c2_r2.in_e->mux_n.in0;
+b_c2_r2.in_e->mux_s.in1;
+b_c2_r2.in_e->mux_w.in1;
+b_c2_r2.in_s->mux_a.in2;
+b_c2_r2.in_s->mux_b.in2;
+b_c2_r2.in_s->mux_n.in1;
+b_c2_r2.in_s->mux_e.in1;
+b_c2_r2.in_s->mux_w.in2;
+b_c2_r2.in_w->mux_a.in3;
+b_c2_r2.in_w->mux_b.in3;
+b_c2_r2.in_w->mux_n.in2;
+b_c2_r2.in_w->mux_e.in2;
+b_c2_r2.in_w->mux_s.in2;
+const;
+b_c2_r3;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c2_r3.out_n;
+mux_e.out->b_c2_r3.out_e;
+mux_s.out->b_c2_r3.out_s;
+mux_w.out->b_c2_r3.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c2_r3.in_n->mux_a.in0;
+b_c2_r3.in_n->mux_b.in0;
+b_c2_r3.in_n->mux_e.in0;
+b_c2_r3.in_n->mux_s.in0;
+b_c2_r3.in_n->mux_w.in0;
+b_c2_r3.in_e->mux_a.in1;
+b_c2_r3.in_e->mux_b.in1;
+b_c2_r3.in_e->mux_n.in0;
+b_c2_r3.in_e->mux_s.in1;
+b_c2_r3.in_e->mux_w.in1;
+b_c2_r3.in_s->mux_a.in2;
+b_c2_r3.in_s->mux_b.in2;
+b_c2_r3.in_s->mux_n.in1;
+b_c2_r3.in_s->mux_e.in1;
+b_c2_r3.in_s->mux_w.in2;
+b_c2_r3.in_w->mux_a.in3;
+b_c2_r3.in_w->mux_b.in3;
+b_c2_r3.in_w->mux_n.in2;
+b_c2_r3.in_w->mux_e.in2;
+b_c2_r3.in_w->mux_s.in2;
+const;
+b_c3_r0;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c3_r0.out_n;
+mux_e.out->b_c3_r0.out_e;
+mux_s.out->b_c3_r0.out_s;
+mux_w.out->b_c3_r0.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c3_r0.in_n->mux_a.in0;
+b_c3_r0.in_n->mux_b.in0;
+b_c3_r0.in_n->mux_e.in0;
+b_c3_r0.in_n->mux_s.in0;
+b_c3_r0.in_n->mux_w.in0;
+b_c3_r0.in_e->mux_a.in1;
+b_c3_r0.in_e->mux_b.in1;
+b_c3_r0.in_e->mux_n.in0;
+b_c3_r0.in_e->mux_s.in1;
+b_c3_r0.in_e->mux_w.in1;
+b_c3_r0.in_s->mux_a.in2;
+b_c3_r0.in_s->mux_b.in2;
+b_c3_r0.in_s->mux_n.in1;
+b_c3_r0.in_s->mux_e.in1;
+b_c3_r0.in_s->mux_w.in2;
+b_c3_r0.in_w->mux_a.in3;
+b_c3_r0.in_w->mux_b.in3;
+b_c3_r0.in_w->mux_n.in2;
+b_c3_r0.in_w->mux_e.in2;
+b_c3_r0.in_w->mux_s.in2;
+const;
+b_c3_r1;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c3_r1.out_n;
+mux_e.out->b_c3_r1.out_e;
+mux_s.out->b_c3_r1.out_s;
+mux_w.out->b_c3_r1.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c3_r1.in_n->mux_a.in0;
+b_c3_r1.in_n->mux_b.in0;
+b_c3_r1.in_n->mux_e.in0;
+b_c3_r1.in_n->mux_s.in0;
+b_c3_r1.in_n->mux_w.in0;
+b_c3_r1.in_e->mux_a.in1;
+b_c3_r1.in_e->mux_b.in1;
+b_c3_r1.in_e->mux_n.in0;
+b_c3_r1.in_e->mux_s.in1;
+b_c3_r1.in_e->mux_w.in1;
+b_c3_r1.in_s->mux_a.in2;
+b_c3_r1.in_s->mux_b.in2;
+b_c3_r1.in_s->mux_n.in1;
+b_c3_r1.in_s->mux_e.in1;
+b_c3_r1.in_s->mux_w.in2;
+b_c3_r1.in_w->mux_a.in3;
+b_c3_r1.in_w->mux_b.in3;
+b_c3_r1.in_w->mux_n.in2;
+b_c3_r1.in_w->mux_e.in2;
+b_c3_r1.in_w->mux_s.in2;
+const;
+b_c3_r2;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c3_r2.out_n;
+mux_e.out->b_c3_r2.out_e;
+mux_s.out->b_c3_r2.out_s;
+mux_w.out->b_c3_r2.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c3_r2.in_n->mux_a.in0;
+b_c3_r2.in_n->mux_b.in0;
+b_c3_r2.in_n->mux_e.in0;
+b_c3_r2.in_n->mux_s.in0;
+b_c3_r2.in_n->mux_w.in0;
+b_c3_r2.in_e->mux_a.in1;
+b_c3_r2.in_e->mux_b.in1;
+b_c3_r2.in_e->mux_n.in0;
+b_c3_r2.in_e->mux_s.in1;
+b_c3_r2.in_e->mux_w.in1;
+b_c3_r2.in_s->mux_a.in2;
+b_c3_r2.in_s->mux_b.in2;
+b_c3_r2.in_s->mux_n.in1;
+b_c3_r2.in_s->mux_e.in1;
+b_c3_r2.in_s->mux_w.in2;
+b_c3_r2.in_w->mux_a.in3;
+b_c3_r2.in_w->mux_b.in3;
+b_c3_r2.in_w->mux_n.in2;
+b_c3_r2.in_w->mux_e.in2;
+b_c3_r2.in_w->mux_s.in2;
+const;
+b_c3_r3;
+mux_a.out->func.in_a;
+mux_b.out->func.in_b;
+mux_n.out->b_c3_r3.out_n;
+mux_e.out->b_c3_r3.out_e;
+mux_s.out->b_c3_r3.out_s;
+mux_w.out->b_c3_r3.out_w;
+const.out->mux_a.in4;
+const.out->mux_b.in4;
+func.out->mux_n.in3;
+func.out->mux_e.in3;
+func.out->mux_s.in3;
+func.out->mux_w.in3;
+b_c3_r3.in_n->mux_a.in0;
+b_c3_r3.in_n->mux_b.in0;
+b_c3_r3.in_n->mux_e.in0;
+b_c3_r3.in_n->mux_s.in0;
+b_c3_r3.in_n->mux_w.in0;
+b_c3_r3.in_e->mux_a.in1;
+b_c3_r3.in_e->mux_b.in1;
+b_c3_r3.in_e->mux_n.in0;
+b_c3_r3.in_e->mux_s.in1;
+b_c3_r3.in_e->mux_w.in1;
+b_c3_r3.in_s->mux_a.in2;
+b_c3_r3.in_s->mux_b.in2;
+b_c3_r3.in_s->mux_n.in1;
+b_c3_r3.in_s->mux_e.in1;
+b_c3_r3.in_s->mux_w.in2;
+b_c3_r3.in_w->mux_a.in3;
+b_c3_r3.in_w->mux_b.in3;
+b_c3_r3.in_w->mux_n.in2;
+b_c3_r3.in_w->mux_e.in2;
+b_c3_r3.in_w->mux_s.in2;
+const;
+io_bottom_0;
+io_bottom_0.in->reg_in.in;
+io_bottom_0.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_bottom_0.out;
+OE.out->io_bottom_0.bidir;
+IE.out->reg_out.in;
+io_bottom_1;
+io_bottom_1.in->reg_in.in;
+io_bottom_1.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_bottom_1.out;
+OE.out->io_bottom_1.bidir;
+IE.out->reg_out.in;
+io_bottom_2;
+io_bottom_2.in->reg_in.in;
+io_bottom_2.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_bottom_2.out;
+OE.out->io_bottom_2.bidir;
+IE.out->reg_out.in;
+io_bottom_3;
+io_bottom_3.in->reg_in.in;
+io_bottom_3.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_bottom_3.out;
+OE.out->io_bottom_3.bidir;
+IE.out->reg_out.in;
+io_left_0;
+io_left_0.in->reg_in.in;
+io_left_0.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_left_0.out;
+OE.out->io_left_0.bidir;
+IE.out->reg_out.in;
+io_left_1;
+io_left_1.in->reg_in.in;
+io_left_1.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_left_1.out;
+OE.out->io_left_1.bidir;
+IE.out->reg_out.in;
+io_left_2;
+io_left_2.in->reg_in.in;
+io_left_2.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_left_2.out;
+OE.out->io_left_2.bidir;
+IE.out->reg_out.in;
+io_left_3;
+io_left_3.in->reg_in.in;
+io_left_3.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_left_3.out;
+OE.out->io_left_3.bidir;
+IE.out->reg_out.in;
+io_right_0;
+io_right_0.in->reg_in.in;
+io_right_0.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_right_0.out;
+OE.out->io_right_0.bidir;
+IE.out->reg_out.in;
+io_right_1;
+io_right_1.in->reg_in.in;
+io_right_1.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_right_1.out;
+OE.out->io_right_1.bidir;
+IE.out->reg_out.in;
+io_right_2;
+io_right_2.in->reg_in.in;
+io_right_2.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_right_2.out;
+OE.out->io_right_2.bidir;
+IE.out->reg_out.in;
+io_right_3;
+io_right_3.in->reg_in.in;
+io_right_3.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_right_3.out;
+OE.out->io_right_3.bidir;
+IE.out->reg_out.in;
+io_top_0;
+IE.out->reg_out.in;
+reg_in.out->OE.in;
+io_top_0.bidir->IE.in;
+reg_out.out->io_top_0.out;
+io_top_0.in->reg_in.in;
+OE.out->io_top_0.bidir;
+io_top_1;
+io_top_1.in->reg_in.in;
+IE.out->reg_out.in;
+reg_out.out->io_top_1.out;
+io_top_1.bidir->IE.in;
+OE.out->io_top_1.bidir;
+reg_in.out->OE.in;
+io_top_2;
+io_top_2.bidir->IE.in;
+io_top_2.in->reg_in.in;
+reg_in.out->OE.in;
+reg_out.out->io_top_2.out;
+OE.out->io_top_2.bidir;
+IE.out->reg_out.in;
+io_top_3;
+io_top_3.in->reg_in.in;
+io_top_3.bidir->IE.in;
+reg_in.out->OE.in;
+reg_out.out->io_top_3.out;
+OE.out->io_top_3.bidir;
+IE.out->reg_out.in;
+cell config order is:[INFO] Parsing DFG...
+
+[OPGRAPH]
+digraph G {
+node0[opcode=add];
+node1[opcode=const];
+node0->node0[operand=0]; //add0->add0
+node1->node0[operand=1]; //const1->add0
+}
+[INFO] Creating Mapper...
+[INFO] Mapping DFG Onto CGRA Architecture...
+presolving:
+(round 1, fast)       1280 del vars, 1216 del conss, 0 add conss, 240 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 1490 clqs
+(round 2, fast)       1360 del vars, 1856 del conss, 0 add conss, 240 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 1490 clqs
+(round 3, exhaustive) 1360 del vars, 2848 del conss, 0 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 1490 clqs
+(round 4, exhaustive) 1360 del vars, 2848 del conss, 0 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 882 upgd conss, 0 impls, 1490 clqs
+(round 5, fast)       1536 del vars, 2916 del conss, 0 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 882 upgd conss, 0 impls, 1210 clqs
+(round 6, fast)       1536 del vars, 2952 del conss, 0 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 882 upgd conss, 0 impls, 1210 clqs
+(round 7, medium)     1549 del vars, 2978 del conss, 0 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 882 upgd conss, 0 impls, 1163 clqs
+(round 8, fast)       1549 del vars, 2991 del conss, 13 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 882 upgd conss, 0 impls, 1176 clqs
+(round 9, medium)     1550 del vars, 2993 del conss, 13 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 882 upgd conss, 0 impls, 1172 clqs
+(round 10, fast)       1550 del vars, 2994 del conss, 14 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 882 upgd conss, 0 impls, 1173 clqs
+(round 11, medium)     1551 del vars, 2996 del conss, 14 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 882 upgd conss, 0 impls, 1170 clqs
+(round 12, fast)       1551 del vars, 2997 del conss, 15 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 882 upgd conss, 0 impls, 1171 clqs
+(round 13, medium)     1552 del vars, 2999 del conss, 15 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 882 upgd conss, 0 impls, 1168 clqs
+(round 14, fast)       1552 del vars, 3000 del conss, 16 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 882 upgd conss, 0 impls, 1169 clqs
+(round 15, exhaustive) 1552 del vars, 3000 del conss, 16 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 914 upgd conss, 0 impls, 1169 clqs
+(round 16, medium)     1554 del vars, 3004 del conss, 16 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 914 upgd conss, 0 impls, 1162 clqs
+(round 17, fast)       1554 del vars, 3006 del conss, 18 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 914 upgd conss, 0 impls, 1164 clqs
+(round 18, exhaustive) 1554 del vars, 3006 del conss, 18 add conss, 240 chg bounds, 784 chg sides, 0 chg coeffs, 918 upgd conss, 0 impls, 1164 clqs
+   (0.1s) probing cycle finished: starting next cycle
+presolving (19 rounds: 19 fast, 10 medium, 5 exhaustive):
+ 1554 deleted vars, 3006 deleted constraints, 18 added constraints, 240 tightened bounds, 0 added holes, 784 changed sides, 0 changed coefficients
+ 0 implications, 4839 cliques
+presolved problem has 798 variables (798 bin, 0 int, 0 impl, 0 cont) and 760 constraints
+    566 constraints of type <setppc>
+    194 constraints of type <logicor>
+transformed objective value is always integral (scale: 1)
+Presolving Time: 0.14
+
+ time | node  | left  |LP iter|LP it/n| mem |mdpt |frac |vars |cons |cols |rows |cuts |confs|strbr|  dualbound   | primalbound  |  gap   
+T 0.2s|     1 |     0 |     0 |     - |  14M|   0 |   - | 798 | 768 | 798 | 760 |   0 |   8 |   0 |-6.000000e+00 | 2.700000e+01 |    Inf 
+
+SCIP Status        : solving was interrupted [solution limit reached]
+Solving Time (sec) : 0.16
+Solving Nodes      : 1
+Primal Bound       : +2.70000000000000e+01 (1 solutions)
+Dual Bound         : -6.00000000000000e+00
+Gap                : infinite
+[INFO] Suboptimal CGRA Mapping Found
+MapperTimeout: 0
+Mapped: 1
+
+Operation Mapping Result:
+add0(add): 0:b_c3_r3.func.fu
+const1(const): 0:b_c3_r3.const.const
+
+Connection Mapping Result:
+add0_val_output:
+  0:b_c3_r2.func.in_b
+  0:b_c3_r2.func.m_in_b
+  0:b_c3_r2.func.out
+  0:b_c3_r2.in_s
+  0:b_c3_r2.mux_b.in2
+  0:b_c3_r2.mux_b.mux
+  0:b_c3_r2.mux_b.out
+  0:b_c3_r2.mux_s.in3
+  0:b_c3_r2.mux_s.mux
+  0:b_c3_r2.mux_s.out
+  0:b_c3_r2.out_s
+  0:b_c3_r3.func.in_a
+  0:b_c3_r3.func.m_out
+  0:b_c3_r3.func.out
+  0:b_c3_r3.in_n
+  0:b_c3_r3.mux_a.in0
+  0:b_c3_r3.mux_a.mux
+  0:b_c3_r3.mux_a.out
+  0:b_c3_r3.mux_n.in3
+  0:b_c3_r3.mux_n.mux
+  0:b_c3_r3.mux_n.out
+  0:b_c3_r3.out_n
+
+const1_val_output:
+  0:b_c3_r3.const.out
+  0:b_c3_r3.func.in_b
+  0:b_c3_r3.mux_b.in4
+  0:b_c3_r3.mux_b.mux
+  0:b_c3_r3.mux_b.out
+
+
+submodule: b_c0_r0FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c0_r1FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c0_r2FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c0_r3FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c1_r0FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c1_r1FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c1_r2FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c1_r3FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c2_r0FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c2_r1FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c2_r2FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c2_r3FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c3_r0FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c3_r1FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c3_r2FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c3_r3FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: io_bottom_0IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_bottom_1IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_bottom_2IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_bottom_3IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_left_0IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_left_1IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_left_2IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_left_3IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_right_0IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_right_1IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_right_2IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_right_3IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_top_0IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_top_1IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_top_2IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_top_3IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_outconfig table: 
+	0xc41760 0xc41300 0xc413a0 0xc41520 0xc41460 0xc415e0 0xc416a0 0xc3e040 0xc487b0 0xc48350 0xc483f0 0xc48570 0xc484b0 0xc48630 0xc486f0 0xc450f0 0xc4f800 0xc4f3a0 0xc4f440 0xc4f5c0 0xc4f500 0xc4f680 0xc4f740 0xc4c140 0xc56850 0xc563f0 0xc56490 0xc56610 0xc56550 0xc566d0 0xc56790 0xc53190 0xc5d8a0 0xc5d440 0xc5d4e0 0xc5d660 0xc5d5a0 0xc5d720 0xc5d7e0 0xc5a1e0 0xc648f0 0xc64490 0xc64530 0xc646b0 0xc645f0 0xc64770 0xc64830 0xc61230 0xc6b940 0xc6b4e0 0xc6b580 0xc6b700 0xc6b640 0xc6b7c0 0xc6b880 0xc68280 0xc72990 0xc72530 0xc725d0 0xc72750 0xc72690 0xc72810 0xc728d0 0xc6f2d0 0xc799e0 0xc79580 0xc79620 0xc797a0 0xc796e0 0xc79860 0xc79920 0xc76320 0xc80a40 0xc805e0 0xc80680 0xc80800 0xc80740 0xc808c0 0xc80980 0xc7d370 0xc87a90 0xc87630 0xc876d0 0xc87850 0xc87790 0xc87910 0xc879d0 0xc843d0 0xc8eae0 0xc8e680 0xc8e720 0xc8e8a0 0xc8e7e0 0xc8e960 0xc8ea20 0xc8b420 0xc95b30 0xc956d0 0xc95770 0xc958f0 0xc95830 0xc959b0 0xc95a70 0xc92470 0xc9cb80 0xc9c720 0xc9c7c0 0xc9c940 0xc9c880 0xc9ca00 0xc9cac0 0xc994c0 0xca3be0 0xca3780 0xca3820 0xca39a0 0xca38e0 0xca3a60 0xca3b20 0xca0510 0xcaac30 0xcaa7d0 0xcaa870 0xcaa9f0 0xcaa930 0xcaaab0 0xcaab70 0xca7570 0xc2fe40 0xc2f990 0xc31800 0xc31350 0xc331c0 0xc32d10 0xc34b80 0xc346d0 0xc36540 0xc36090 0xc37f00 0xc37a30 0xc398c0 0xc393f0 0xc3b180 0xc3adb0 0xc29740 0xc29270 0xc2b100 0xc2ac50 0xc2cac0 0xc2c610 0xc2e480 0xc2dfd0 0xc24730 0xc243a0 0xc21db0 0xc22270 0xc267c0 0xc26310 0xc27ea0 0xc279f0 
+Value mappings: (val node: {mrrg node })
+0xcba040:0:b_c3_r2.func.in_b 0:b_c3_r2.func.m_in_b 0:b_c3_r2.func.out 0:b_c3_r2.in_s 0:b_c3_r2.mux_b.in2 0:b_c3_r2.mux_b.mux 0:b_c3_r2.mux_b.out 0:b_c3_r2.mux_s.in3 0:b_c3_r2.mux_s.mux 0:b_c3_r2.mux_s.out 0:b_c3_r2.out_s 0:b_c3_r3.func.in_a 0:b_c3_r3.func.m_out 0:b_c3_r3.func.out 0:b_c3_r3.in_n 0:b_c3_r3.mux_a.in0 0:b_c3_r3.mux_a.mux 0:b_c3_r3.mux_a.out 0:b_c3_r3.mux_n.in3 0:b_c3_r3.mux_n.mux 0:b_c3_r3.mux_n.out 0:b_c3_r3.out_n 
+0xcba1a0:0:b_c3_r3.const.out 0:b_c3_r3.func.in_b 0:b_c3_r3.mux_b.in4 0:b_c3_r3.mux_b.mux 0:b_c3_r3.mux_b.out 
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {010}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {11}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {0000}
+MuxAConfig: {000}
+MuxBConfig: {100}
+MuxEConfig: {xx}
+MuxNConfig: {11}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {10000000000000000000000000000001}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+bitstream is:
+submodule: b_c0_r0FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c0_r1FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c0_r2FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c0_r3FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c1_r0FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c1_r1FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c1_r2FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c1_r3FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c2_r0FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c2_r1FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c2_r2FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c2_r3FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c3_r0FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c3_r1FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c3_r2FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: b_c3_r3FuncConfigMuxAConfigMuxBConfigMuxEConfigMuxNConfigMuxSConfigMuxWConfig
+submodule: constConstVal
+submodule: func
+submodule: op_add_32b
+submodule: op_and_32b
+submodule: op_ashr_32b
+submodule: op_divide_32b
+submodule: op_lshr_32b
+submodule: op_multiply_32b
+submodule: op_or_32b
+submodule: op_shl_32b
+submodule: op_sub_32b
+submodule: op_xor_32b
+submodule: mux_a
+submodule: mux_b
+submodule: mux_e
+submodule: mux_n
+submodule: mux_s
+submodule: mux_w
+submodule: io_bottom_0IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_bottom_1IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_bottom_2IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_bottom_3IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_left_0IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_left_1IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_left_2IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_left_3IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_right_0IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_right_1IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_right_2IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_right_3IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_top_0IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_top_1IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_top_2IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_out
+submodule: io_top_3IEConfigOEConfig
+submodule: IE
+submodule: OE
+submodule: reg_in
+submodule: reg_outconfig table: 
+	0xc41760 0xc41300 0xc413a0 0xc41520 0xc41460 0xc415e0 0xc416a0 0xc3e040 0xc487b0 0xc48350 0xc483f0 0xc48570 0xc484b0 0xc48630 0xc486f0 0xc450f0 0xc4f800 0xc4f3a0 0xc4f440 0xc4f5c0 0xc4f500 0xc4f680 0xc4f740 0xc4c140 0xc56850 0xc563f0 0xc56490 0xc56610 0xc56550 0xc566d0 0xc56790 0xc53190 0xc5d8a0 0xc5d440 0xc5d4e0 0xc5d660 0xc5d5a0 0xc5d720 0xc5d7e0 0xc5a1e0 0xc648f0 0xc64490 0xc64530 0xc646b0 0xc645f0 0xc64770 0xc64830 0xc61230 0xc6b940 0xc6b4e0 0xc6b580 0xc6b700 0xc6b640 0xc6b7c0 0xc6b880 0xc68280 0xc72990 0xc72530 0xc725d0 0xc72750 0xc72690 0xc72810 0xc728d0 0xc6f2d0 0xc799e0 0xc79580 0xc79620 0xc797a0 0xc796e0 0xc79860 0xc79920 0xc76320 0xc80a40 0xc805e0 0xc80680 0xc80800 0xc80740 0xc808c0 0xc80980 0xc7d370 0xc87a90 0xc87630 0xc876d0 0xc87850 0xc87790 0xc87910 0xc879d0 0xc843d0 0xc8eae0 0xc8e680 0xc8e720 0xc8e8a0 0xc8e7e0 0xc8e960 0xc8ea20 0xc8b420 0xc95b30 0xc956d0 0xc95770 0xc958f0 0xc95830 0xc959b0 0xc95a70 0xc92470 0xc9cb80 0xc9c720 0xc9c7c0 0xc9c940 0xc9c880 0xc9ca00 0xc9cac0 0xc994c0 0xca3be0 0xca3780 0xca3820 0xca39a0 0xca38e0 0xca3a60 0xca3b20 0xca0510 0xcaac30 0xcaa7d0 0xcaa870 0xcaa9f0 0xcaa930 0xcaaab0 0xcaab70 0xca7570 0xc2fe40 0xc2f990 0xc31800 0xc31350 0xc331c0 0xc32d10 0xc34b80 0xc346d0 0xc36540 0xc36090 0xc37f00 0xc37a30 0xc398c0 0xc393f0 0xc3b180 0xc3adb0 0xc29740 0xc29270 0xc2b100 0xc2ac50 0xc2cac0 0xc2c610 0xc2e480 0xc2dfd0 0xc24730 0xc243a0 0xc21db0 0xc22270 0xc267c0 0xc26310 0xc27ea0 0xc279f0 
+Value mappings: (val node: {mrrg node })
+0xcba040:0:b_c3_r2.func.in_b 0:b_c3_r2.func.m_in_b 0:b_c3_r2.func.out 0:b_c3_r2.in_s 0:b_c3_r2.mux_b.in2 0:b_c3_r2.mux_b.mux 0:b_c3_r2.mux_b.out 0:b_c3_r2.mux_s.in3 0:b_c3_r2.mux_s.mux 0:b_c3_r2.mux_s.out 0:b_c3_r2.out_s 0:b_c3_r3.func.in_a 0:b_c3_r3.func.m_out 0:b_c3_r3.func.out 0:b_c3_r3.in_n 0:b_c3_r3.mux_a.in0 0:b_c3_r3.mux_a.mux 0:b_c3_r3.mux_a.out 0:b_c3_r3.mux_n.in3 0:b_c3_r3.mux_n.mux 0:b_c3_r3.mux_n.out 0:b_c3_r3.out_n 
+0xcba1a0:0:b_c3_r3.const.out 0:b_c3_r3.func.in_b 0:b_c3_r3.mux_b.in4 0:b_c3_r3.mux_b.mux 0:b_c3_r3.mux_b.out 
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {xxx}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {xxxx}
+MuxAConfig: {xxx}
+MuxBConfig: {010}
+MuxEConfig: {xx}
+MuxNConfig: {xx}
+MuxSConfig: {11}
+MuxWConfig: {xx}
+ConstVal: {xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+FuncConfig: {0000}
+MuxAConfig: {000}
+MuxBConfig: {100}
+MuxEConfig: {xx}
+MuxNConfig: {11}
+MuxSConfig: {xx}
+MuxWConfig: {xx}
+ConstVal: {10000000000000000000000000000001}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+IEConfig: {x}
+OEConfig: {x}
+{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{xxx}{xx}{xx}{xx}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{xxxx}{xxx}{010}{xx}{xx}{11}{xx}{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}{0000}{000}{100}{xx}{11}{xx}{xx}{10000000000000000000000000000001}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}{x}

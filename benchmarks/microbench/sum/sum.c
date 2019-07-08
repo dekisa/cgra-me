@@ -34,7 +34,7 @@ int main() {
     for (i = 0; i < 100; i++) {
 	//DFGLoop:loop
 //        if (i == 2)
-            sum += a[i];
+            sum += sum;
 //        else
 //           sum += N;
 //           i+=sum;
