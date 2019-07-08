@@ -1,6 +1,5 @@
 #include <stdio.h>
-int** nglobal;
-//int* npointer;
+
 /*
 load and store conversion to input and output
 load_conversion_algorithm()
@@ -20,25 +19,29 @@ similar algorithm for store
 
 /* this is still just a demo, there is no convention on marking inputs and outputs altough the code is getting larger */
 
-int test_function(int a, int** n, int* npointer) {
+int test_function(int ref_by_value, int* ref_by_pointer, int ref_by_pointer_array[]) {
 
-    //demonstrate store - has two outputs for now
-    //return n[2][2]  = a + 10;
-    
-    //demonstrate load
-    //return  (n[2][2] + n[3][1])*(n[2][2] - n[3][1]);
-    
-    //demonstrate load problem1 - index is long - enable demonstrate store for crash
-    //return  (a + n[3][1])*(n[2][2] - n[3][1]);
+    //DFGLoop:loop
+    //access ref_by_value
+    //load ref_by_pointer_array
+    //store ref_by_pointer
 
-    //demonstrate load problem2
-    //return  (n[2][2] + n[2][1])*(n[2][2] - n[2][1]);
+    //*ref_by_pointer = ref_by_value + 10;;
+    //return *ref_by_pointer = *ref_by_pointer + 1;
 
-    //demonstrate undone work
-    //return  (nglobal[2][2] + nglobal[3][1])*(nglobal[2][2] - nglobal[3][1]);
+    ref_by_pointer_array[3] = ref_by_pointer_array[4] + ref_by_value + 10;;
+    ref_by_pointer_array[4] = ref_by_value + 101;;
+    return ref_by_pointer_array[2] = ref_by_pointer_array[3] + 1;
+//    return *ref_by_pointer = ref_by_value + ref_by_pointer_array[2];
     
-    //demonstrate undone work
-    return *npointer;
-    
+    //demonstrate load basic
+    //return  (n[2] + n[3])*(n[2] - n[3]);
+
+    //demonstrate load with argument, only long is supported
+    //return  (n[2] + n[3])*(n[a+1]);
+
+    //demonstrate load with pointer
+    //return npointer;
+
 }
 

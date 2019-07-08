@@ -545,30 +545,8 @@ namespace
                             }
                             //check if it is 2d array
                             if(LoadInst* L1 = dyn_cast<LoadInst>(G->getPointerOperand())){
-                                errs() << " index two: ";
-                                if(GetElementPtrInst* G1 = dyn_cast<GetElementPtrInst>(L1->getPointerOperand())){
-                                    //G1->dump();
-                                    if(ConstantInt *C1 = dyn_cast<ConstantInt>( G1->idx_begin() )){
-                                        errs() <<  C1->getSExtValue();
-                                        input_name = input_name + "_" + std::to_string(C1->getSExtValue());
-                                    }else if(Argument* A1 = dyn_cast<Argument>( G1->idx_begin() )){ 
-                                        errs() <<  A1->getArgNo();
-                                        input_name = input_name + "_arg" + std::to_string(A1->getArgNo());
-                                    } else {
-                                        input_name = input_name + "_x";
-                                        errs() << "unknown index";
-                                    }
-                                    //here we should insert check for 3d array. instead assume 2d and check if array is input
-                                    if(Argument* Arg = dyn_cast<Argument>(G1->getPointerOperand())){
-                                        errs() << ", input: " << std::to_string(Arg->getArgNo());
-                                        input_name = input_name + "_arg" + std::to_string(Arg->getArgNo());
-                                    } else {
-                                        input_name = input_name + "_argx";
-                                        errs() << "this array is not input?";
-                                    }
-                                } else {
-                                    errs() << "error: 2d array is not using gep";
-                                }
+                                errs() << "ERROR: only one dimensional arrays are supported\n";
+                                return 1;
                             } else if(Argument* Arg = dyn_cast<Argument>(G->getPointerOperand())){
                                 errs() << ", input: " << std::to_string(Arg->getArgNo());  
                                 input_name = input_name + "_arg" + std::to_string(Arg->getArgNo());
@@ -577,8 +555,11 @@ namespace
                                 errs() << "this array is not input?";
                             }
                         }
-                        else {
-                            errs() << "load pointer is not gep\n";;
+                        else if(Argument* A = dyn_cast<Argument>(L->getPointerOperand())){
+                                errs() << "pointer in argument:" << A->getArgNo();
+                                input_name = input_name + "_ptr" + std::to_string(A->getArgNo());
+                        }else{
+                            errs() << "load pointer is not supported\n";
                         }
                         errs() << "\n";
                         OpGraphOp* op = new OpGraphOp(input_name, OPGRAPH_OP_INPUT);
@@ -613,33 +594,21 @@ namespace
                             }
                             //check if it is 2d array
                             if(LoadInst* L1 = dyn_cast<LoadInst>(G->getPointerOperand())){
-                                if(GetElementPtrInst* G1 = dyn_cast<GetElementPtrInst>(L1->getPointerOperand())){
-                                    if(ConstantInt *C1 = dyn_cast<ConstantInt>( G1->idx_begin() )){
-                                        output_name = output_name + "_" + std::to_string(C1->getSExtValue());
-                                    }else if(Argument* A1 = dyn_cast<Argument>( G1->idx_begin() )){ 
-                                        output_name = output_name + "_arg" + std::to_string(A1->getArgNo());
-                                    } else {
-                                        output_name = output_name + "_x";
-                                    }
-                                    if(Argument* Arg = dyn_cast<Argument>(G1->getPointerOperand())){
-                                        output_name = output_name + "_arg" + std::to_string(Arg->getArgNo());
-                                    } else {
-                                        output_name = output_name + "_argx";
-                                    }
-                                } else {
-                                    errs() << "error: 2d array is not using gep";
-                                }
+                                errs() << "ERROR: only one dimensional arrays are supported\n";
+                                return 1;
                             } else if(Argument* Arg = dyn_cast<Argument>(G->getPointerOperand())){
                                 output_name = output_name + "_arg" + std::to_string(Arg->getArgNo());
                             } else {
                                 output_name = output_name + "_argx";
                             }
-                        }
-                        else {
-                            errs() << "load pointer is not gep\n";;
+                        } else if(Argument* A = dyn_cast<Argument>(S->getPointerOperand())){
+                                errs() << "pointer in argument:" << A->getArgNo();
+                                output_name = output_name + "_ptr" + std::to_string(A->getArgNo());
+                        }else{
+                            errs() << "store pointer is not supported\n";;
                         }
 
-                        Instruction* store_input = S->getValueOperand();
+                        Instruction* store_input = dyn_cast<Instruction>(S->getValueOperand());
                         OpGraphOp* out = new OpGraphOp(output_name, OPGRAPH_OP_OUTPUT);
                         out->input.push_back(vals[store_input]);
                         opgraph->op_nodes.push_back(out);
