@@ -91,14 +91,11 @@ Module::~Module()
 // This is a void function insead of a std::vector<Module*> function because it would otherwise use lots of memory (as it is recursive)
 void Module::genConfigOrder(std::vector<ConfigCell*> & ConfigTable) const
 {
-    
     for(const auto& name_and_configcell : configcells) {
-        std::cout << name_and_configcell.second->name;
         ConfigTable.push_back(name_and_configcell.second);
     }
 
     for(const auto& name_and_submodule : submodules) {
-        std::cout << "\nsubmodule: " << name_and_submodule.second->name;
         name_and_submodule.second->genConfigOrder(ConfigTable);
     }
 }
@@ -642,13 +639,9 @@ void Module::print_submodules()
 void Module::print_configcells()
 {
     // print for all composite submodules
-    //for(std::map<std::string,ConfigCell*>::iterator it = configcells.begin(); it != configcells.end(); ++it)
-    for(const auto& it : configcells)
+    for(std::map<std::string,ConfigCell*>::iterator it = configcells.begin(); it != configcells.end(); ++it)
     {
-        std::cout << "notnot";
-        //deki_edit
-        std::cout << it.first << ":";
-        std::cout << it.second->name << "\n";
+        std::cout << it->second->name << "\n";
     }
 }
 
