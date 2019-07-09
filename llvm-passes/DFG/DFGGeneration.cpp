@@ -516,14 +516,14 @@ namespace
                     // load should be input
                     if(LoadInst* L = dyn_cast<LoadInst>(I))
                     {
-                        if (L->hasOneUse()){
+                        //if (L->hasOneUse()){
                             if(GetElementPtrInst* G = dyn_cast<GetElementPtrInst>(L->use_begin()->getUser())){
-                                errs() << "load used only by GEP instruction is ignored\n";   //debug
+                                errs() << "load used only by GEP instructions is ignored\n";   //debug
                                 //L->use_begin()->getUser()->dump();                          //debug
                                 //L->dump();                                                  //debug
                                 continue;
                             }
-                        }
+                        //}
                         //this load is useful, make a input node
                         errs() << "making input node for load";                                       //debug
                         //L->dump();
