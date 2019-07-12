@@ -57,6 +57,7 @@ class BitStream
         void print(); // Print out the bistream
         void print_debug(); // Print out bistream in debug mode (with spaces between bits for differerent config cells)
         void print_testbench(std::ostream& os) const;
+	void print_bitstream(std::ostream& os) const;
 
     private:
         std::unordered_map<const ConfigCell*, std::vector<BitSetting>> setting_storage;

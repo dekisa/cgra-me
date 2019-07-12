@@ -33,6 +33,7 @@
 #include <CGRA/BitSetting.h>
 #include <CGRA/Exception.h>
 
+#include <CGRA/user-inc/NESWbitstream.h>
 #include <iostream>
 
 template<>
@@ -72,7 +73,42 @@ std::ostream& operator<<(std::ostream& os, const BitSetting& bs) {
             throw cgrame_error("unhandled BitSetting in stream printing function");
     }    
 }
+unsigned int to_binary(const BitSetting& bs){
+        switch (bs) {
+        case BitSetting::LOW:
+            return 0;
+        case BitSetting::HIGH:
+            return 1;
+        case BitSetting::DONT_CARE_PREFER_LOW:
+        case BitSetting::DONT_CARE_PREFER_HIGH:
+            return 0; 
+        case BitSetting::HIGH_IMPEDANCE:
+            return 0; 
+        default:
+            throw cgrame_error("unhandled BitSetting in stream printing function");
+    }    
+}
 
+unsigned int to_binary(const std::vector<BitSetting>& bits){
+    if (!is_valid(bits))
+        return INVALID_VAL;
+
+    unsigned int result = 0;    
+
+    for (const auto& bit : bits) {
+        result = result << 1 | to_binary(bit);
+    }
+    return result;
+}
+
+bool is_valid(const std::vector<BitSetting>& bits){
+    for (const auto& bit : bits) {
+        if ((bit != BitSetting::LOW) && (bit != BitSetting::HIGH)){
+            return false;
+        }
+    }
+    return true;
+}
 std::ostream& operator<<(std::ostream& os, const std::vector<BitSetting>& bits) {
     os << '{';
     for (const auto& bit : bits) {

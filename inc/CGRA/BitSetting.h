@@ -50,6 +50,9 @@ T from_bool(bool b);
 template<>
 BitSetting from_bool<BitSetting>(bool b);
 BitSetting force_to_rail(const BitSetting& bs);
+unsigned int to_binary(const BitSetting& bs);
+unsigned int to_binary(const std::vector<BitSetting>& bits);
+bool is_valid(const std::vector<BitSetting>& bits);
 
 std::ostream& operator<<(std::ostream& os, const BitSetting& bs);
 std::ostream& operator<<(std::ostream& os, const std::vector<BitSetting>& bits);

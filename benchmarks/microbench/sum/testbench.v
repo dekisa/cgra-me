@@ -46,23 +46,23 @@ module CGRA_configurator(
 		1'bx,1'bx, // b_c3_r3::MuxSConfig
 		1'b1,1'b1, // b_c3_r3::MuxNConfig
 		1'bx,1'bx, // b_c3_r3::MuxEConfig
-		1'b0,1'b0,1'b1, // b_c3_r3::MuxBConfig
-		1'b0,1'b0,1'b0, // b_c3_r3::MuxAConfig
-		1'b0,1'b0,1'b0,1'b0, // b_c3_r3::FuncConfig
+		1'bx,1'bx,1'bx, // b_c3_r3::MuxBConfig
+		1'b0,1'b0,1'b1, // b_c3_r3::MuxAConfig
+		1'bx,1'bx,1'bx,1'bx, // b_c3_r3::FuncConfig
 		1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx, // b_c3_r2::ConstVal
 		1'bx,1'bx, // b_c3_r2::MuxWConfig
-		1'b1,1'b1, // b_c3_r2::MuxSConfig
-		1'bx,1'bx, // b_c3_r2::MuxNConfig
+		1'bx,1'bx, // b_c3_r2::MuxSConfig
+		1'b1,1'b1, // b_c3_r2::MuxNConfig
 		1'bx,1'bx, // b_c3_r2::MuxEConfig
 		1'b0,1'b1,1'b0, // b_c3_r2::MuxBConfig
-		1'bx,1'bx,1'bx, // b_c3_r2::MuxAConfig
-		1'bx,1'bx,1'bx,1'bx, // b_c3_r2::FuncConfig
+		1'b0,1'b0,1'b0, // b_c3_r2::MuxAConfig
+		1'b0,1'b0,1'b0,1'b0, // b_c3_r2::FuncConfig
 		1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx, // b_c3_r1::ConstVal
 		1'bx,1'bx, // b_c3_r1::MuxWConfig
-		1'bx,1'bx, // b_c3_r1::MuxSConfig
+		1'b1,1'b1, // b_c3_r1::MuxSConfig
 		1'bx,1'bx, // b_c3_r1::MuxNConfig
 		1'bx,1'bx, // b_c3_r1::MuxEConfig
-		1'bx,1'bx,1'bx, // b_c3_r1::MuxBConfig
+		1'b0,1'b1,1'b0, // b_c3_r1::MuxBConfig
 		1'bx,1'bx,1'bx, // b_c3_r1::MuxAConfig
 		1'bx,1'bx,1'bx,1'bx, // b_c3_r1::FuncConfig
 		1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx,1'bx, // b_c3_r0::ConstVal

@@ -1372,7 +1372,6 @@ var edges = [];
 edges.push(new vis.DataSet([
 { from: '0:b_c0_r0.const.const', to: '0:b_c0_r0.const.out', arrows: 'to' },
 { from: '0:b_c0_r0.const.out', to: '0:b_c0_r0.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c0_r0.const.out', to: '0:b_c0_r0.mux_b.in4', arrows: 'to' },
 { from: '0:b_c0_r0.func.fu', to: '0:b_c0_r0.func.m_out', arrows: 'to' },
 { from: '0:b_c0_r0.func.in_a', to: '0:b_c0_r0.func.fu', arrows: 'to' },
 { from: '0:b_c0_r0.func.in_a', to: '0:b_c0_r0.func.m_in_a', arrows: 'to' },
@@ -1449,7 +1448,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c0_r0.out_w', to: '0:io_left_0.in', arrows: 'to' },
 { from: '0:b_c0_r1.const.const', to: '0:b_c0_r1.const.out', arrows: 'to' },
 { from: '0:b_c0_r1.const.out', to: '0:b_c0_r1.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c0_r1.const.out', to: '0:b_c0_r1.mux_b.in4', arrows: 'to' },
 { from: '0:b_c0_r1.func.fu', to: '0:b_c0_r1.func.m_out', arrows: 'to' },
 { from: '0:b_c0_r1.func.in_a', to: '0:b_c0_r1.func.fu', arrows: 'to' },
 { from: '0:b_c0_r1.func.in_a', to: '0:b_c0_r1.func.m_in_a', arrows: 'to' },
@@ -1526,7 +1524,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c0_r1.out_w', to: '0:io_left_1.in', arrows: 'to' },
 { from: '0:b_c0_r2.const.const', to: '0:b_c0_r2.const.out', arrows: 'to' },
 { from: '0:b_c0_r2.const.out', to: '0:b_c0_r2.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c0_r2.const.out', to: '0:b_c0_r2.mux_b.in4', arrows: 'to' },
 { from: '0:b_c0_r2.func.fu', to: '0:b_c0_r2.func.m_out', arrows: 'to' },
 { from: '0:b_c0_r2.func.in_a', to: '0:b_c0_r2.func.fu', arrows: 'to' },
 { from: '0:b_c0_r2.func.in_a', to: '0:b_c0_r2.func.m_in_a', arrows: 'to' },
@@ -1603,7 +1600,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c0_r2.out_w', to: '0:io_left_2.in', arrows: 'to' },
 { from: '0:b_c0_r3.const.const', to: '0:b_c0_r3.const.out', arrows: 'to' },
 { from: '0:b_c0_r3.const.out', to: '0:b_c0_r3.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c0_r3.const.out', to: '0:b_c0_r3.mux_b.in4', arrows: 'to' },
 { from: '0:b_c0_r3.func.fu', to: '0:b_c0_r3.func.m_out', arrows: 'to' },
 { from: '0:b_c0_r3.func.in_a', to: '0:b_c0_r3.func.fu', arrows: 'to' },
 { from: '0:b_c0_r3.func.in_a', to: '0:b_c0_r3.func.m_in_a', arrows: 'to' },
@@ -1680,7 +1676,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c0_r3.out_w', to: '0:io_left_3.in', arrows: 'to' },
 { from: '0:b_c1_r0.const.const', to: '0:b_c1_r0.const.out', arrows: 'to' },
 { from: '0:b_c1_r0.const.out', to: '0:b_c1_r0.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c1_r0.const.out', to: '0:b_c1_r0.mux_b.in4', arrows: 'to' },
 { from: '0:b_c1_r0.func.fu', to: '0:b_c1_r0.func.m_out', arrows: 'to' },
 { from: '0:b_c1_r0.func.in_a', to: '0:b_c1_r0.func.fu', arrows: 'to' },
 { from: '0:b_c1_r0.func.in_a', to: '0:b_c1_r0.func.m_in_a', arrows: 'to' },
@@ -1757,7 +1752,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c1_r0.out_w', to: '0:b_c0_r0.in_e', arrows: 'to' },
 { from: '0:b_c1_r1.const.const', to: '0:b_c1_r1.const.out', arrows: 'to' },
 { from: '0:b_c1_r1.const.out', to: '0:b_c1_r1.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c1_r1.const.out', to: '0:b_c1_r1.mux_b.in4', arrows: 'to' },
 { from: '0:b_c1_r1.func.fu', to: '0:b_c1_r1.func.m_out', arrows: 'to' },
 { from: '0:b_c1_r1.func.in_a', to: '0:b_c1_r1.func.fu', arrows: 'to' },
 { from: '0:b_c1_r1.func.in_a', to: '0:b_c1_r1.func.m_in_a', arrows: 'to' },
@@ -1834,7 +1828,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c1_r1.out_w', to: '0:b_c0_r1.in_e', arrows: 'to' },
 { from: '0:b_c1_r2.const.const', to: '0:b_c1_r2.const.out', arrows: 'to' },
 { from: '0:b_c1_r2.const.out', to: '0:b_c1_r2.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c1_r2.const.out', to: '0:b_c1_r2.mux_b.in4', arrows: 'to' },
 { from: '0:b_c1_r2.func.fu', to: '0:b_c1_r2.func.m_out', arrows: 'to' },
 { from: '0:b_c1_r2.func.in_a', to: '0:b_c1_r2.func.fu', arrows: 'to' },
 { from: '0:b_c1_r2.func.in_a', to: '0:b_c1_r2.func.m_in_a', arrows: 'to' },
@@ -1911,7 +1904,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c1_r2.out_w', to: '0:b_c0_r2.in_e', arrows: 'to' },
 { from: '0:b_c1_r3.const.const', to: '0:b_c1_r3.const.out', arrows: 'to' },
 { from: '0:b_c1_r3.const.out', to: '0:b_c1_r3.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c1_r3.const.out', to: '0:b_c1_r3.mux_b.in4', arrows: 'to' },
 { from: '0:b_c1_r3.func.fu', to: '0:b_c1_r3.func.m_out', arrows: 'to' },
 { from: '0:b_c1_r3.func.in_a', to: '0:b_c1_r3.func.fu', arrows: 'to' },
 { from: '0:b_c1_r3.func.in_a', to: '0:b_c1_r3.func.m_in_a', arrows: 'to' },
@@ -1988,7 +1980,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c1_r3.out_w', to: '0:b_c0_r3.in_e', arrows: 'to' },
 { from: '0:b_c2_r0.const.const', to: '0:b_c2_r0.const.out', arrows: 'to' },
 { from: '0:b_c2_r0.const.out', to: '0:b_c2_r0.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c2_r0.const.out', to: '0:b_c2_r0.mux_b.in4', arrows: 'to' },
 { from: '0:b_c2_r0.func.fu', to: '0:b_c2_r0.func.m_out', arrows: 'to' },
 { from: '0:b_c2_r0.func.in_a', to: '0:b_c2_r0.func.fu', arrows: 'to' },
 { from: '0:b_c2_r0.func.in_a', to: '0:b_c2_r0.func.m_in_a', arrows: 'to' },
@@ -2065,7 +2056,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c2_r0.out_w', to: '0:b_c1_r0.in_e', arrows: 'to' },
 { from: '0:b_c2_r1.const.const', to: '0:b_c2_r1.const.out', arrows: 'to' },
 { from: '0:b_c2_r1.const.out', to: '0:b_c2_r1.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c2_r1.const.out', to: '0:b_c2_r1.mux_b.in4', arrows: 'to' },
 { from: '0:b_c2_r1.func.fu', to: '0:b_c2_r1.func.m_out', arrows: 'to' },
 { from: '0:b_c2_r1.func.in_a', to: '0:b_c2_r1.func.fu', arrows: 'to' },
 { from: '0:b_c2_r1.func.in_a', to: '0:b_c2_r1.func.m_in_a', arrows: 'to' },
@@ -2142,7 +2132,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c2_r1.out_w', to: '0:b_c1_r1.in_e', arrows: 'to' },
 { from: '0:b_c2_r2.const.const', to: '0:b_c2_r2.const.out', arrows: 'to' },
 { from: '0:b_c2_r2.const.out', to: '0:b_c2_r2.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c2_r2.const.out', to: '0:b_c2_r2.mux_b.in4', arrows: 'to' },
 { from: '0:b_c2_r2.func.fu', to: '0:b_c2_r2.func.m_out', arrows: 'to' },
 { from: '0:b_c2_r2.func.in_a', to: '0:b_c2_r2.func.fu', arrows: 'to' },
 { from: '0:b_c2_r2.func.in_a', to: '0:b_c2_r2.func.m_in_a', arrows: 'to' },
@@ -2219,7 +2208,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c2_r2.out_w', to: '0:b_c1_r2.in_e', arrows: 'to' },
 { from: '0:b_c2_r3.const.const', to: '0:b_c2_r3.const.out', arrows: 'to' },
 { from: '0:b_c2_r3.const.out', to: '0:b_c2_r3.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c2_r3.const.out', to: '0:b_c2_r3.mux_b.in4', arrows: 'to' },
 { from: '0:b_c2_r3.func.fu', to: '0:b_c2_r3.func.m_out', arrows: 'to' },
 { from: '0:b_c2_r3.func.in_a', to: '0:b_c2_r3.func.fu', arrows: 'to' },
 { from: '0:b_c2_r3.func.in_a', to: '0:b_c2_r3.func.m_in_a', arrows: 'to' },
@@ -2296,7 +2284,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c2_r3.out_w', to: '0:b_c1_r3.in_e', arrows: 'to' },
 { from: '0:b_c3_r0.const.const', to: '0:b_c3_r0.const.out', arrows: 'to' },
 { from: '0:b_c3_r0.const.out', to: '0:b_c3_r0.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c3_r0.const.out', to: '0:b_c3_r0.mux_b.in4', arrows: 'to' },
 { from: '0:b_c3_r0.func.fu', to: '0:b_c3_r0.func.m_out', arrows: 'to' },
 { from: '0:b_c3_r0.func.in_a', to: '0:b_c3_r0.func.fu', arrows: 'to' },
 { from: '0:b_c3_r0.func.in_a', to: '0:b_c3_r0.func.m_in_a', arrows: 'to' },
@@ -2373,7 +2360,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c3_r0.out_w', to: '0:b_c2_r0.in_e', arrows: 'to' },
 { from: '0:b_c3_r1.const.const', to: '0:b_c3_r1.const.out', arrows: 'to' },
 { from: '0:b_c3_r1.const.out', to: '0:b_c3_r1.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c3_r1.const.out', to: '0:b_c3_r1.mux_b.in4', arrows: 'to' },
 { from: '0:b_c3_r1.func.fu', to: '0:b_c3_r1.func.m_out', arrows: 'to' },
 { from: '0:b_c3_r1.func.in_a', to: '0:b_c3_r1.func.fu', arrows: 'to' },
 { from: '0:b_c3_r1.func.in_a', to: '0:b_c3_r1.func.m_in_a', arrows: 'to' },
@@ -2450,7 +2436,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c3_r1.out_w', to: '0:b_c2_r1.in_e', arrows: 'to' },
 { from: '0:b_c3_r2.const.const', to: '0:b_c3_r2.const.out', arrows: 'to' },
 { from: '0:b_c3_r2.const.out', to: '0:b_c3_r2.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c3_r2.const.out', to: '0:b_c3_r2.mux_b.in4', arrows: 'to' },
 { from: '0:b_c3_r2.func.fu', to: '0:b_c3_r2.func.m_out', arrows: 'to' },
 { from: '0:b_c3_r2.func.in_a', to: '0:b_c3_r2.func.fu', arrows: 'to' },
 { from: '0:b_c3_r2.func.in_a', to: '0:b_c3_r2.func.m_in_a', arrows: 'to' },
@@ -2527,7 +2512,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c3_r2.out_w', to: '0:b_c2_r2.in_e', arrows: 'to' },
 { from: '0:b_c3_r3.const.const', to: '0:b_c3_r3.const.out', arrows: 'to' },
 { from: '0:b_c3_r3.const.out', to: '0:b_c3_r3.mux_a.in4', arrows: 'to' },
-{ from: '0:b_c3_r3.const.out', to: '0:b_c3_r3.mux_b.in4', arrows: 'to' },
 { from: '0:b_c3_r3.func.fu', to: '0:b_c3_r3.func.m_out', arrows: 'to' },
 { from: '0:b_c3_r3.func.in_a', to: '0:b_c3_r3.func.fu', arrows: 'to' },
 { from: '0:b_c3_r3.func.in_a', to: '0:b_c3_r3.func.m_in_a', arrows: 'to' },
@@ -2828,35 +2812,46 @@ edges.push(new vis.DataSet([
 { from: '0:io_top_3.reg_out.reg', to: '0:io_top_3.reg_out.out', arrows: 'to' },
 ]));
 var nodeMapped = []; while(nodeMapped.push([]) < 1);
-nodeMapped[0].push({ id: '0:b_c3_r3.func.fu', color: 'red', title: 'add0' });
+nodeMapped[0].push({ id: '0:b_c3_r2.func.fu', color: 'red', title: 'add0' });
 nodeMapped[0].push({ id: '0:b_c3_r3.const.const', color: 'red', title: 'const1' });
-nodeMapped[0].push({ id: '0:b_c3_r2.func.in_b', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.func.m_in_b', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r1.func.in_b', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r1.func.m_in_b', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r1.func.out', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r1.in_s', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r1.mux_b.in2', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r1.mux_b.mux', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r1.mux_b.out', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r1.mux_s.in3', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r1.mux_s.mux', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r1.mux_s.out', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r1.out_s', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.func.in_a', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.func.m_out', color: 'red', title: 'add0_val_output' });
 nodeMapped[0].push({ id: '0:b_c3_r2.func.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.in_s', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_b.in2', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_b.mux', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_b.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_s.in3', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_s.mux', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_s.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.out_s', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.func.in_a', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.func.m_out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.func.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.in_n', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_a.in0', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_a.mux', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_a.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_n.in3', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_n.mux', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_n.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.out_n', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.in_n', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.mux_a.in0', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.mux_a.mux', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.mux_a.out', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.mux_n.in3', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.mux_n.mux', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.mux_n.out', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.out_n', color: 'red', title: 'add0_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.func.in_b', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.in_s', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.mux_b.in2', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.mux_b.mux', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r2.mux_b.out', color: 'red', title: 'const1_val_output' });
 nodeMapped[0].push({ id: '0:b_c3_r3.const.out', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.func.in_b', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_b.in4', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_b.mux', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_b.out', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r3.func.in_a', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r3.func.m_in_a', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r3.func.out', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r3.mux_a.in4', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r3.mux_a.mux', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r3.mux_a.out', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r3.mux_n.in3', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r3.mux_n.mux', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r3.mux_n.out', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r3.out_n', color: 'red', title: 'const1_val_output' });
 function draw_helper(context) {
     var container = document.getElementById('context_' + context.toString());
     var data = {

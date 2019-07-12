@@ -60,6 +60,9 @@ std::unique_ptr<CGRA> UserArchs::createNESWArch(const std::map<std::string, std:
 
     std::unique_ptr<CGRA> result(new CGRA());
 
+    result->ROWS = rows;
+    result->COLS = cols;
+
     // create top IOs
     for (int i = 0; i < cols; i++)
     {
