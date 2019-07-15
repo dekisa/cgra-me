@@ -188,6 +188,9 @@ cgra-me_SOURCE_DIR:STATIC=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1
 //Dependencies for the target
 cgra-me_static_LIB_DEPENDS:STATIC=general;pugixml;
 
+//Dependencies for the target
+ifconvert_LIB_DEPENDS:STATIC=general;cgra-me;
+
 //Dependencies for target
 pugixml_LIB_DEPENDS:STATIC=
 
@@ -270,7 +273,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=17
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

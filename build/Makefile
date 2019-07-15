@@ -292,6 +292,19 @@ DFG/fast:
 	$(MAKE) -f llvm-passes/DFG/CMakeFiles/DFG.dir/build.make llvm-passes/DFG/CMakeFiles/DFG.dir/build
 .PHONY : DFG/fast
 
+#=============================================================================
+# Target rules for targets named ifconvert
+
+# Build rule for target.
+ifconvert: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 ifconvert
+.PHONY : ifconvert
+
+# fast build rule for target.
+ifconvert/fast:
+	$(MAKE) -f llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/build.make llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/build
+.PHONY : ifconvert/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -314,6 +327,7 @@ help:
 	@echo "... adl_1"
 	@echo "... intrinsics_gen"
 	@echo "... DFG"
+	@echo "... ifconvert"
 .PHONY : help
 
 

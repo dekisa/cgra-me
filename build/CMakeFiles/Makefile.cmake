@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../llvm-passes/CMakeLists.txt"
   "../llvm-passes/DFG/CMakeLists.txt"
   "../llvm-passes/DFG/LoopParser.py"
+  "../llvm-passes/ifconvert/CMakeLists.txt"
   "../src/CMakeLists.txt"
   "../src/adl_0/CMakeLists.txt"
   "../src/adl_1/CMakeLists.txt"
@@ -80,6 +81,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/adl_1/CMakeFiles/CMakeDirectoryInformation.cmake"
   "llvm-passes/CMakeFiles/CMakeDirectoryInformation.cmake"
   "llvm-passes/DFG/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "llvm-passes/ifconvert/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -98,4 +100,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/adl_1/CMakeFiles/adl_1.dir/DependInfo.cmake"
   "llvm-passes/CMakeFiles/intrinsics_gen.dir/DependInfo.cmake"
   "llvm-passes/DFG/CMakeFiles/DFG.dir/DependInfo.cmake"
+  "llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/DependInfo.cmake"
   )

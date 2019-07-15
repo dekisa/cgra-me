@@ -46,3 +46,6 @@
 /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/llvm-passes/DFG/CMakeFiles/edit_cache.dir
 /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/llvm-passes/DFG/CMakeFiles/rebuild_cache.dir
 /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/llvm-passes/DFG/CMakeFiles/DFG.dir
+/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/llvm-passes/ifconvert/CMakeFiles/edit_cache.dir
+/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/llvm-passes/ifconvert/CMakeFiles/rebuild_cache.dir
+/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/llvm-passes/ifconvert/CMakeFiles/ifconvert.dir

@@ -8,6 +8,7 @@ CFLAGS ?= -O3
 OPT_DISABLE_FLAGS ?= -fno-vectorize -fno-slp-vectorize -fno-unroll-loops #-Xclang -disable-O0-optnone
 
 LLVM_DFG_PLUGIN ?= ../../../build/lib/libDFG.so
+LLVM_IFCONVERT_PLUGIN ?= ../../../build/lib/libifconvert.so
 LOOP_PARSER ?= ../../../build/script/LoopParser.py
 
 LOOP_TAGS ?= loop
@@ -26,7 +27,7 @@ $(DFG_TARGETS): $(BENCHNAME)_ifcon.bc $(BENCHNAME).tag $(BENCHNAME)_ssa.bc $(BEN
 	opt '$(BENCHNAME)_ifcon.bc' -o '/dev/null' -load '$(LLVM_DFG_PLUGIN)' --dfg-out -in-tag-pairs '$(BENCHNAME).tag' $(DFG_FLAGS)
 
 %_ifcon.bc: %_ssa.bc
-	opt -load ~/llvm-project/build/lib/LLVMifconvert.so -loopus-flatcfg '$*_ssa.bc' -o '$*_ifcon.bc'
+	opt -load '$(LLVM_IFCONVERT_PLUGIN)' -loopus-flatcfg '$*_ssa.bc' -o '$*_ifcon.bc'
 
 %_ssa.bc: %.bc
 	opt -mem2reg '$*.bc' -o '$*_ssa.bc'

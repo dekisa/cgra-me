@@ -296,40 +296,40 @@ namespace
         {
             // Loop tag is in ths first basic block of the loop
             int found_tag_num = 0;
-            //for(auto it = F.begin()->begin(); it != F.begin()->end(); ++it)
-            //{
-            //    if(isa<CallInst>(it))
-            //    {
-            //        Function * func = dyn_cast<CallInst>(it)->getCalledFunction();
-            //        if((func != NULL) && (func->getName() == "DFGLOOP_TAG")){
-			//            // The case where an indirect call happens
-			//            found_tag_num = cast<ConstantInt>(dyn_cast<CallInst>(it)->getArgOperand(0))->getValue().getZExtValue(); // found_tag_num has the the tag number
-			//        }
-            //    }
-            //}
+            for(auto it = F.begin()->begin(); it != F.begin()->end(); ++it)
+            {
+                if(isa<CallInst>(it))
+                {
+                    Function * func = dyn_cast<CallInst>(it)->getCalledFunction();
+                    if((func != NULL) && (func->getName() == "DFGLOOP_TAG")){
+			            // The case where an indirect call happens
+			            found_tag_num = cast<ConstantInt>(dyn_cast<CallInst>(it)->getArgOperand(0))->getValue().getZExtValue(); // found_tag_num has the the tag number
+			        }
+                }
+            }
             
-            //if(!found_tag_num) // If there is no tag associated with this loop
-            //    return false;
+            if(!found_tag_num) // If there is no tag associated with this loop
+                return false;
 
-//            std::string tag_name;
-//
-//            auto tag_pairs_it = tag_pairs.find(found_tag_num);
-//            if(tag_pairs_it == tag_pairs.end())
-//            {
-//                errs() << "Error: Tag could not be found from the generated script, ignoring this loop." << "\n";
-//                return false;
-//            }
-//            else
-//            {
-//                auto tag_string_it = std::find(loop_tags.begin(), loop_tags.end(), tag_pairs_it->second);
-//                if(tag_string_it == loop_tags.end())
-//                {
-//                    return false; // Do not process this loop
-//                }
-                // Process the loop otherwise
-//                tag_name = *tag_string_it;
-//                errs() << "Info: The loop with tag: " << tag_name << " is generating DFG." << "\n";
-//            }
+            std::string tag_name;
+
+            auto tag_pairs_it = tag_pairs.find(found_tag_num);
+            if(tag_pairs_it == tag_pairs.end())
+            {
+                errs() << "Error: Tag could not be found from the generated script, ignoring this loop." << "\n";
+                return false;
+            }
+            else
+            {
+                auto tag_string_it = std::find(loop_tags.begin(), loop_tags.end(), tag_pairs_it->second);
+                if(tag_string_it == loop_tags.end())
+                {
+                    return false; // Do not process this loop
+                }
+              // Process the loop otherwise
+                tag_name = *tag_string_it;
+                errs() << "Info: The loop with tag: " << tag_name << " is generating DFG." << "\n";
+            }
 
             //if(!L->empty()) // if empty there are no sub loops
             //   return false;
@@ -796,8 +796,8 @@ namespace
                 removeUnnecessaryLeafNodes(opgraph);
 
             opgraph->debug_check();
-	        std::ofstream f("graph.dot", std::ios::out);
-            //std::ofstream f("graph_" + tag_name + ".dot", std::ios::out);
+	    //    std::ofstream f("graph.dot", std::ios::out);
+            std::ofstream f("graph_" + tag_name + ".dot", std::ios::out);
             opgraph->printDOTwithOps(f);
 
             return false;

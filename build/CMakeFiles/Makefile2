@@ -197,7 +197,7 @@ thirdparty/pugixml/preinstall:
 thirdparty/pugixml/CMakeFiles/pugixml.dir/all:
 	$(MAKE) -f thirdparty/pugixml/CMakeFiles/pugixml.dir/build.make thirdparty/pugixml/CMakeFiles/pugixml.dir/depend
 	$(MAKE) -f thirdparty/pugixml/CMakeFiles/pugixml.dir/build.make thirdparty/pugixml/CMakeFiles/pugixml.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=36,37 "Built target pugixml"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=41,42 "Built target pugixml"
 .PHONY : thirdparty/pugixml/CMakeFiles/pugixml.dir/all
 
 # Include target in all.
@@ -548,7 +548,7 @@ src/modules/preinstall:
 src/modules/CMakeFiles/modules.dir/all:
 	$(MAKE) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/depend
 	$(MAKE) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=34,35 "Built target modules"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=39,40 "Built target modules"
 .PHONY : src/modules/CMakeFiles/modules.dir/all
 
 # Include target in all.
@@ -603,7 +603,7 @@ src/visual/preinstall:
 src/visual/CMakeFiles/visual.dir/all:
 	$(MAKE) -f src/visual/CMakeFiles/visual.dir/build.make src/visual/CMakeFiles/visual.dir/depend
 	$(MAKE) -f src/visual/CMakeFiles/visual.dir/build.make src/visual/CMakeFiles/visual.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=38 "Built target visual"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=43 "Built target visual"
 .PHONY : src/visual/CMakeFiles/visual.dir/all
 
 # Include target in all.
@@ -803,17 +803,20 @@ clean: src/adl_1/CMakeFiles/adl_1.dir/clean
 
 # Convenience name for "all" pass in the directory.
 llvm-passes/all: llvm-passes/DFG/all
+llvm-passes/all: llvm-passes/ifconvert/all
 
 .PHONY : llvm-passes/all
 
 # Convenience name for "clean" pass in the directory.
 llvm-passes/clean: llvm-passes/CMakeFiles/intrinsics_gen.dir/clean
 llvm-passes/clean: llvm-passes/DFG/clean
+llvm-passes/clean: llvm-passes/ifconvert/clean
 
 .PHONY : llvm-passes/clean
 
 # Convenience name for "preinstall" pass in the directory.
 llvm-passes/preinstall: llvm-passes/DFG/preinstall
+llvm-passes/preinstall: llvm-passes/ifconvert/preinstall
 
 .PHONY : llvm-passes/preinstall
 
@@ -901,6 +904,61 @@ llvm-passes/DFG/CMakeFiles/DFG.dir/clean:
 
 # clean rule for target.
 clean: llvm-passes/DFG/CMakeFiles/DFG.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory llvm-passes/ifconvert
+
+# Convenience name for "all" pass in the directory.
+llvm-passes/ifconvert/all: llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/all
+
+.PHONY : llvm-passes/ifconvert/all
+
+# Convenience name for "clean" pass in the directory.
+llvm-passes/ifconvert/clean: llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/clean
+
+.PHONY : llvm-passes/ifconvert/clean
+
+# Convenience name for "preinstall" pass in the directory.
+llvm-passes/ifconvert/preinstall:
+
+.PHONY : llvm-passes/ifconvert/preinstall
+
+#=============================================================================
+# Target rules for target llvm-passes/ifconvert/CMakeFiles/ifconvert.dir
+
+# All Build rule for target.
+llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/all: src/CMakeFiles/cgra-me.dir/all
+	$(MAKE) -f llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/build.make llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/depend
+	$(MAKE) -f llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/build.make llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=34,35,36,37,38 "Built target ifconvert"
+.PHONY : llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/all
+
+# Include target in all.
+all: llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles 38
+	$(MAKE) -f CMakeFiles/Makefile2 llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles 0
+.PHONY : llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/rule
+
+# Convenience name for target.
+ifconvert: llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/rule
+
+.PHONY : ifconvert
+
+# clean rule for target.
+llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/clean:
+	$(MAKE) -f llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/build.make llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/clean
+.PHONY : llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/clean
+
+# clean rule for target.
+clean: llvm-passes/ifconvert/CMakeFiles/ifconvert.dir/clean
 
 .PHONY : clean
 
