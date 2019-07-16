@@ -255,7 +255,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c0_r0.mux_b.in1', label: '0:b_c0_r0.mux_b.in1'},
 { id: '0:b_c0_r0.mux_b.in2', label: '0:b_c0_r0.mux_b.in2'},
 { id: '0:b_c0_r0.mux_b.in3', label: '0:b_c0_r0.mux_b.in3'},
-{ id: '0:b_c0_r0.mux_b.in4', label: '0:b_c0_r0.mux_b.in4'},
 { id: '0:b_c0_r0.mux_b.mux', label: '0:b_c0_r0.mux_b.mux'},
 { id: '0:b_c0_r0.mux_b.out', label: '0:b_c0_r0.mux_b.out'},
 { id: '0:b_c0_r0.mux_e.in0', label: '0:b_c0_r0.mux_e.in0'},
@@ -310,7 +309,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c0_r1.mux_b.in1', label: '0:b_c0_r1.mux_b.in1'},
 { id: '0:b_c0_r1.mux_b.in2', label: '0:b_c0_r1.mux_b.in2'},
 { id: '0:b_c0_r1.mux_b.in3', label: '0:b_c0_r1.mux_b.in3'},
-{ id: '0:b_c0_r1.mux_b.in4', label: '0:b_c0_r1.mux_b.in4'},
 { id: '0:b_c0_r1.mux_b.mux', label: '0:b_c0_r1.mux_b.mux'},
 { id: '0:b_c0_r1.mux_b.out', label: '0:b_c0_r1.mux_b.out'},
 { id: '0:b_c0_r1.mux_e.in0', label: '0:b_c0_r1.mux_e.in0'},
@@ -365,7 +363,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c0_r2.mux_b.in1', label: '0:b_c0_r2.mux_b.in1'},
 { id: '0:b_c0_r2.mux_b.in2', label: '0:b_c0_r2.mux_b.in2'},
 { id: '0:b_c0_r2.mux_b.in3', label: '0:b_c0_r2.mux_b.in3'},
-{ id: '0:b_c0_r2.mux_b.in4', label: '0:b_c0_r2.mux_b.in4'},
 { id: '0:b_c0_r2.mux_b.mux', label: '0:b_c0_r2.mux_b.mux'},
 { id: '0:b_c0_r2.mux_b.out', label: '0:b_c0_r2.mux_b.out'},
 { id: '0:b_c0_r2.mux_e.in0', label: '0:b_c0_r2.mux_e.in0'},
@@ -420,7 +417,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c0_r3.mux_b.in1', label: '0:b_c0_r3.mux_b.in1'},
 { id: '0:b_c0_r3.mux_b.in2', label: '0:b_c0_r3.mux_b.in2'},
 { id: '0:b_c0_r3.mux_b.in3', label: '0:b_c0_r3.mux_b.in3'},
-{ id: '0:b_c0_r3.mux_b.in4', label: '0:b_c0_r3.mux_b.in4'},
 { id: '0:b_c0_r3.mux_b.mux', label: '0:b_c0_r3.mux_b.mux'},
 { id: '0:b_c0_r3.mux_b.out', label: '0:b_c0_r3.mux_b.out'},
 { id: '0:b_c0_r3.mux_e.in0', label: '0:b_c0_r3.mux_e.in0'},
@@ -475,7 +471,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c1_r0.mux_b.in1', label: '0:b_c1_r0.mux_b.in1'},
 { id: '0:b_c1_r0.mux_b.in2', label: '0:b_c1_r0.mux_b.in2'},
 { id: '0:b_c1_r0.mux_b.in3', label: '0:b_c1_r0.mux_b.in3'},
-{ id: '0:b_c1_r0.mux_b.in4', label: '0:b_c1_r0.mux_b.in4'},
 { id: '0:b_c1_r0.mux_b.mux', label: '0:b_c1_r0.mux_b.mux'},
 { id: '0:b_c1_r0.mux_b.out', label: '0:b_c1_r0.mux_b.out'},
 { id: '0:b_c1_r0.mux_e.in0', label: '0:b_c1_r0.mux_e.in0'},
@@ -530,7 +525,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c1_r1.mux_b.in1', label: '0:b_c1_r1.mux_b.in1'},
 { id: '0:b_c1_r1.mux_b.in2', label: '0:b_c1_r1.mux_b.in2'},
 { id: '0:b_c1_r1.mux_b.in3', label: '0:b_c1_r1.mux_b.in3'},
-{ id: '0:b_c1_r1.mux_b.in4', label: '0:b_c1_r1.mux_b.in4'},
 { id: '0:b_c1_r1.mux_b.mux', label: '0:b_c1_r1.mux_b.mux'},
 { id: '0:b_c1_r1.mux_b.out', label: '0:b_c1_r1.mux_b.out'},
 { id: '0:b_c1_r1.mux_e.in0', label: '0:b_c1_r1.mux_e.in0'},
@@ -585,7 +579,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c1_r2.mux_b.in1', label: '0:b_c1_r2.mux_b.in1'},
 { id: '0:b_c1_r2.mux_b.in2', label: '0:b_c1_r2.mux_b.in2'},
 { id: '0:b_c1_r2.mux_b.in3', label: '0:b_c1_r2.mux_b.in3'},
-{ id: '0:b_c1_r2.mux_b.in4', label: '0:b_c1_r2.mux_b.in4'},
 { id: '0:b_c1_r2.mux_b.mux', label: '0:b_c1_r2.mux_b.mux'},
 { id: '0:b_c1_r2.mux_b.out', label: '0:b_c1_r2.mux_b.out'},
 { id: '0:b_c1_r2.mux_e.in0', label: '0:b_c1_r2.mux_e.in0'},
@@ -640,7 +633,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c1_r3.mux_b.in1', label: '0:b_c1_r3.mux_b.in1'},
 { id: '0:b_c1_r3.mux_b.in2', label: '0:b_c1_r3.mux_b.in2'},
 { id: '0:b_c1_r3.mux_b.in3', label: '0:b_c1_r3.mux_b.in3'},
-{ id: '0:b_c1_r3.mux_b.in4', label: '0:b_c1_r3.mux_b.in4'},
 { id: '0:b_c1_r3.mux_b.mux', label: '0:b_c1_r3.mux_b.mux'},
 { id: '0:b_c1_r3.mux_b.out', label: '0:b_c1_r3.mux_b.out'},
 { id: '0:b_c1_r3.mux_e.in0', label: '0:b_c1_r3.mux_e.in0'},
@@ -695,7 +687,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c2_r0.mux_b.in1', label: '0:b_c2_r0.mux_b.in1'},
 { id: '0:b_c2_r0.mux_b.in2', label: '0:b_c2_r0.mux_b.in2'},
 { id: '0:b_c2_r0.mux_b.in3', label: '0:b_c2_r0.mux_b.in3'},
-{ id: '0:b_c2_r0.mux_b.in4', label: '0:b_c2_r0.mux_b.in4'},
 { id: '0:b_c2_r0.mux_b.mux', label: '0:b_c2_r0.mux_b.mux'},
 { id: '0:b_c2_r0.mux_b.out', label: '0:b_c2_r0.mux_b.out'},
 { id: '0:b_c2_r0.mux_e.in0', label: '0:b_c2_r0.mux_e.in0'},
@@ -750,7 +741,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c2_r1.mux_b.in1', label: '0:b_c2_r1.mux_b.in1'},
 { id: '0:b_c2_r1.mux_b.in2', label: '0:b_c2_r1.mux_b.in2'},
 { id: '0:b_c2_r1.mux_b.in3', label: '0:b_c2_r1.mux_b.in3'},
-{ id: '0:b_c2_r1.mux_b.in4', label: '0:b_c2_r1.mux_b.in4'},
 { id: '0:b_c2_r1.mux_b.mux', label: '0:b_c2_r1.mux_b.mux'},
 { id: '0:b_c2_r1.mux_b.out', label: '0:b_c2_r1.mux_b.out'},
 { id: '0:b_c2_r1.mux_e.in0', label: '0:b_c2_r1.mux_e.in0'},
@@ -805,7 +795,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c2_r2.mux_b.in1', label: '0:b_c2_r2.mux_b.in1'},
 { id: '0:b_c2_r2.mux_b.in2', label: '0:b_c2_r2.mux_b.in2'},
 { id: '0:b_c2_r2.mux_b.in3', label: '0:b_c2_r2.mux_b.in3'},
-{ id: '0:b_c2_r2.mux_b.in4', label: '0:b_c2_r2.mux_b.in4'},
 { id: '0:b_c2_r2.mux_b.mux', label: '0:b_c2_r2.mux_b.mux'},
 { id: '0:b_c2_r2.mux_b.out', label: '0:b_c2_r2.mux_b.out'},
 { id: '0:b_c2_r2.mux_e.in0', label: '0:b_c2_r2.mux_e.in0'},
@@ -860,7 +849,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c2_r3.mux_b.in1', label: '0:b_c2_r3.mux_b.in1'},
 { id: '0:b_c2_r3.mux_b.in2', label: '0:b_c2_r3.mux_b.in2'},
 { id: '0:b_c2_r3.mux_b.in3', label: '0:b_c2_r3.mux_b.in3'},
-{ id: '0:b_c2_r3.mux_b.in4', label: '0:b_c2_r3.mux_b.in4'},
 { id: '0:b_c2_r3.mux_b.mux', label: '0:b_c2_r3.mux_b.mux'},
 { id: '0:b_c2_r3.mux_b.out', label: '0:b_c2_r3.mux_b.out'},
 { id: '0:b_c2_r3.mux_e.in0', label: '0:b_c2_r3.mux_e.in0'},
@@ -915,7 +903,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c3_r0.mux_b.in1', label: '0:b_c3_r0.mux_b.in1'},
 { id: '0:b_c3_r0.mux_b.in2', label: '0:b_c3_r0.mux_b.in2'},
 { id: '0:b_c3_r0.mux_b.in3', label: '0:b_c3_r0.mux_b.in3'},
-{ id: '0:b_c3_r0.mux_b.in4', label: '0:b_c3_r0.mux_b.in4'},
 { id: '0:b_c3_r0.mux_b.mux', label: '0:b_c3_r0.mux_b.mux'},
 { id: '0:b_c3_r0.mux_b.out', label: '0:b_c3_r0.mux_b.out'},
 { id: '0:b_c3_r0.mux_e.in0', label: '0:b_c3_r0.mux_e.in0'},
@@ -970,7 +957,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c3_r1.mux_b.in1', label: '0:b_c3_r1.mux_b.in1'},
 { id: '0:b_c3_r1.mux_b.in2', label: '0:b_c3_r1.mux_b.in2'},
 { id: '0:b_c3_r1.mux_b.in3', label: '0:b_c3_r1.mux_b.in3'},
-{ id: '0:b_c3_r1.mux_b.in4', label: '0:b_c3_r1.mux_b.in4'},
 { id: '0:b_c3_r1.mux_b.mux', label: '0:b_c3_r1.mux_b.mux'},
 { id: '0:b_c3_r1.mux_b.out', label: '0:b_c3_r1.mux_b.out'},
 { id: '0:b_c3_r1.mux_e.in0', label: '0:b_c3_r1.mux_e.in0'},
@@ -1025,7 +1011,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c3_r2.mux_b.in1', label: '0:b_c3_r2.mux_b.in1'},
 { id: '0:b_c3_r2.mux_b.in2', label: '0:b_c3_r2.mux_b.in2'},
 { id: '0:b_c3_r2.mux_b.in3', label: '0:b_c3_r2.mux_b.in3'},
-{ id: '0:b_c3_r2.mux_b.in4', label: '0:b_c3_r2.mux_b.in4'},
 { id: '0:b_c3_r2.mux_b.mux', label: '0:b_c3_r2.mux_b.mux'},
 { id: '0:b_c3_r2.mux_b.out', label: '0:b_c3_r2.mux_b.out'},
 { id: '0:b_c3_r2.mux_e.in0', label: '0:b_c3_r2.mux_e.in0'},
@@ -1080,7 +1065,6 @@ nodes.push(new vis.DataSet([
 { id: '0:b_c3_r3.mux_b.in1', label: '0:b_c3_r3.mux_b.in1'},
 { id: '0:b_c3_r3.mux_b.in2', label: '0:b_c3_r3.mux_b.in2'},
 { id: '0:b_c3_r3.mux_b.in3', label: '0:b_c3_r3.mux_b.in3'},
-{ id: '0:b_c3_r3.mux_b.in4', label: '0:b_c3_r3.mux_b.in4'},
 { id: '0:b_c3_r3.mux_b.mux', label: '0:b_c3_r3.mux_b.mux'},
 { id: '0:b_c3_r3.mux_b.out', label: '0:b_c3_r3.mux_b.out'},
 { id: '0:b_c3_r3.mux_e.in0', label: '0:b_c3_r3.mux_e.in0'},
@@ -1415,7 +1399,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c0_r0.mux_b.in1', to: '0:b_c0_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r0.mux_b.in2', to: '0:b_c0_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r0.mux_b.in3', to: '0:b_c0_r0.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c0_r0.mux_b.in4', to: '0:b_c0_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r0.mux_b.mux', to: '0:b_c0_r0.mux_b.out', arrows: 'to' },
 { from: '0:b_c0_r0.mux_b.out', to: '0:b_c0_r0.func.in_b', arrows: 'to' },
 { from: '0:b_c0_r0.mux_e.in0', to: '0:b_c0_r0.mux_e.mux', arrows: 'to' },
@@ -1491,7 +1474,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c0_r1.mux_b.in1', to: '0:b_c0_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r1.mux_b.in2', to: '0:b_c0_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r1.mux_b.in3', to: '0:b_c0_r1.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c0_r1.mux_b.in4', to: '0:b_c0_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r1.mux_b.mux', to: '0:b_c0_r1.mux_b.out', arrows: 'to' },
 { from: '0:b_c0_r1.mux_b.out', to: '0:b_c0_r1.func.in_b', arrows: 'to' },
 { from: '0:b_c0_r1.mux_e.in0', to: '0:b_c0_r1.mux_e.mux', arrows: 'to' },
@@ -1567,7 +1549,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c0_r2.mux_b.in1', to: '0:b_c0_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r2.mux_b.in2', to: '0:b_c0_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r2.mux_b.in3', to: '0:b_c0_r2.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c0_r2.mux_b.in4', to: '0:b_c0_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r2.mux_b.mux', to: '0:b_c0_r2.mux_b.out', arrows: 'to' },
 { from: '0:b_c0_r2.mux_b.out', to: '0:b_c0_r2.func.in_b', arrows: 'to' },
 { from: '0:b_c0_r2.mux_e.in0', to: '0:b_c0_r2.mux_e.mux', arrows: 'to' },
@@ -1643,7 +1624,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c0_r3.mux_b.in1', to: '0:b_c0_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r3.mux_b.in2', to: '0:b_c0_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r3.mux_b.in3', to: '0:b_c0_r3.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c0_r3.mux_b.in4', to: '0:b_c0_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c0_r3.mux_b.mux', to: '0:b_c0_r3.mux_b.out', arrows: 'to' },
 { from: '0:b_c0_r3.mux_b.out', to: '0:b_c0_r3.func.in_b', arrows: 'to' },
 { from: '0:b_c0_r3.mux_e.in0', to: '0:b_c0_r3.mux_e.mux', arrows: 'to' },
@@ -1719,7 +1699,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c1_r0.mux_b.in1', to: '0:b_c1_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r0.mux_b.in2', to: '0:b_c1_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r0.mux_b.in3', to: '0:b_c1_r0.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c1_r0.mux_b.in4', to: '0:b_c1_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r0.mux_b.mux', to: '0:b_c1_r0.mux_b.out', arrows: 'to' },
 { from: '0:b_c1_r0.mux_b.out', to: '0:b_c1_r0.func.in_b', arrows: 'to' },
 { from: '0:b_c1_r0.mux_e.in0', to: '0:b_c1_r0.mux_e.mux', arrows: 'to' },
@@ -1795,7 +1774,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c1_r1.mux_b.in1', to: '0:b_c1_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r1.mux_b.in2', to: '0:b_c1_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r1.mux_b.in3', to: '0:b_c1_r1.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c1_r1.mux_b.in4', to: '0:b_c1_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r1.mux_b.mux', to: '0:b_c1_r1.mux_b.out', arrows: 'to' },
 { from: '0:b_c1_r1.mux_b.out', to: '0:b_c1_r1.func.in_b', arrows: 'to' },
 { from: '0:b_c1_r1.mux_e.in0', to: '0:b_c1_r1.mux_e.mux', arrows: 'to' },
@@ -1871,7 +1849,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c1_r2.mux_b.in1', to: '0:b_c1_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r2.mux_b.in2', to: '0:b_c1_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r2.mux_b.in3', to: '0:b_c1_r2.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c1_r2.mux_b.in4', to: '0:b_c1_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r2.mux_b.mux', to: '0:b_c1_r2.mux_b.out', arrows: 'to' },
 { from: '0:b_c1_r2.mux_b.out', to: '0:b_c1_r2.func.in_b', arrows: 'to' },
 { from: '0:b_c1_r2.mux_e.in0', to: '0:b_c1_r2.mux_e.mux', arrows: 'to' },
@@ -1947,7 +1924,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c1_r3.mux_b.in1', to: '0:b_c1_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r3.mux_b.in2', to: '0:b_c1_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r3.mux_b.in3', to: '0:b_c1_r3.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c1_r3.mux_b.in4', to: '0:b_c1_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c1_r3.mux_b.mux', to: '0:b_c1_r3.mux_b.out', arrows: 'to' },
 { from: '0:b_c1_r3.mux_b.out', to: '0:b_c1_r3.func.in_b', arrows: 'to' },
 { from: '0:b_c1_r3.mux_e.in0', to: '0:b_c1_r3.mux_e.mux', arrows: 'to' },
@@ -2023,7 +1999,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c2_r0.mux_b.in1', to: '0:b_c2_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r0.mux_b.in2', to: '0:b_c2_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r0.mux_b.in3', to: '0:b_c2_r0.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c2_r0.mux_b.in4', to: '0:b_c2_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r0.mux_b.mux', to: '0:b_c2_r0.mux_b.out', arrows: 'to' },
 { from: '0:b_c2_r0.mux_b.out', to: '0:b_c2_r0.func.in_b', arrows: 'to' },
 { from: '0:b_c2_r0.mux_e.in0', to: '0:b_c2_r0.mux_e.mux', arrows: 'to' },
@@ -2099,7 +2074,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c2_r1.mux_b.in1', to: '0:b_c2_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r1.mux_b.in2', to: '0:b_c2_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r1.mux_b.in3', to: '0:b_c2_r1.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c2_r1.mux_b.in4', to: '0:b_c2_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r1.mux_b.mux', to: '0:b_c2_r1.mux_b.out', arrows: 'to' },
 { from: '0:b_c2_r1.mux_b.out', to: '0:b_c2_r1.func.in_b', arrows: 'to' },
 { from: '0:b_c2_r1.mux_e.in0', to: '0:b_c2_r1.mux_e.mux', arrows: 'to' },
@@ -2175,7 +2149,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c2_r2.mux_b.in1', to: '0:b_c2_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r2.mux_b.in2', to: '0:b_c2_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r2.mux_b.in3', to: '0:b_c2_r2.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c2_r2.mux_b.in4', to: '0:b_c2_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r2.mux_b.mux', to: '0:b_c2_r2.mux_b.out', arrows: 'to' },
 { from: '0:b_c2_r2.mux_b.out', to: '0:b_c2_r2.func.in_b', arrows: 'to' },
 { from: '0:b_c2_r2.mux_e.in0', to: '0:b_c2_r2.mux_e.mux', arrows: 'to' },
@@ -2251,7 +2224,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c2_r3.mux_b.in1', to: '0:b_c2_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r3.mux_b.in2', to: '0:b_c2_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r3.mux_b.in3', to: '0:b_c2_r3.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c2_r3.mux_b.in4', to: '0:b_c2_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c2_r3.mux_b.mux', to: '0:b_c2_r3.mux_b.out', arrows: 'to' },
 { from: '0:b_c2_r3.mux_b.out', to: '0:b_c2_r3.func.in_b', arrows: 'to' },
 { from: '0:b_c2_r3.mux_e.in0', to: '0:b_c2_r3.mux_e.mux', arrows: 'to' },
@@ -2327,7 +2299,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c3_r0.mux_b.in1', to: '0:b_c3_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r0.mux_b.in2', to: '0:b_c3_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r0.mux_b.in3', to: '0:b_c3_r0.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c3_r0.mux_b.in4', to: '0:b_c3_r0.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r0.mux_b.mux', to: '0:b_c3_r0.mux_b.out', arrows: 'to' },
 { from: '0:b_c3_r0.mux_b.out', to: '0:b_c3_r0.func.in_b', arrows: 'to' },
 { from: '0:b_c3_r0.mux_e.in0', to: '0:b_c3_r0.mux_e.mux', arrows: 'to' },
@@ -2403,7 +2374,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c3_r1.mux_b.in1', to: '0:b_c3_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r1.mux_b.in2', to: '0:b_c3_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r1.mux_b.in3', to: '0:b_c3_r1.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c3_r1.mux_b.in4', to: '0:b_c3_r1.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r1.mux_b.mux', to: '0:b_c3_r1.mux_b.out', arrows: 'to' },
 { from: '0:b_c3_r1.mux_b.out', to: '0:b_c3_r1.func.in_b', arrows: 'to' },
 { from: '0:b_c3_r1.mux_e.in0', to: '0:b_c3_r1.mux_e.mux', arrows: 'to' },
@@ -2479,7 +2449,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c3_r2.mux_b.in1', to: '0:b_c3_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r2.mux_b.in2', to: '0:b_c3_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r2.mux_b.in3', to: '0:b_c3_r2.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c3_r2.mux_b.in4', to: '0:b_c3_r2.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r2.mux_b.mux', to: '0:b_c3_r2.mux_b.out', arrows: 'to' },
 { from: '0:b_c3_r2.mux_b.out', to: '0:b_c3_r2.func.in_b', arrows: 'to' },
 { from: '0:b_c3_r2.mux_e.in0', to: '0:b_c3_r2.mux_e.mux', arrows: 'to' },
@@ -2555,7 +2524,6 @@ edges.push(new vis.DataSet([
 { from: '0:b_c3_r3.mux_b.in1', to: '0:b_c3_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r3.mux_b.in2', to: '0:b_c3_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r3.mux_b.in3', to: '0:b_c3_r3.mux_b.mux', arrows: 'to' },
-{ from: '0:b_c3_r3.mux_b.in4', to: '0:b_c3_r3.mux_b.mux', arrows: 'to' },
 { from: '0:b_c3_r3.mux_b.mux', to: '0:b_c3_r3.mux_b.out', arrows: 'to' },
 { from: '0:b_c3_r3.mux_b.out', to: '0:b_c3_r3.func.in_b', arrows: 'to' },
 { from: '0:b_c3_r3.mux_e.in0', to: '0:b_c3_r3.mux_e.mux', arrows: 'to' },
@@ -2812,46 +2780,134 @@ edges.push(new vis.DataSet([
 { from: '0:io_top_3.reg_out.reg', to: '0:io_top_3.reg_out.out', arrows: 'to' },
 ]));
 var nodeMapped = []; while(nodeMapped.push([]) < 1);
-nodeMapped[0].push({ id: '0:b_c3_r2.func.fu', color: 'red', title: 'add0' });
-nodeMapped[0].push({ id: '0:b_c3_r3.const.const', color: 'red', title: 'const1' });
-nodeMapped[0].push({ id: '0:b_c3_r1.func.in_b', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r1.func.m_in_b', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r1.func.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r1.in_s', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r1.mux_b.in2', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r1.mux_b.mux', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r1.mux_b.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r1.mux_s.in3', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r1.mux_s.mux', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r1.mux_s.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r1.out_s', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.func.in_a', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.func.m_out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.func.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.in_n', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_a.in0', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_a.mux', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_a.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_n.in3', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_n.mux', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_n.out', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.out_n', color: 'red', title: 'add0_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.func.in_b', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.in_s', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_b.in2', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_b.mux', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r2.mux_b.out', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.const.out', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.func.in_a', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.func.m_in_a', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.func.out', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_a.in4', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_a.mux', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_a.out', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_n.in3', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_n.mux', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.mux_n.out', color: 'red', title: 'const1_val_output' });
-nodeMapped[0].push({ id: '0:b_c3_r3.out_n', color: 'red', title: 'const1_val_output' });
+nodeMapped[0].push({ id: '0:io_top_1.IE.io', color: 'red', title: 'input0' });
+nodeMapped[0].push({ id: '0:io_left_3.IE.io', color: 'red', title: 'input1' });
+nodeMapped[0].push({ id: '0:io_left_2.IE.io', color: 'red', title: 'input2' });
+nodeMapped[0].push({ id: '0:b_c3_r0.const.const', color: 'red', title: 'const3' });
+nodeMapped[0].push({ id: '0:b_c0_r2.func.fu', color: 'red', title: 'add4' });
+nodeMapped[0].push({ id: '0:b_c1_r0.func.fu', color: 'red', title: 'add5' });
+nodeMapped[0].push({ id: '0:b_c2_r0.func.fu', color: 'red', title: 'sub6' });
+nodeMapped[0].push({ id: '0:io_top_1.OE.io', color: 'red', title: 'output7' });
+nodeMapped[0].push({ id: '0:io_top_2.OE.io', color: 'red', title: 'output8' });
+nodeMapped[0].push({ id: '0:b_c0_r2.func.in_a', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.in_s', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.mux_a.in2', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.mux_a.mux', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.mux_a.out', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r3.in_w', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r3.mux_n.in2', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r3.mux_n.mux', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r3.mux_n.out', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r3.out_n', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:io_left_3.IE.out', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:io_left_3.out', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:io_left_3.reg_out.in', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:io_left_3.reg_out.out', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:io_left_3.reg_out.reg', color: 'red', title: 'input1_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.func.in_b', color: 'red', title: 'input2_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.in_w', color: 'red', title: 'input2_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.mux_b.in3', color: 'red', title: 'input2_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.mux_b.mux', color: 'red', title: 'input2_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.mux_b.out', color: 'red', title: 'input2_val_output' });
+nodeMapped[0].push({ id: '0:io_left_2.IE.out', color: 'red', title: 'input2_val_output' });
+nodeMapped[0].push({ id: '0:io_left_2.out', color: 'red', title: 'input2_val_output' });
+nodeMapped[0].push({ id: '0:io_left_2.reg_out.in', color: 'red', title: 'input2_val_output' });
+nodeMapped[0].push({ id: '0:io_left_2.reg_out.out', color: 'red', title: 'input2_val_output' });
+nodeMapped[0].push({ id: '0:io_left_2.reg_out.reg', color: 'red', title: 'input2_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.func.in_a', color: 'red', title: 'input0_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.in_n', color: 'red', title: 'input0_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_a.in0', color: 'red', title: 'input0_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_a.mux', color: 'red', title: 'input0_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_a.out', color: 'red', title: 'input0_val_output' });
+nodeMapped[0].push({ id: '0:io_top_1.IE.out', color: 'red', title: 'input0_val_output' });
+nodeMapped[0].push({ id: '0:io_top_1.out', color: 'red', title: 'input0_val_output' });
+nodeMapped[0].push({ id: '0:io_top_1.reg_out.in', color: 'red', title: 'input0_val_output' });
+nodeMapped[0].push({ id: '0:io_top_1.reg_out.out', color: 'red', title: 'input0_val_output' });
+nodeMapped[0].push({ id: '0:io_top_1.reg_out.reg', color: 'red', title: 'input0_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r1.func.in_a', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r1.func.m_in_a', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r1.func.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r1.in_s', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r1.mux_a.in2', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r1.mux_a.mux', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r1.mux_a.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r1.mux_e.in3', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r1.mux_e.mux', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r1.mux_e.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r1.out_e', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.func.m_out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.func.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.mux_n.in3', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.mux_n.mux', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.mux_n.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c0_r2.out_n', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.func.in_b', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.in_s', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_b.in2', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_b.mux', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_b.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_e.in1', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_e.mux', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_e.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.out_e', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.func.in_a', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.func.in_b', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.func.m_in_b', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.func.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.in_w', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.mux_a.in3', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.mux_a.mux', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.mux_a.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.mux_b.in3', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.mux_b.mux', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.mux_b.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.mux_n.in3', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.mux_n.mux', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.mux_n.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r1.out_n', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.func.in_a', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.in_w', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.mux_a.in3', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.mux_a.mux', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.mux_a.out', color: 'red', title: 'add4_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.func.in_b', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.in_e', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.mux_b.in1', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.mux_b.mux', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.mux_b.out', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r0.const.out', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r0.func.in_a', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r0.func.m_in_a', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r0.func.out', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r0.mux_a.in4', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r0.mux_a.mux', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r0.mux_a.out', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r0.mux_w.in3', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r0.mux_w.mux', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r0.mux_w.out', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c3_r0.out_w', color: 'red', title: 'const3_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.func.m_out', color: 'red', title: 'add5_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.func.out', color: 'red', title: 'add5_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_n.in3', color: 'red', title: 'add5_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_n.mux', color: 'red', title: 'add5_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.mux_n.out', color: 'red', title: 'add5_val_output' });
+nodeMapped[0].push({ id: '0:b_c1_r0.out_n', color: 'red', title: 'add5_val_output' });
+nodeMapped[0].push({ id: '0:io_top_1.OE.in', color: 'red', title: 'add5_val_output' });
+nodeMapped[0].push({ id: '0:io_top_1.in', color: 'red', title: 'add5_val_output' });
+nodeMapped[0].push({ id: '0:io_top_1.reg_in.in', color: 'red', title: 'add5_val_output' });
+nodeMapped[0].push({ id: '0:io_top_1.reg_in.out', color: 'red', title: 'add5_val_output' });
+nodeMapped[0].push({ id: '0:io_top_1.reg_in.reg', color: 'red', title: 'add5_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.func.m_out', color: 'red', title: 'sub6_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.func.out', color: 'red', title: 'sub6_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.mux_n.in3', color: 'red', title: 'sub6_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.mux_n.mux', color: 'red', title: 'sub6_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.mux_n.out', color: 'red', title: 'sub6_val_output' });
+nodeMapped[0].push({ id: '0:b_c2_r0.out_n', color: 'red', title: 'sub6_val_output' });
+nodeMapped[0].push({ id: '0:io_top_2.OE.in', color: 'red', title: 'sub6_val_output' });
+nodeMapped[0].push({ id: '0:io_top_2.in', color: 'red', title: 'sub6_val_output' });
+nodeMapped[0].push({ id: '0:io_top_2.reg_in.in', color: 'red', title: 'sub6_val_output' });
+nodeMapped[0].push({ id: '0:io_top_2.reg_in.out', color: 'red', title: 'sub6_val_output' });
+nodeMapped[0].push({ id: '0:io_top_2.reg_in.reg', color: 'red', title: 'sub6_val_output' });
 function draw_helper(context) {
     var container = document.getElementById('context_' + context.toString());
     var data = {

@@ -1,6 +1,19 @@
 digraph G {
-add0[opcode=add];
-const1[opcode=const];
-add0->add0[operand=0]; //add->add
-const1->add0[operand=1]; //const->add
+input0[opcode=input];
+input1[opcode=input];
+input2[opcode=input];
+const3[opcode=const];
+add4[opcode=add];
+add5[opcode=add];
+sub6[opcode=sub];
+output7[opcode=output];
+output8[opcode=output];
+input1->add4[operand=0]; 
+input2->add4[operand=1];
+input0->add5[operand=0]; 
+add4->add5[operand=1];
+add4->sub6[operand=0]; 
+const3->sub6[operand=1];
+add5->output7[operand=0]; 
+sub6->output8[operand=0];
 }
