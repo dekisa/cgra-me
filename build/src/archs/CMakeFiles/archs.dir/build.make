@@ -57,9 +57,33 @@ include src/archs/CMakeFiles/archs.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/archs/CMakeFiles/archs.dir/flags.make
 
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: src/archs/CMakeFiles/archs.dir/flags.make
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o: ../src/archs/NESWArch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o"
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/archs && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/archs.dir/NESWArch.cpp.o -c /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/archs/NESWArch.cpp
+
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/archs.dir/NESWArch.cpp.i"
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/archs && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/archs/NESWArch.cpp > CMakeFiles/archs.dir/NESWArch.cpp.i
+
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/archs.dir/NESWArch.cpp.s"
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/archs && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/archs/NESWArch.cpp -o CMakeFiles/archs.dir/NESWArch.cpp.s
+
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o.requires:
+
+.PHONY : src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o.requires
+
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o.provides: src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o.requires
+	$(MAKE) -f src/archs/CMakeFiles/archs.dir/build.make src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o.provides.build
+.PHONY : src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o.provides
+
+src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o.provides.build: src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o
+
+
 src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o: src/archs/CMakeFiles/archs.dir/flags.make
 src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o: ../src/archs/AdresArch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o"
 	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/archs && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/archs.dir/AdresArch.cpp.o -c /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/archs/AdresArch.cpp
 
 src/archs/CMakeFiles/archs.dir/AdresArch.cpp.i: cmake_force
@@ -83,7 +107,7 @@ src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o.provides.build: src/archs/CMakeFi
 
 src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o: src/archs/CMakeFiles/archs.dir/flags.make
 src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o: ../src/archs/SimpleArch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o"
 	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/archs && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/archs.dir/SimpleArch.cpp.o -c /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/archs/SimpleArch.cpp
 
 src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.i: cmake_force
@@ -105,6 +129,7 @@ src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o.provides: src/archs/CMakeFiles/a
 src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o.provides.build: src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o
 
 
+archs: src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o
 archs: src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o
 archs: src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o
 archs: src/archs/CMakeFiles/archs.dir/build.make
@@ -116,6 +141,7 @@ src/archs/CMakeFiles/archs.dir/build: archs
 
 .PHONY : src/archs/CMakeFiles/archs.dir/build
 
+src/archs/CMakeFiles/archs.dir/requires: src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o.requires
 src/archs/CMakeFiles/archs.dir/requires: src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o.requires
 src/archs/CMakeFiles/archs.dir/requires: src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o.requires
 

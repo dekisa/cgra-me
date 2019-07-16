@@ -1137,13 +1137,18 @@ IO::IO(std::string name, unsigned size)
     addSubModule(new Register("reg_out", size));
     addSubModule(new TriState(TriState::Mode::PROVIDES_IO_OP, "OE", size));
     addConfig(new ConfigCell("OEConfig"), {"OE.enable"});
-
+    //deki_edit
+    addSubModule(new TriState(TriState::Mode::PROVIDES_IO_OP, "IE", size));
+    addConfig(new ConfigCell("IEConfig"), {"IE.enable"});
+    
     addConnection("this.in", "reg_in.in");
     addConnection("reg_in.out", "OE.in");
-    addConnection("this.bidir", "reg_out.in");
+    //addConnection("this.bidir", "reg_out.in");
+    addConnection("this.bidir", "IE.in");
+    addConnection("IE.out", "reg_out.in");
     addConnection("OE.out", "this.bidir");
     addConnection("reg_out.out", "this.out");
-
+    //deki_edit
     // module type
     mt = MOD_COMPOSITE;
 }

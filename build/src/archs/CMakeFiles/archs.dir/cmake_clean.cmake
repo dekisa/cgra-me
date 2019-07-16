@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/archs.dir/NESWArch.cpp.o"
   "CMakeFiles/archs.dir/AdresArch.cpp.o"
   "CMakeFiles/archs.dir/SimpleArch.cpp.o"
 )

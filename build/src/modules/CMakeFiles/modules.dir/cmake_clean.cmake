@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/modules.dir/SimpleArchFU.cpp.o"
+  "CMakeFiles/modules.dir/NESWArchFU.cpp.o"
   "CMakeFiles/modules.dir/AdresPE.cpp.o"
 )
 

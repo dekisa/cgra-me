@@ -142,6 +142,14 @@ CGRA/user-inc/UserArchs.h
 CGRA/user-inc/UserModules.h
 -
 
+/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/archs/NESWArch.cpp
+CGRA/Exception.h
+-
+CGRA/user-inc/UserArchs.h
+-
+CGRA/user-inc/UserModules.h
+-
+
 /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/archs/SimpleArch.cpp
 CGRA/Exception.h
 -

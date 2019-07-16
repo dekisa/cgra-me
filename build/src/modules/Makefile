@@ -152,6 +152,33 @@ AdresPE.cpp.s:
 	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build && $(MAKE) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/AdresPE.cpp.s
 .PHONY : AdresPE.cpp.s
 
+NESWArchFU.o: NESWArchFU.cpp.o
+
+.PHONY : NESWArchFU.o
+
+# target to build an object file
+NESWArchFU.cpp.o:
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build && $(MAKE) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o
+.PHONY : NESWArchFU.cpp.o
+
+NESWArchFU.i: NESWArchFU.cpp.i
+
+.PHONY : NESWArchFU.i
+
+# target to preprocess a source file
+NESWArchFU.cpp.i:
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build && $(MAKE) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.i
+.PHONY : NESWArchFU.cpp.i
+
+NESWArchFU.s: NESWArchFU.cpp.s
+
+.PHONY : NESWArchFU.s
+
+# target to generate assembly for a file
+NESWArchFU.cpp.s:
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build && $(MAKE) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.s
+.PHONY : NESWArchFU.cpp.s
+
 SimpleArchFU.o: SimpleArchFU.cpp.o
 
 .PHONY : SimpleArchFU.o
@@ -191,6 +218,9 @@ help:
 	@echo "... AdresPE.o"
 	@echo "... AdresPE.i"
 	@echo "... AdresPE.s"
+	@echo "... NESWArchFU.o"
+	@echo "... NESWArchFU.i"
+	@echo "... NESWArchFU.s"
 	@echo "... SimpleArchFU.o"
 	@echo "... SimpleArchFU.i"
 	@echo "... SimpleArchFU.s"

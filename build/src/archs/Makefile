@@ -152,6 +152,33 @@ AdresArch.cpp.s:
 	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build && $(MAKE) -f src/archs/CMakeFiles/archs.dir/build.make src/archs/CMakeFiles/archs.dir/AdresArch.cpp.s
 .PHONY : AdresArch.cpp.s
 
+NESWArch.o: NESWArch.cpp.o
+
+.PHONY : NESWArch.o
+
+# target to build an object file
+NESWArch.cpp.o:
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build && $(MAKE) -f src/archs/CMakeFiles/archs.dir/build.make src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o
+.PHONY : NESWArch.cpp.o
+
+NESWArch.i: NESWArch.cpp.i
+
+.PHONY : NESWArch.i
+
+# target to preprocess a source file
+NESWArch.cpp.i:
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build && $(MAKE) -f src/archs/CMakeFiles/archs.dir/build.make src/archs/CMakeFiles/archs.dir/NESWArch.cpp.i
+.PHONY : NESWArch.cpp.i
+
+NESWArch.s: NESWArch.cpp.s
+
+.PHONY : NESWArch.s
+
+# target to generate assembly for a file
+NESWArch.cpp.s:
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build && $(MAKE) -f src/archs/CMakeFiles/archs.dir/build.make src/archs/CMakeFiles/archs.dir/NESWArch.cpp.s
+.PHONY : NESWArch.cpp.s
+
 SimpleArch.o: SimpleArch.cpp.o
 
 .PHONY : SimpleArch.o
@@ -191,6 +218,9 @@ help:
 	@echo "... AdresArch.o"
 	@echo "... AdresArch.i"
 	@echo "... AdresArch.s"
+	@echo "... NESWArch.o"
+	@echo "... NESWArch.i"
+	@echo "... NESWArch.s"
 	@echo "... SimpleArch.o"
 	@echo "... SimpleArch.i"
 	@echo "... SimpleArch.s"

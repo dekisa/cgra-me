@@ -81,9 +81,33 @@ src/modules/CMakeFiles/modules.dir/SimpleArchFU.cpp.o.provides: src/modules/CMak
 src/modules/CMakeFiles/modules.dir/SimpleArchFU.cpp.o.provides.build: src/modules/CMakeFiles/modules.dir/SimpleArchFU.cpp.o
 
 
+src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o: src/modules/CMakeFiles/modules.dir/flags.make
+src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o: ../src/modules/NESWArchFU.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o"
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/modules && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/modules.dir/NESWArchFU.cpp.o -c /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/modules/NESWArchFU.cpp
+
+src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/modules.dir/NESWArchFU.cpp.i"
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/modules/NESWArchFU.cpp > CMakeFiles/modules.dir/NESWArchFU.cpp.i
+
+src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/modules.dir/NESWArchFU.cpp.s"
+	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/modules && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/modules/NESWArchFU.cpp -o CMakeFiles/modules.dir/NESWArchFU.cpp.s
+
+src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o.requires:
+
+.PHONY : src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o.requires
+
+src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o.provides: src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o.requires
+	$(MAKE) -f src/modules/CMakeFiles/modules.dir/build.make src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o.provides.build
+.PHONY : src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o.provides
+
+src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o.provides.build: src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o
+
+
 src/modules/CMakeFiles/modules.dir/AdresPE.cpp.o: src/modules/CMakeFiles/modules.dir/flags.make
 src/modules/CMakeFiles/modules.dir/AdresPE.cpp.o: ../src/modules/AdresPE.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/modules/CMakeFiles/modules.dir/AdresPE.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/modules/CMakeFiles/modules.dir/AdresPE.cpp.o"
 	cd /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/modules && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/modules.dir/AdresPE.cpp.o -c /home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/src/modules/AdresPE.cpp
 
 src/modules/CMakeFiles/modules.dir/AdresPE.cpp.i: cmake_force
@@ -106,6 +130,7 @@ src/modules/CMakeFiles/modules.dir/AdresPE.cpp.o.provides.build: src/modules/CMa
 
 
 modules: src/modules/CMakeFiles/modules.dir/SimpleArchFU.cpp.o
+modules: src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o
 modules: src/modules/CMakeFiles/modules.dir/AdresPE.cpp.o
 modules: src/modules/CMakeFiles/modules.dir/build.make
 
@@ -117,6 +142,7 @@ src/modules/CMakeFiles/modules.dir/build: modules
 .PHONY : src/modules/CMakeFiles/modules.dir/build
 
 src/modules/CMakeFiles/modules.dir/requires: src/modules/CMakeFiles/modules.dir/SimpleArchFU.cpp.o.requires
+src/modules/CMakeFiles/modules.dir/requires: src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o.requires
 src/modules/CMakeFiles/modules.dir/requires: src/modules/CMakeFiles/modules.dir/AdresPE.cpp.o.requires
 
 .PHONY : src/modules/CMakeFiles/modules.dir/requires

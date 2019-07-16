@@ -80,6 +80,7 @@ FuncUnit::FuncUnit(std::string name, std::vector<OpGraphOpCode> supported_modes,
     // Create the ports
     addPort("in_a", PORT_INPUT, "size");
     addPort("in_b", PORT_INPUT, "size");
+    addPort("in_sel", PORT_INPUT, "size");
     if (supported_modes.size() > 1) // If there is more than one mode, we need to add a select line, we will also have a mux, so make port "out" a reg
     {
         addPort("select", PORT_INPUT, ceil(log2(supported_modes.size())));
@@ -185,24 +186,29 @@ MRRG* FuncUnit::createMRRG(unsigned II = 1)
         // create nodes
         MRRGNode* in_a = new MRRGNode(this, i, "in_a");
         MRRGNode* in_b = new MRRGNode(this, i, "in_b");
+        MRRGNode* in_sel = new MRRGNode(this, i, "in_sel");
         MRRGNode* fu  = new MRRGNode(this, i, "fu", MRRG_NODE_FUNCTION);
         fu->operand[0] = in_a;
         fu->operand[1] = in_b;
+        fu->operand[2] = in_sel;
         for (unsigned i = 0; i < supported_modes.size(); i++)
         {
             fu->supported_ops.push_back(supported_modes[i]);
         }
         MRRGNode* m_in_a = new MRRGNode(this, i, "m_in_a");
         MRRGNode* m_in_b = new MRRGNode(this, i, "m_in_b");
+        MRRGNode* m_in_sel = new MRRGNode(this, i, "m_in_sel");
         MRRGNode* m_out  = new MRRGNode(this, i, "m_out");
         MRRGNode* out  = new MRRGNode(this, i, "out");
 
         // add nodes to MRRG
         result->nodes[i]["in_a"] = in_a;
         result->nodes[i]["in_b"] = in_b;
+        result->nodes[i]["in_sel"] = in_sel;
         result->nodes[i]["fu"] = fu;
         result->nodes[i]["m_in_a"] = m_in_a;
         result->nodes[i]["m_in_b"] = m_in_b;
+        result->nodes[i]["m_in_sel"] = m_in_sel;
         result->nodes[i]["m_out"] = m_out;
         result->nodes[i]["out"] = out;
     }
@@ -211,9 +217,11 @@ MRRG* FuncUnit::createMRRG(unsigned II = 1)
     {
         MRRGNode* in_a      = result->nodes[i]["in_a"];
         MRRGNode* in_b      = result->nodes[i]["in_b"];
+        MRRGNode* in_sel      = result->nodes[i]["in_sel"];
         MRRGNode* fu        = result->nodes[i]["fu"];
         MRRGNode* m_in_a    = result->nodes[i]["m_in_a"];
         MRRGNode* m_in_b    = result->nodes[i]["m_in_b"];
+        MRRGNode* m_in_sel    = result->nodes[i]["m_in_sel"];
         MRRGNode* out       = result->nodes[i]["out"];
 
         MRRGNode* m_out_next    = result->nodes[MOD_II(i + getLatency())]["m_out"];
@@ -221,14 +229,17 @@ MRRG* FuncUnit::createMRRG(unsigned II = 1)
 #define connect(a,b) (a)->fanout.push_back(b); (b)->fanin.push_back(a);
         connect(in_a, fu);
         connect(in_b, fu);
+        connect(in_sel, fu);
         connect(fu, m_out_next);
         connect(m_out_next, out_next);
 
         connect(in_a, m_in_a);
         connect(in_b, m_in_b);
+        connect(in_sel, m_in_sel);
 
         connect(m_in_a, out);
         connect(m_in_b, out);
+        connect(m_in_sel, out);
 #undef connect
     }
 

@@ -70,6 +70,7 @@ cgra__me_static_EXTERNAL_OBJECTS = \
 "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/adl_1/CMakeFiles/adl_1.dir/ADLParser.cpp.o" \
 "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/adl_1/CMakeFiles/adl_1.dir/ADLStructs.cpp.o" \
 "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/adl_1/CMakeFiles/adl_1.dir/SyntacticSugar.cpp.o" \
+"/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o" \
 "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o" \
 "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o" \
 "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/core/CMakeFiles/core.dir/AnnealMapper.cpp.o" \
@@ -90,6 +91,7 @@ cgra__me_static_EXTERNAL_OBJECTS = \
 "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/dotparser/CMakeFiles/dotparser.dir/dfgdot.yy.cc.o" \
 "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/dotparser/CMakeFiles/dotparser.dir/dotparser.cc.o" \
 "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/modules/CMakeFiles/modules.dir/SimpleArchFU.cpp.o" \
+"/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o" \
 "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/modules/CMakeFiles/modules.dir/AdresPE.cpp.o" \
 "/home/deki/master/cgra-me-evaluation/cgra-me-1.0.1/build/src/visual/CMakeFiles/visual.dir/Visual.cpp.o"
 
@@ -101,6 +103,7 @@ lib/libcgra-me_static.a: src/adl_0/CMakeFiles/adl_0.dir/module.cpp.o
 lib/libcgra-me_static.a: src/adl_1/CMakeFiles/adl_1.dir/ADLParser.cpp.o
 lib/libcgra-me_static.a: src/adl_1/CMakeFiles/adl_1.dir/ADLStructs.cpp.o
 lib/libcgra-me_static.a: src/adl_1/CMakeFiles/adl_1.dir/SyntacticSugar.cpp.o
+lib/libcgra-me_static.a: src/archs/CMakeFiles/archs.dir/NESWArch.cpp.o
 lib/libcgra-me_static.a: src/archs/CMakeFiles/archs.dir/AdresArch.cpp.o
 lib/libcgra-me_static.a: src/archs/CMakeFiles/archs.dir/SimpleArch.cpp.o
 lib/libcgra-me_static.a: src/core/CMakeFiles/core.dir/AnnealMapper.cpp.o
@@ -121,6 +124,7 @@ lib/libcgra-me_static.a: src/dotparser/CMakeFiles/dotparser.dir/dfgdot.tab.cc.o
 lib/libcgra-me_static.a: src/dotparser/CMakeFiles/dotparser.dir/dfgdot.yy.cc.o
 lib/libcgra-me_static.a: src/dotparser/CMakeFiles/dotparser.dir/dotparser.cc.o
 lib/libcgra-me_static.a: src/modules/CMakeFiles/modules.dir/SimpleArchFU.cpp.o
+lib/libcgra-me_static.a: src/modules/CMakeFiles/modules.dir/NESWArchFU.cpp.o
 lib/libcgra-me_static.a: src/modules/CMakeFiles/modules.dir/AdresPE.cpp.o
 lib/libcgra-me_static.a: src/visual/CMakeFiles/visual.dir/Visual.cpp.o
 lib/libcgra-me_static.a: src/CMakeFiles/cgra-me_static.dir/build.make
