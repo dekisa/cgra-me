@@ -39,7 +39,7 @@ NESWArchFU::NESWArchFU(std::string name, bool full_fu)
 
     // add input muxs
     addSubModule(new Multiplexer("mux_a", 5)); // plus 2 for feedback and constant
-    addSubModule(new Multiplexer("mux_b", 5));
+    addSubModule(new Multiplexer("mux_b", 4));
     addSubModule(new Multiplexer("mux_n", 4));
     addSubModule(new Multiplexer("mux_e", 4));
     addSubModule(new Multiplexer("mux_s", 4));
