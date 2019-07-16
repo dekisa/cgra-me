@@ -17,11 +17,10 @@ load_conversion_algorithm()
 similar algorithm for store
 */
 
-/* this is still just a demo, there is no convention on marking inputs and outputs altough the code is getting larger */
 
 int test_function(int ref_by_value, int* ref_by_pointer, int ref_by_pointer_array[]) {
 
-    //DFGLoop:loop
+    //DFGnLoop:loop
     //access ref_by_value
     //load ref_by_pointer_array
     //store ref_by_pointer
@@ -44,4 +43,27 @@ int test_function(int ref_by_value, int* ref_by_pointer, int ref_by_pointer_arra
     //return npointer;
 
 }
+int do_procA(int a, int b){
+    //DFGLoop:processingA
+    return a+b-5;
+}
+
+
+
+int do_procB(int a, int b){
+    //DFGLoop:processingB
+    return a-b;
+}
+
+int main(){
+    int a = 5;
+    int b = 3;
+
+    int c = do_procA(a,b);
+
+    do_procB(a,b);
+  
+    return a+b+c;
+}
+
 
