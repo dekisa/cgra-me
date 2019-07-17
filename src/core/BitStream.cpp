@@ -34,6 +34,7 @@
 
 #include <numeric>
 #include <ostream>
+#include <CGRA/user-inc/NESWbitstream.h>
 
 void BitStream::append(const ConfigCell* ccell, const std::vector<BitSetting>& bits) {
     if (not setting_storage.emplace(ccell, bits).second) {
@@ -57,6 +58,30 @@ void BitStream::print_debug()
         std::cout << ccell->getName() << ": " << setting_storage.at(ccell) << '\n';
     }
 };
+
+void bitstream_word::fill(unsigned int val, int size){
+    if(val == INVALID_VAL)
+        val = 0;
+    for(int i = 0; i < size; i++){
+        word = (word >> 1) | (val << 31);
+        current_position-=1;
+        val = val >> 1;
+    }
+};
+
+std::ostream& operator<<(std::ostream& os, const bitstream_word& bw){
+    unsigned int local_copy_word = bw.word;
+
+    //make sure to fill with zeros if the word is not completed    
+    if(bw.current_position > 0){
+        for (int i = 0; i < bw.current_position; i++){
+            local_copy_word = (local_copy_word >> 1);
+        }
+    }
+
+    return os.write((char*)&local_copy_word, 4);
+};
+
 
 // Prints out bits in reverse order for a ModelSim testbench
 void BitStream::print_testbench(std::ostream& os) const
@@ -122,3 +147,129 @@ void BitStream::print_testbench(std::ostream& os) const
         "endmodule\n"
     ;
 }
+// bitstream printing to binary file, format defined in NEWSbitstream.h, 
+// for achitecture NESWArchFU.cpp, NESWArch.cpp
+void BitStream::print_bitstream(std::ostream& os) const{
+    //write the start value
+    bitstream_word word_start;
+    word_start.fill(0xa3c5, 16);
+    os << word_start;
+
+    //calculate and write the size
+    int rows = ((CGRA*)ccell_order.at(0)->getAllConnectedPorts().at(0)->getModule().parent->parent)->ROWS;
+    int cols = ((CGRA*)ccell_order.at(0)->getAllConnectedPorts().at(0)->getModule().parent->parent)->COLS;
+    int size = rows*cols;
+
+    //info to write to binary file later
+    unsigned int block_count = 0;    
+
+    //iterate over blocks 
+    auto ccell_it = ccell_order.begin();
+    for (int i = 0; i < size; i++) {
+
+        //check if block settings are valid
+        bool block_valid = false;
+        for (int i = 0; i < CELLS_PER_BLOCK; i++)
+            if(is_valid(setting_storage.at(*(ccell_it + i))))
+                block_valid = true;
+        if(!block_valid){
+            //move to next block
+            ccell_it += CELLS_PER_BLOCK;
+            continue;        
+        } else
+        block_count++;
+
+        //get configuration cells
+        const auto& fu_cell         = *(ccell_it + FU_CONFIG_IT);
+        const auto& constant_cell   = *(ccell_it + CONST_IT);
+        const auto& mux_fu1_cell    = *(ccell_it + MUX_FU1_IT);
+        const auto& mux_fu2_cell    = *(ccell_it + MUX_FU2_IT);
+        const auto& mux_n_cell      = *(ccell_it + MUX_N_IT);
+        const auto& mux_e_cell      = *(ccell_it + MUX_E_IT);
+        const auto& mux_s_cell      = *(ccell_it + MUX_S_IT);
+        const auto& mux_w_cell      = *(ccell_it + MUX_W_IT);
+
+        //emprty words
+        bitstream_word word1;
+        bitstream_word word2;
+        bitstream_word word3;
+        bitstream_word word4;
+
+        //extract position info
+        std::string block_name = fu_cell->getAllConnectedPorts().at(0)->getModule().parent->getName();
+        std::string delimiter = "_";
+        size_t delim_pos_1 = block_name.find(delimiter);
+        size_t delim_pos_2 = block_name.find(delimiter, delim_pos_1+1);
+        unsigned int xpos = std::stoi(block_name.substr(delim_pos_1+2, delim_pos_2 - delim_pos_1 - 2));
+        unsigned int ypos = std::stoi(block_name.substr(delim_pos_2+2));
+
+        // FU configuration
+        unsigned int fu_config  = to_binary(setting_storage.at(fu_cell));
+        // Constant value
+        unsigned int constant   = to_binary(setting_storage.at(constant_cell));
+        // mux info
+        unsigned int mux_fu1    = to_binary(setting_storage.at(mux_fu1_cell));
+        unsigned int mux_fu2    = to_binary(setting_storage.at(mux_fu2_cell));
+        unsigned int mux_n      = to_binary(setting_storage.at(mux_n_cell));
+        unsigned int mux_e      = to_binary(setting_storage.at(mux_e_cell));
+        unsigned int mux_s      = to_binary(setting_storage.at(mux_s_cell));
+        unsigned int mux_w      = to_binary(setting_storage.at(mux_w_cell));
+
+        //calculate fr and fs
+        GET_FR_FU(fu1, n, e, s, w);
+        GET_FR_FU(fu2, n, e, s, w);
+        GET_FS_FU(fu, n, e, s, w);
+        GET_FS_NESW(n, fu1, fu2, e, s, w);
+        GET_FS_NESW(e, fu1, fu2, n, s, w);
+        GET_FS_NESW(s, fu1, fu2, n, e, w);
+        GET_FS_NESW(w, fu1, fu2, n, e, s);
+        GET_FR_NESW(n, e, s, w);
+        GET_FR_NESW(e, n, s, w);
+        GET_FR_NESW(s, n, e, w);
+        GET_FR_NESW(w, n, e, s);
+
+        //fill words        
+        word1.fill(xpos, 6);
+        word1.fill(ypos, 6);
+        word1.fill(mux_fu1,3);
+        word1.fill(mux_fu2,2);
+        word1.fill(mux_n,2);
+        word1.fill(mux_e,2);
+        word1.fill(mux_s,2);
+        word1.fill(mux_w,2);
+        word1.fill(mux_fu1,3);
+        word1.fill(fr_fu1,4);
+        
+        word2.fill(mux_fu2,2);
+        word2.fill(fr_fu2, 4);
+        word2.fill(fs_n, 5);
+        word2.fill(fs_e, 5);
+        word2.fill(fs_s, 5);
+        word2.fill(fs_w, 5);
+        word2.fill(fu_config, 5);
+        word2.fill(0, 1);
+
+        word3.fill(fs_fu, 4);
+        word1.fill(mux_n,2);
+        word3.fill(fr_n, 5);
+        word1.fill(mux_e,2);
+        word3.fill(fr_e, 5);
+        word1.fill(mux_s,2);
+        word3.fill(fr_s, 5);
+        word1.fill(mux_w,2);
+        word3.fill(fr_w, 5);
+
+        word4.fill(constant,32);
+
+        //write out
+        os << word1 << word2 << word3 << word4;
+
+        //move to next block
+        ccell_it += CELLS_PER_BLOCK;
+    }
+    word_start.fill(block_count, 16);
+    os.seekp(0);
+    os << word_start;
+
+}
+

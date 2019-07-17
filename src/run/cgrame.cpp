@@ -305,7 +305,7 @@ int main(int argc, char* argv[])
         if(printop)
         {
             std::cout << std::endl << "[OPGRAPH]" << std::endl;
-            opgraph->print_dot();
+            opgraph->printDOTwithOps();
         }
 
         std::ifstream ini_file(exe_path + "/mapper_config.ini");
@@ -365,6 +365,10 @@ int main(int argc, char* argv[])
             {
                 std::ofstream tb_file("testbench.v");
                 arch->genBitStream(mapping_result).print_testbench(tb_file);
+            }
+            if (arch_id = 3){
+                std::ofstream bs_file("bitstream.bin", std::ios::out | std::ios::binary);
+                arch->genBitStream(mapping_result).print_bitstream(bs_file);
             }
 
             return 0;
