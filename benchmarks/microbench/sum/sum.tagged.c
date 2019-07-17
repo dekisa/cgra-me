@@ -44,14 +44,14 @@ int test_function(int ref_by_value, int* ref_by_pointer, int ref_by_pointer_arra
     //return npointer;
 
 }
-int do_procA(int a, int b){
+int __attribute__ ((noinline)) do_procA(int a, int b){
 DFGLOOP_TAG(1);
     return a+b-5;
 }
 
 
 
-int do_procB(int a, int b){
+int __attribute__ ((noinline)) do_procB(int a, int b){
 DFGLOOP_TAG(2);
     return a-b;
 }

@@ -3,9 +3,9 @@ MAKEFLAGS += -r
 
 BENCHNAME ?= $(shell basename `pwd`)
 
-##CFLAGS ?= -O3
+CFLAGS ?= -O3
 ##use this to get functions working
-CFLAGS ?= -O1
+##CFLAGS ?= -O1
 OPT_DISABLE_FLAGS ?= -fno-vectorize -fno-slp-vectorize -fno-unroll-loops
 
 LLVM_DFG_PLUGIN ?= ../../../build/lib/libDFG.so
