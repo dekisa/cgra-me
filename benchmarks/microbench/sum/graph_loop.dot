@@ -2,7 +2,7 @@ digraph G {
 input0[opcode=input];
 input1[opcode=input];
 input2[opcode=input];
-const3[opcode=const];
+const_3[opcode=const]; //2
 add4[opcode=add];
 add5[opcode=add];
 sub6[opcode=sub];
@@ -13,7 +13,7 @@ input2->add4[operand=1];
 input0->add5[operand=0]; 
 add4->add5[operand=1];
 add4->sub6[operand=1]; 
-const3->sub6[operand=0];
+const_3->sub6[operand=0];
 add5->output7[operand=0]; 
 sub6->output8[operand=0];
 }

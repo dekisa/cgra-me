@@ -305,7 +305,7 @@ int main(int argc, char* argv[])
         if(printop)
         {
             std::cout << std::endl << "[OPGRAPH]" << std::endl;
-            opgraph->print_dot();
+            opgraph->printDOTwithOps();
         }
 
         std::ifstream ini_file(exe_path + "/mapper_config.ini");

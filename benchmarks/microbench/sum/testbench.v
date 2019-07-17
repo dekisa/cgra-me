@@ -57,7 +57,7 @@ module CGRA_configurator(
 		1'bx,1'bx, // b_c2_r0::MuxBConfig
 		1'bx,1'bx,1'bx, // b_c2_r0::MuxAConfig
 		1'bx,1'bx,1'bx,1'bx, // b_c2_r0::FuncConfig
-		1'b1,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1, // b_c1_r2::ConstVal
+		1'b1,1'b1,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0, // b_c1_r2::ConstVal
 		1'bx,1'bx, // b_c1_r2::MuxWConfig
 		1'b1,1'b1, // b_c1_r2::MuxSConfig
 		1'bx,1'bx, // b_c1_r2::MuxNConfig
