@@ -12,8 +12,8 @@ input1->add4[operand=0];
 input2->add4[operand=1];
 input0->add5[operand=0]; 
 add4->add5[operand=1];
-add4->sub6[operand=0]; 
-const3->sub6[operand=1];
+add4->sub6[operand=1]; 
+const3->sub6[operand=0];
 add5->output7[operand=0]; 
 sub6->output8[operand=0];
 }
