@@ -31,10 +31,10 @@ calling bitstream generator\
 [src/run/cgrame.c](src/run/cgrame.c)
 
 ### Dataflow graph
-parsing dfg to get constant value\
+parsing dfg to get constant configuration value when mapping dfg\
 [src/core/ModuleFuncUnit.cpp](src/core/ModuleFuncUnit.cpp)
 
-changing dfg node label data\
+changing dfg node label data when generating dfg\
 [src/core/OpGraph.cp](src/core/OpGraph.cp)
 
 Dataflow graph\
