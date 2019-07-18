@@ -150,16 +150,44 @@ void OpGraphOp::parserUpdate(std::map<std::string, std::string> kvp)
     if(kvp.find("input") != kvp.end())
     {
         opcode = OPGRAPH_OP_INPUT;
+		/*if(kvp.find("argNo") != kvp.end())
+	    {
+			argNo = std::stoi(kvp["argNo"]);
+		}
+		else
+		{
+			std::cout << "Warning: Input " << name << " doesn't have a valid argument number.\n";
+			argNo = 0;
+		}*/
     }
     else if(kvp.find("output") != kvp.end())
     {
-        opcode = OPGRAPH_OP_OUTPUT;
+        opcode = OPGRAPH_OP_OUTPUT;		
+		/*if(kvp.find("argNo") != kvp.end())
+	    {
+			argNo = std::stoi(kvp["argNo"]);
+		}
+		else
+		{
+			std::cout << "Warning: Output " << name << " doesn't have a valid argument number.\n";
+			argNo = 0;
+		}*/
     }
     else if(kvp.find("opcode") != kvp.end())
     {
         opcode = opcode_map[kvp["opcode"]];
-    }
-
+		if(opcode == OPGRAPH_OP_CONST){
+			if(kvp.find("value") != kvp.end())
+		    {
+				value = std::stoi(kvp["value"]);
+			}
+			else
+			{
+				std::cout << "Warning: constant " << name << " doesn't have a valid value, using default 0.\n";
+				value = 0;
+			}
+		}
+    }   
     if(kvp.find("cycle") != kvp.end())
     {
         // TODO: let the parser catch these exceptions
@@ -490,11 +518,21 @@ void OpGraph::printDOTwithOps(std::ostream &s)
     {
         assert(*it);
         stringstream node_name;
-//-        node_name << (*it)->opcode;
-        node_name << (*it)->name;
+        node_name << (*it)->opcode;
+        //node_name << (*it)->name;
 
         opnode_map[(*it)] = node_name.str() + std::to_string(counter++);
-        s << opnode_map[(*it)] << "[opcode=" << (*it)->opcode << "];\n";
+        s << opnode_map[(*it)] << "[opcode=" << (*it)->opcode << "]";
+
+		if((*it)->opcode == OPGRAPH_OP_CONST)
+			s << "[value=" << (*it)->value << "]";		
+		if((*it)->opcode == OPGRAPH_OP_INPUT || (*it)->opcode == OPGRAPH_OP_OUTPUT){
+			s << "[argNo=" << (*it)->arg.first << "]" << "[argType=" << (*it)->arg.second << "]";
+			if ((*it)->arg.second == "array")
+				s <<  "[index=" << (*it)->index.first << "]" << "[indexType=" << (*it)->index.second << "]"  ;	
+		}	
+
+		s <<";\n";
     }
 
     // use val nodes to create all edges

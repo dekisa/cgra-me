@@ -381,20 +381,7 @@ std::vector<BitSetting> ConstUnit::getBitConfig(
     if (mrrg_nodes_from_val_node.empty()) {
         return {data_size, BitSetting::DONT_CARE_PREFER_LOW};
     } else {
-        
-        std::string node_name = begin(mrrg_nodes_from_op_node)->first->name;
-        //left to agree on naming, cannot use multiple _
-        std::string delimiter = "_";
-        size_t delim_pos_1 = node_name.find(delimiter);
-        size_t delim_pos_2 = node_name.find(delimiter, delim_pos_1+1);
-        int constant_val = std::stoi(node_name.substr(delim_pos_1+1, delim_pos_2 - delim_pos_1 - 1));
-        //check if negative
-        std::string negative_flag = node_name.substr(0, delim_pos_1);
-        if (negative_flag == "constn")
-            constant_val = -constant_val;
-
-
-        return bitsettings_from_int(constant_val,32);
+        return bitsettings_from_int(begin(mrrg_nodes_from_op_node)->first->value,32);
     }
 }
 

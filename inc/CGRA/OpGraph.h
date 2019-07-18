@@ -113,6 +113,13 @@ class OpGraphOp : public OpGraphNode
 
         int    op_latency;
 
+	    int    value;       //used only for constants
+
+        std::pair<int, int>         position;//x and y position, after mapping
+        std::pair<int, std::string> arg;    //argument number and argument type
+        std::pair<int, std::string>  index;  //index value and index type
+        //this should be map for multi dimensional aarray
+        //std::map<int, std::string>  index;  //index value and index type
     private:
         // translation map for text opcodes to enum
         static std::map<std::string, OpGraphOpCode> opcode_map;
