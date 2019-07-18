@@ -17,8 +17,8 @@
 *.dot
 
 #Excluding user custom benchmarks
-benchmarks/userbench/*
-!benchmarks/userbench/README
+#benchmarks/userbench/*
+#!benchmarks/userbench/README
 
 #Excluding build path
 build/
