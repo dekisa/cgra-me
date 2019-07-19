@@ -1,0 +1,13 @@
+digraph G {
+add0[opcode=add];
+input0_1[opcode=input];
+const-5_2[opcode=const];
+add3[opcode=add];
+input1_4[opcode=input];
+ret5[opcode=output];
+add0->add3[operand=0]; //add->add
+input0_1->add0[operand=0]; //input0_->add
+const-5_2->add0[operand=1]; //const-5_->add
+add3->ret5[operand=0]; //add->ret
+input1_4->add3[operand=1]; //input1_->add
+}

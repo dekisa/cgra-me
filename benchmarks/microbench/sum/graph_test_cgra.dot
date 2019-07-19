@@ -1,0 +1,20 @@
+digraph G {
+add0[opcode=add];
+input2_1[opcode=input];
+input1_2[opcode=input];
+add3[opcode=add];
+input0_4[opcode=input];
+output_ptr35[opcode=output];
+add6[opcode=add];
+const2_7[opcode=const];
+output_ptr48[opcode=output];
+ret9[opcode=output];
+add0->add3[operand=0]; //add->add
+add0->add6[operand=0]; //add->add
+input2_1->add0[operand=0]; //input2_->add
+input1_2->add0[operand=1]; //input1_->add
+add3->output_ptr35[operand=0]; //add->output_ptr3
+input0_4->add3[operand=1]; //input0_->add
+add6->output_ptr48[operand=0]; //add->output_ptr4
+const2_7->add6[operand=1]; //const2_->add
+}

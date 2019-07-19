@@ -1,0 +1,33 @@
+digraph G {
+input0[opcode=input][argNo=1][argType=array][index=0][indexType=const];
+input1[opcode=input][argNo=2][argType=array][index=1][indexType=const];
+input2[opcode=input][argNo=2][argType=array][index=4][indexType=input];
+input3[opcode=input][argNo=3][argType=array][index=1][indexType=const][index=3][indexType=const];
+input4[opcode=input][argNo=3][argType=array][index=1][indexType=const][index=2][indexType=const];
+add5[opcode=add];
+input6[opcode=input][argNo=0][argType=value];
+add7[opcode=add];
+add8[opcode=add];
+add9[opcode=add];
+add10[opcode=add];
+output11[opcode=output][argNo=1][argType=array][index=0][indexType=const];
+output12[opcode=output][argNo=2][argType=array][index=2][indexType=const];
+output13[opcode=output][argNo=2][argType=array][index=5][indexType=input];
+output14[opcode=output][argNo=3][argType=array][index=3][indexType=const][index=4][indexType=const];
+output15[opcode=output][argNo=0][argType=value];
+input0->add5[operand=0]; //input->add
+input1->add7[operand=1]; //input->add
+input2->add8[operand=1]; //input->add
+input3->add9[operand=1]; //input->add
+input4->add10[operand=1]; //input->add
+add5->add7[operand=0]; //add->add
+input6->add5[operand=1]; //input->add
+add7->add8[operand=0]; //add->add
+add8->add9[operand=0]; //add->add
+add9->add10[operand=0]; //add->add
+add10->output11[operand=0]; //add->output
+add10->output12[operand=0]; //add->output
+add10->output13[operand=0]; //add->output
+add10->output14[operand=0]; //add->output
+add10->output15[operand=0]; //add->ret
+}
