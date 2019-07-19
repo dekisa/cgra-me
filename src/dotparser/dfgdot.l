@@ -40,7 +40,7 @@ static yy::location loc;
 \"[a-zA-Z_0-9]+\"           { return yy::parser::make_ID(std::string(yytext),loc);}
 [a-zA-Z_]+[0-9]*            { return yy::parser::make_ID(std::string(yytext),loc);}
 [a-zA-Z\200-\377_]+[0-9]*   { return yy::parser::make_ID(std::string(yytext),loc);}
-[0-9]+                      { return yy::parser::make_ID(std::string(yytext),loc);}
+[-0-9]+                      { return yy::parser::make_ID(std::string(yytext),loc);}
 
 "//"[^\n]* {loc.step(); continue;}
 
