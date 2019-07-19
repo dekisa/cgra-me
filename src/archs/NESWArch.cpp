@@ -142,7 +142,7 @@ std::unique_ptr<CGRA> UserArchs::createNESWArch(const std::map<std::string, std:
     for(int c = 0; c < cols; c++)
     {
         std::string io_name = "io_top_" + std::to_string(c);
-        std::string block_name = "b_c" + std::to_string(c) + "_r" + std::to_string(0);
+        std::string block_name = "b_c" + std::to_string(c) + "_r" + std::to_string(rows-1);
         result->addConnection(io_name + ".out", block_name + ".in_n"); // to block
         result->addConnection(block_name + ".out_n", io_name + ".in"); // to io
     }
@@ -160,7 +160,7 @@ std::unique_ptr<CGRA> UserArchs::createNESWArch(const std::map<std::string, std:
     for(int c = 0; c < cols; c++)
     {
         std::string io_name = "io_bottom_" + std::to_string(c);
-        std::string block_name = "b_c" + std::to_string(c) + "_r" + std::to_string(rows-1);
+        std::string block_name = "b_c" + std::to_string(c) + "_r" + std::to_string(0);
         result->addConnection(io_name + ".out", block_name + ".in_s"); // to block
         result->addConnection(block_name + ".out_s", io_name + ".in"); // to io
     }
@@ -183,8 +183,8 @@ std::unique_ptr<CGRA> UserArchs::createNESWArch(const std::map<std::string, std:
             std::string block_name_c_r1 = "b_c" + std::to_string(c) + "_r" + std::to_string(r + 1);
 
             // north / south connections
-            result->addConnection(block_name_c_r + ".out_s", block_name_c_r1 + ".in_n");
-            result->addConnection(block_name_c_r1 + ".out_n", block_name_c_r + ".in_s");
+            result->addConnection(block_name_c_r + ".out_n", block_name_c_r1 + ".in_s");
+            result->addConnection(block_name_c_r1 + ".out_s", block_name_c_r + ".in_n");
         }
     }
 
