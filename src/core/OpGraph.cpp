@@ -528,8 +528,14 @@ void OpGraph::printDOTwithOps(std::ostream &s)
 			s << "[value=" << (*it)->value << "]";		
 		if((*it)->opcode == OPGRAPH_OP_INPUT || (*it)->opcode == OPGRAPH_OP_OUTPUT){
 			s << "[argNo=" << (*it)->arg.first << "]" << "[argType=" << (*it)->arg.second << "]";
-			if ((*it)->arg.second == "array")
-				s <<  "[index=" << (*it)->index.first << "]" << "[indexType=" << (*it)->index.second << "]"  ;	
+			if ((*it)->arg.second == "array"){
+//				for(std::map<int, std::string>::iterator map_it = (*it)->index.begin(); map_it != (*it)->index.end(), map_it++){
+//					s <<  "[index=" << map_it->first << "]" << "[indexType=" << map_it->second << "]"  ;	
+//				}
+				for(auto const& map_it : (*it)->index){
+					s <<  "[index=" << map_it.first << "]" << "[indexType=" << map_it.second << "]"  ;	
+				}
+			}
 		}	
 
 		s <<";\n";

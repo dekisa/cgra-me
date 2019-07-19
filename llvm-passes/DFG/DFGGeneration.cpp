@@ -260,6 +260,74 @@ namespace
         while(break_flag);
     }
 
+    int getArrayInfo(Instruction* I, std::map<int, std::string>& index, std::pair<int, std::string>& arg){
+
+        Value * pointer;
+
+        if(LoadInst* L = dyn_cast<LoadInst>(I)){
+            pointer = L->getPointerOperand();
+        } else if(StoreInst* S = dyn_cast<StoreInst>(I)){
+            pointer = S->getPointerOperand();
+        } else{
+            std::cout << "ERROR: cannot get array info from instruction:\n";
+            I->dump();
+            return 1;
+        }
+        std::pair<int, std::string> currentIndex;
+        //check if this is array
+        if(GetElementPtrInst* G = dyn_cast<GetElementPtrInst>(pointer))
+        {
+        	arg.second = "array";
+            if(ConstantInt *C = dyn_cast<ConstantInt>( G->idx_begin() ))
+            {
+                currentIndex.first = C->getSExtValue();
+                currentIndex.second = "const";
+            }
+            else if(Argument* A = dyn_cast<Argument>( G->idx_begin() ))
+            { 
+                currentIndex.first = A->getArgNo();
+                currentIndex.second = "input";
+            } else 
+            {
+                errs()<< "ERROR: unsuported index at load operation\n";
+                //L->dump();
+                return 1;
+            }
+            //check if it is 2d array
+            if(LoadInst* L1 = dyn_cast<LoadInst>(G->getPointerOperand()))
+            {
+                getArrayInfo(L1, index, arg);
+                
+            }
+            else if(Argument* Arg = dyn_cast<Argument>(G->getPointerOperand()))
+            {
+                arg.first = Arg->getArgNo();
+            }
+            else 
+            {
+                errs() << "ERROR: unsupported pointer for load instruction\n";
+                //L->dump();
+                return 1;
+            }
+        }
+        else if(Argument* A = dyn_cast<Argument>(pointer))
+        {
+            arg.first = A->getArgNo();
+            arg.second= "array";
+            currentIndex.first = 0;
+            currentIndex.second = "const";
+        }
+        else
+        {
+            errs() << "store pointer is not supported\n";
+            return 1;
+        }
+
+        index.insert(currentIndex);
+        return 0;
+        
+    }
+
     // Hello - The first implementation, without getAnalysisUsage.
     struct DFGOut : public FunctionPass
     {
@@ -519,63 +587,17 @@ namespace
                         //this check assumes that load used by GEP is not used anywhere else
                         if(GetElementPtrInst* G = dyn_cast<GetElementPtrInst>(L->use_begin()->getUser()))
                             continue;
-                        
-                        int argNo;
-                        std::string argType;
-                        int index;
-                        std::string indexType = "";
 
-                        //check if this is array
-                        if(GetElementPtrInst* G = dyn_cast<GetElementPtrInst>(L->getPointerOperand()))
-                        {
-                        	argType = "array";
-                            if(ConstantInt *C = dyn_cast<ConstantInt>( G->idx_begin() ))
-                            {
-                                index = C->getSExtValue();
-                                indexType = "const";
-                            }
-                            else if(Argument* A = dyn_cast<Argument>( G->idx_begin() ))
-                            { 
-                                index = A->getArgNo();
-                                indexType = "input";
-                            } else 
-                            {
-                                errs()<< "ERROR: unsuported index at load operation\n";
-                                L->dump();
-                                return 1;
-                            }
-                            //check if it is 2d array
-                            if(LoadInst* L1 = dyn_cast<LoadInst>(G->getPointerOperand()))
-                            {
-                                errs() << "ERROR: only one dimensional arrays are supported\n";
-                                return 1;
-                            }
-                            else if(Argument* Arg = dyn_cast<Argument>(G->getPointerOperand()))
-                            {
-                                argNo = Arg->getArgNo();
-                            }
-                            else 
-                            {
-                                errs() << "ERROR: unsupported pointer for load instruction\n";
-                                L->dump();
-                                return 1;
-                            }
-                        }
-                        else if(Argument* A = dyn_cast<Argument>(L->getPointerOperand()))
-                        {
-                            argNo = A->getArgNo();
-                            argType = "array";
-                            index = 0;
-                            indexType = "const";
-                        }
-                        else
-                        {
-                            errs() << "store pointer is not supported\n";
+                        std::pair<int, std::string> arg;// = new std::pair<int, std::string>();
+                        std::map<int, std::string> index;
+
+                        if (getArrayInfo(L, index, arg)){
                             return 1;
                         }
+
                         OpGraphOp* op = new OpGraphOp("input", OPGRAPH_OP_INPUT);
-                        op->arg = std::pair<int, std::string>(argNo,argType);
-                        op->index = std::pair<int, std::string>(index, indexType);
+                        op->arg = arg;
+                        op->index = index;
 
                         opgraph->op_nodes.push_back(op);
                         opgraph->inputs.push_back(op);
@@ -595,64 +617,17 @@ namespace
                     //store should be output
                     if(StoreInst* S = dyn_cast<StoreInst>(I))
                     {
-                        int argNo;
-                        std::string argType;
-                        int index;
-                        std::string indexType = "";
+                        std::pair<int, std::string> arg;
+                        std::map<int, std::string> index;
 
-                        //check if this is array
-                        if(GetElementPtrInst* G = dyn_cast<GetElementPtrInst>(S->getPointerOperand()))
-                        {
-
-                            if(ConstantInt *C = dyn_cast<ConstantInt>( G->idx_begin() ))
-                            {
-                                index = C->getSExtValue();
-                                indexType = "const";
-                            }
-                            else if(Argument* A = dyn_cast<Argument>( G->idx_begin() ))
-                            { 
-                                index = A->getArgNo();
-                                indexType = "input";
-                            }
-                            else
-                            {
-                                errs()<< "ERROR: unsuported index at store operation\n";
-                                S->dump();
-                                return 1;
-                            }
-                            //check if it is 2d array
-                            if(LoadInst* L1 = dyn_cast<LoadInst>(G->getPointerOperand()))
-                            {
-                                errs() << "ERROR: only one dimensional arrays are supported\n";
-                                return 1;
-                            }
-                            else if(Argument* Arg = dyn_cast<Argument>(G->getPointerOperand()))
-                            {
-                                argNo = Arg->getArgNo();
-                                argType = "array";
-                            }
-                            else
-                            {
-                                errs() << "ERROR: unsupported pointer for store instruction\n";
-                                S->dump();
-                            }
-                        }
-                        else if(Argument* A = dyn_cast<Argument>(S->getPointerOperand()))
-                        {
-                            argNo = A->getArgNo();
-                            argType = "array";
-                            index = 0;
-                            indexType = "const";
-                        }
-                        else
-                        {
-                            errs() << "store pointer is not supported\n";
+                        if (getArrayInfo(S, index, arg)){
                             return 1;
                         }
+
                         Instruction* store_input = dyn_cast<Instruction>(S->getValueOperand());
                         OpGraphOp* out = new OpGraphOp("output", OPGRAPH_OP_OUTPUT);
-                        out->arg = std::pair<int, std::string>(argNo,argType);
-                        out->index = std::pair<int, std::string>(index, indexType);
+                        out->arg = arg;
+                        out->index = index;
                         out->input.push_back(vals[store_input]);
                         opgraph->op_nodes.push_back(out);
                         opgraph->outputs.push_back(out);
