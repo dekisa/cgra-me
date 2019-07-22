@@ -48,17 +48,17 @@ def loop_parser(input_source, output_source, output_tag):
     output_src_f = open(output_src_path, 'w')
     output_tag_f = open(output_tag_path, 'w')
 
-    tag_string = "//DFGLoop:"
+    tag_string = "//DFGFunction:"
     tag_count = 1
 
-    output_src_f.write("__attribute__((noinline)) void DFGLOOP_TAG(int index);\n")
+    output_src_f.write("__attribute__((noinline)) void DFGFUNCTION_TAG(int index);\n")
 
     for line in input_src_f:
         tag_loc = line.find(tag_string)
         if tag_loc != -1: #Found a tag
             tag_name = line[tag_loc + len(tag_string) : -1].strip()
             output_tag_f.write(str(tag_count) + ' ' + tag_name + '\n')
-            output_src_f.write("DFGLOOP_TAG(" + str(tag_count) + ");\n")
+            output_src_f.write("DFGFUNCTION_TAG(" + str(tag_count) + ");\n")
             tag_count+=1
         else:
             output_src_f.write(line)

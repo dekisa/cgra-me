@@ -250,13 +250,13 @@ void BitStream::print_bitstream(std::ostream& os) const{
         word2.fill(0, 1);
 
         word3.fill(fs_fu, 4);
-        word1.fill(mux_n,2);
+        word3.fill(mux_n,2);
         word3.fill(fr_n, 5);
-        word1.fill(mux_e,2);
+        word3.fill(mux_e,2);
         word3.fill(fr_e, 5);
-        word1.fill(mux_s,2);
+        word3.fill(mux_s,2);
         word3.fill(fr_s, 5);
-        word1.fill(mux_w,2);
+        word3.fill(mux_w,2);
         word3.fill(fr_w, 5);
 
         word4.fill(constant,32);

@@ -85,6 +85,8 @@ int main(int argc, char* argv[])
     bool genverilog;
     bool make_testbench;
     int adl;
+    std::string bitstream_output_filename;
+    bool generate_bitstream;
 
     try
     {
@@ -108,6 +110,7 @@ int main(int argc, char* argv[])
             ("o,print-op", "Print Operation Graph to stdout", cxxopts::value<bool>())
             ("gen-verilog", "Generate Verilog Implementation of Architecture and Dump to Specified Directory", cxxopts::value<std::string>(), "<Directorypath>")
             ("gen-testbench", "Generate testbench for use in a simulation of the DFG with configuration bitstream", cxxopts::value<bool>())
+            ("bitstream_output", "The bitstream file to write in obs format", cxxopts::value<std::string>())
             ;
 
         options.parse(argc, argv);
@@ -173,6 +176,16 @@ int main(int argc, char* argv[])
                 return 1;
             }
         }
+        
+        if(options.count("bitstream_output"))
+        {
+            generate_bitstream = true;
+            bitstream_output_filename = options["bitstream_output"].as<std::string>();
+        }
+        else
+        {
+            generate_bitstream = false;
+        }
 
         dfg_filename = options["dfg"].as<std::string>();
         arch_filename = options["xml"].as<std::string>();
@@ -187,6 +200,7 @@ int main(int argc, char* argv[])
         printop = options["print-op"].as<bool>();
         adl = options["parser"].as<int>();
         make_testbench = options["gen-testbench"].as<bool>();
+        
     }
     catch(const cxxopts::OptionException & e)
     {
@@ -366,8 +380,8 @@ int main(int argc, char* argv[])
                 std::ofstream tb_file("testbench.v");
                 arch->genBitStream(mapping_result).print_testbench(tb_file);
             }
-            if (arch_id = 3){
-                std::ofstream bs_file("bitstream.bin", std::ios::out | std::ios::binary);
+            if (generate_bitstream){
+                std::ofstream bs_file(bitstream_output_filename, std::ios::out | std::ios::binary);
                 arch->genBitStream(mapping_result).print_bitstream(bs_file);
             }
 

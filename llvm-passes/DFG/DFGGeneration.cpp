@@ -369,7 +369,7 @@ namespace
                 if(isa<CallInst>(it))
                 {
                     Function * func = dyn_cast<CallInst>(it)->getCalledFunction();
-                    if((func != NULL) && (func->getName() == "DFGLOOP_TAG")){
+                    if((func != NULL) && (func->getName() == "DFGFUNCTION_TAG")){
 			            // The case where an indirect call happens
 			            found_tag_num = cast<ConstantInt>(dyn_cast<CallInst>(it)->getArgOperand(0))->getValue().getZExtValue(); // found_tag_num has the the tag number
 			        }
@@ -396,7 +396,7 @@ namespace
                 }
               // Process the loop otherwise
                 tag_name = *tag_string_it;
-                errs() << "Info: The loop with tag: " << tag_name << " is generating DFG." << "\n";
+                errs() << "Info: The function with tag: " << tag_name << " is generating DFG." << "\n";
             }
 
             //if(!L->empty()) // if empty there are no sub loops

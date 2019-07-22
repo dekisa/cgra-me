@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 int __attribute__ ((noinline)) do_procA(int a, int b){
-    //DFGFunction:processingA
+    //DFGLoop:processingA
     return a+b-5;
 }
 
 
 
 int __attribute__ ((noinline)) do_procB(int a, int b){
-    //DFGFunction:processingB
+    //DFGLoop:processingB
     return a-b;
 }
 
