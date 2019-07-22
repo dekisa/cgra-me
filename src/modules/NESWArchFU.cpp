@@ -123,25 +123,25 @@ NESWArchFU::NESWArchFU(std::string name, bool full_fu)
     //addConnection("mux_out.out", "mux_a.in" + std::to_string(num_inputs));
     //addConnection("const.out", "mux_b.in4"); //we dont need constatn on both inputs
     // to out mux n
-    addConnection("this.in_e", "mux_n.in0");
-    addConnection("this.in_s", "mux_n.in1");
-    addConnection("this.in_w", "mux_n.in2");
-    addConnection("func.out", "mux_n.in3");
+    addConnection("this.in_e", "mux_n.in1");
+    addConnection("this.in_s", "mux_n.in2");
+    addConnection("this.in_w", "mux_n.in3");
+    addConnection("func.out", "mux_n.in0");
     // to out mux e
-    addConnection("this.in_n", "mux_e.in0");
-    addConnection("this.in_s", "mux_e.in1");
-    addConnection("this.in_w", "mux_e.in2");
-    addConnection("func.out", "mux_e.in3");
+    addConnection("this.in_n", "mux_e.in1");
+    addConnection("this.in_s", "mux_e.in2");
+    addConnection("this.in_w", "mux_e.in3");
+    addConnection("func.out", "mux_e.in0");
     // to out mux s
-    addConnection("this.in_n", "mux_s.in0");
-    addConnection("this.in_e", "mux_s.in1");
-    addConnection("this.in_w", "mux_s.in2");
-    addConnection("func.out", "mux_s.in3");
+    addConnection("this.in_n", "mux_s.in1");
+    addConnection("this.in_e", "mux_s.in2");
+    addConnection("this.in_w", "mux_s.in3");
+    addConnection("func.out", "mux_s.in0");
     // to out mux w
-    addConnection("this.in_n", "mux_w.in0");
-    addConnection("this.in_e", "mux_w.in1");
-    addConnection("this.in_s", "mux_w.in2");
-    addConnection("func.out", "mux_w.in3");
+    addConnection("this.in_n", "mux_w.in1");
+    addConnection("this.in_e", "mux_w.in2");
+    addConnection("this.in_s", "mux_w.in3");
+    addConnection("func.out", "mux_w.in0");
     // to funcunit
     addConnection("mux_a.out", "func.in_a");
     addConnection("mux_b.out", "func.in_b");
