@@ -39,3 +39,15 @@ changing dfg node label data when generating dfg\
 
 Dataflow graph\
 [llvm-passes/DFG/DFGGeneration.cpp](llvm-passes/DFG/DFGGeneration.cpp)
+
+## List of limitations
+- C file containing functions to be converted to DFG should be in separate folder inside benchmarks/userbench. Name of the C file should be the same as the folder name.
+- Makefile should containg the line including rules.mk ([example](https://github.com/dekisa/cgra-me/blob/DFG_runonfunction_const_arg_data/benchmarks/userbench/functions_test/Makefile#L2))
+- Covert C functions to DFG using make command
+- Conert DFGs to bitstream using mappit script, see [example](https://github.com/dekisa/cgra-me/blob/DFG_runonfunction_const_arg_data/benchmarks/userbench/functions_test/mappit.sh)
+- Functions to be converted to DFG should be marked with a tag ([example](https://github.com/dekisa/cgra-me/blob/DFG_runonfunction_const_arg_data/benchmarks/userbench/functions_test/functions_test.c#L4)) and that tag should appear in LOOP_TAGS variable ([example](https://github.com/dekisa/cgra-me/blob/DFG_runonfunction_const_arg_data/benchmarks/rules_functions_test.mk#L14))
+- Function arguments are converted to inputs when they are read and to outputs when they are writen to. Pointers and arrays are supported with limitations.
+- Pointers can be dereferenced only without any address ofset
+- Arrays can be multidimensional. Indexes can be constants and values passed as function arguments, other possibilities are not supported. Also, when using values passed as function arguments as array index, these must be long int.
+- Return instruction is converted to output
+- For generating bitstream you should provide the filename using --bitstream_output <filename> option. You should only use this option with NEWS Artchitecture
