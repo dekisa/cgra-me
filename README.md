@@ -51,4 +51,4 @@ Dataflow graph\
 - Pointers can be dereferenced only without any address ofset
 - Arrays can be multidimensional. Indexes can be constants and values passed as function arguments, other possibilities are not supported. Also, when using values passed as function arguments as array index, these must be `long int`.
 - Return instruction is converted to output
-- For generating bitstream you should provide the filename using `--bitstream_output <filename>` option. You should only use this option with NEWS Artchitecture
+- For generating bitstream you should provide the filename using `--bitstream_output <filename>` option, see [example](https://github.com/dekisa/cgra-me/blob/DFG_runonfunction_const_arg_data/benchmarks/rules_bitstream.mk#L48). You should only use this option with NEWS Artchitecture
