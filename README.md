@@ -22,20 +22,20 @@ generating bitstream\`
 [src/core/BitStream.cpp](src/core/BitStream.cpp)
 
 hardcoded data for bitstream\
-[inc/CGRA/user-inc/NESWbitstream](inc/CGRA/user-inc/NESWbitstream)
+[inc/CGRA/user-inc/NESWbitstream.h](inc/CGRA/user-inc/NESWbitstream.h)
 
 handling configuration bits\
 [src/core/BitSetting.cpp](src/core/BitSetting.cpp)
 
 calling bitstream generator\
-[src/run/cgrame.c](src/run/cgrame.c)
+[src/run/cgrame.cpp](src/run/cgrame.cpp)
 
 ### Dataflow graph
 parsing dfg to get constant configuration value when mapping dfg\
 [src/core/ModuleFuncUnit.cpp](src/core/ModuleFuncUnit.cpp)
 
 changing dfg node label data when generating dfg\
-[src/core/OpGraph.cp](src/core/OpGraph.cp)
+[src/core/OpGraph.cpp](src/core/OpGraph.cpp)
 
 Dataflow graph\
 [llvm-passes/DFG/DFGGeneration.cpp](llvm-passes/DFG/DFGGeneration.cpp)
