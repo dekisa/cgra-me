@@ -43,7 +43,7 @@ Dataflow graph\
 ## List of limitations
 - C file containing functions to be converted to DFG should be in separate folder inside `benchmarks/userbench`. Name of the C file should be the same as the folder name.
 - `Makefile` should containg the line including `rules.mk` ([example](https://github.com/dekisa/cgra-me/blob/DFG_runonfunction_const_arg_data/benchmarks/userbench/functions_test/Makefile#L2))
-- Covert C functions to DFG using make command
+- Covert C functions to DFG using `make` command
 - Conert DFGs to bitstream using `mappit.sh`, see [example](https://github.com/dekisa/cgra-me/blob/DFG_runonfunction_const_arg_data/benchmarks/userbench/functions_test/mappit.sh)
 - Functions to be converted to DFG should be marked with a tag ([example](https://github.com/dekisa/cgra-me/blob/DFG_runonfunction_const_arg_data/benchmarks/userbench/functions_test/functions_test.c#L4)) and that tag should appear in `LOOP_TAGS` variable ([example](https://github.com/dekisa/cgra-me/blob/DFG_runonfunction_const_arg_data/benchmarks/rules_functions_test.mk#L14))
 - Function to be converted to DFG should contain only one basic block
