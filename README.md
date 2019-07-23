@@ -15,7 +15,7 @@ adding new architecture\
 [inc/CGRA/user-inc/UserArchs.h](inc/CGRA/user-inc/UserArchs.h)
 
 fixing the io problem\
-[src/core/Module.cp](src/core/Module.cp)
+[src/core/Module.cpp](src/core/Module.cpp)
 
 ### Bitstream
 generating bitstream\
