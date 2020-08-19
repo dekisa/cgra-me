@@ -412,7 +412,7 @@ namespace
 
             // Print the whole function
 
-            F.dump();
+//            F.dump();
 
             // create new opgraph for loop
             OpGraph* opgraph = new OpGraph();

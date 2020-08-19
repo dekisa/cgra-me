@@ -25,10 +25,10 @@ run: $(BITSTREAM_TARGETS)
 ## FOR BUILDING ##
 
 $(DFG_TARGETS): $(BENCHNAME).bc $(BENCHNAME).tag
-	opt '$(BENCHNAME).bc' -o '/dev/null' -load '$(LLVM_DFG_PLUGIN)' --dfg-out -in-tag-pairs '$(BENCHNAME).tag' $(DFG_FLAGS)
+	opt-9 '$(BENCHNAME).bc' -o '/dev/null' -load '$(LLVM_DFG_PLUGIN)' --dfg-out -in-tag-pairs '$(BENCHNAME).tag' $(DFG_FLAGS)
 
 %.bc: %.tagged.c
-	clang -emit-llvm -c '$*.tagged.c' -o '$*.bc' $(CFLAGS) $(OPT_DISABLE_FLAGS)
+	clang-9 -emit-llvm -c '$*.tagged.c' -o '$*.bc' $(CFLAGS) $(OPT_DISABLE_FLAGS)
 
 %.ll: %.bc
 	llvm-dis '$*.bc'
